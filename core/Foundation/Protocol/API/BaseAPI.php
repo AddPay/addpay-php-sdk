@@ -12,7 +12,7 @@ class BaseAPI
 
     public function __construct()
     {
-        $this->config = new Config(__DIR__ . '/../../../Config/');
+        $this->config = new Config(__DIR__ . '/../../../../config/');
 
         $this->validateConfig();
 
