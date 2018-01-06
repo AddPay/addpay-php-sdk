@@ -9,8 +9,8 @@ No. Then don't use it.
 ### Why is there a composer.json and composer.lock file then?
 The package was **built** using composer.
 
-### I get an error saying some/path/AddPayOpenAPI.php does not exist? Your package is broken!
-No, the package is fine. You need to load the AddPayOpenAPI.php file relative to your working files path.
+### I get an error saying `AddPayOpenAPI.php` does not exist? Your package is broken!
+No, dumbass. You need to load the AddPayOpenAPI.php file relative to your working path.
 
 ### Why don't you provide examples of every example?
 Because I'd like to encourage you to use your brain and read the fucking API documentation before asking idiotic questions like these, you'll then realize why you sound like a tool.
