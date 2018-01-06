@@ -257,7 +257,7 @@ echo $transaction->resource['customer']['firstname'];
 ```
 
 #### Checking the transaction state
-Please see the AddPay Developer Documentation for a full list of `status` keys.
+Please see the AddPay Developer Documentation for a full list of `status` keys and what to do for each status.
 ```php
 if ($transaction->statusIs(AddPayOpenAPI::STATE_COMPLETED)) {
   // Do what you need to do.
@@ -265,8 +265,6 @@ if ($transaction->statusIs(AddPayOpenAPI::STATE_COMPLETED)) {
   // Do what you need to do, etc, etc,
 }
 ```
-
-#### Handle the Transaction PROCESS result
 
 ### Public API
 The public API provides some useful geographical meta data that can be used in improving your application, this meta data includes the current exchange rate values, list of world countries and currencies, etc.
