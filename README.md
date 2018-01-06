@@ -81,6 +81,8 @@ withWooHoo('I can read');
 
 ## Exactly the same as the original package, but hey, reading is overrated right?
 
+### /endrant with lazy-brain people in mind.
+
 # Getting Started
 
 ## Grab your client_id and client_secret
