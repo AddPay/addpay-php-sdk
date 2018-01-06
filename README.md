@@ -209,7 +209,7 @@ $transaction = $openAPI->transactions()
 See the Transaction Reference Object on the AddPay Developer Documentation for a full list of fields that may be updated.
 ```php
 $transaction = $openAPI->transactions()
-                       ->withId('TRANSACTION_ID_HERE)
+                       ->withId('TRANSACTION_ID_HERE')
                        ->withInstrumentType('CARD')
                        ->withInstrumentNumber('4242424242424242')
                        ->withInstrumentCode('123')
@@ -222,7 +222,7 @@ $transaction = $openAPI->transactions()
 See the Transaction Reference Object on the AddPay Developer Documentation for a full list of fields that may be updated.
 ```php
 $transaction = $openAPI->transactions()
-                       ->withId('TRANSACTION_ID_HERE)
+                       ->withId('TRANSACTION_ID_HERE')
                        ->withInitiatesAt('2050-01-01')
                        ->update();
 ```
@@ -231,7 +231,7 @@ $transaction = $openAPI->transactions()
 Processing a transaction has several steps. Please see the Self-Hosted Payment Page section of the AddPay Developer Documentation if you processing through your own payment page, otherwise see the AddPay-Hosted Payment Page section.
 ```php
 $transaction = $openAPI->transactions()
-                       ->withId('TRANSACTION_ID_HERE)
+                       ->withId('TRANSACTION_ID_HERE')
                        ->process();
 ```
 
@@ -239,7 +239,7 @@ $transaction = $openAPI->transactions()
 Processing a transaction has several steps. Please see the Self-Hosted Payment Page section of the AddPay Developer Documentation if you processing through your own payment page, otherwise see the AddPay-Hosted Payment Page section.
 ```php
 $transaction = $openAPI->transactions()
-                       ->withId('TRANSACTION_ID_HERE)
+                       ->withId('TRANSACTION_ID_HERE')
                        ->cancel();
 ```
 
