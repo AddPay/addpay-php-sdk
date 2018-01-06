@@ -13,7 +13,7 @@ The package was **built** using composer.
 No, the package is fine. You need to load the AddPayOpenAPI.php file relative to your working files path.
 
 ### Why don't you provide examples of every example?
-Because I'd like to encourage you to use your brain and read the fucking API documentation before asking idiotic questions like these.
+Because I'd like to encourage you to use your brain and read the fucking API documentation before asking idiotic questions like these, you'll then realize why you sound like a tool.
 
 # Important Note
 While developing the package for the with the above mentioned "developer" in mind, this package has some magic method handlers, the major method being the `with` method call which is received by the internal `__call` method. Think of the `with` method as a wildcard method that allows you to set a JSON payload with anything following the `with` word, for example:
