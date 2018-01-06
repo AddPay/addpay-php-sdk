@@ -54,6 +54,13 @@ Open up `Config/config.json` within the package root, edit and replace the defau
 ### Open API
 The open API provides an API interface to handle objects around transactions and the processing of them. Below we provide some examples of using the API. Please first read the API documentation at https://www.addpay.co.za/developers before diving in to grasp an understanding of the API. 
 
+#### Instantiating the Open API
+```php
+require_once(__DIR__ . '/AddPayOpenAPI.php');
+
+$openAPI = new AddPayOpenAPI();
+```
+
 #### Services
 Services are required when switching transaction payment modules or creating your own payment page. See the AddPay API documentation for more information on where you'd use these calls.
 
