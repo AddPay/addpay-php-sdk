@@ -145,6 +145,11 @@ if ($serviceList->succeeds()) {
 ### Transactions
 Creating, retreiving, updating, processing and cancelling of transactions are described here.
 
+#### Fetching a transaction
+```php
+$transaction = $openAPI->transactions()->find('TRANSACTION_ID_HERE');
+```
+
 #### Creating a SALE transaction
 ```php
 $transaction = $openAPI->transactions()
