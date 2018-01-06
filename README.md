@@ -78,9 +78,6 @@ withWooHoo('I can read');
    }
 }
 ```
-
-## Exactly the same as the original package, but hey, reading is overrated right?
-
 ### /endrant... Let's start working with the package....
 
 # Getting Started
