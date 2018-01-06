@@ -47,7 +47,7 @@ Alernatively you could enforce it with an underscore by calling `withAmountCurre
 Head yo your developer portal, find the section providing your sandbox client_id and client_secret. If you're already live, use your live credentials instead.
 
 ### Edit the configuration file
-Open up Config/config.json within the package root, edit and replace the default values in each field.
+Open up `Config/config.json` within the package root, edit and replace the default values in each field.
 
 ## Usage Examples
 
