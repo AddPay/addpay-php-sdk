@@ -41,7 +41,7 @@ However, the AddPay API requirement is to have `currency_code` as a single attri
 ```
 Alernatively you could enforce it with an underscore by calling `withAmountCurreny_code('USD')` but that's really ugly code to work with, in my personal opinion anyway.
 
-## IF THE IMPORTANT NOTE _STILL_ ISN'T CLEAR YO YOU, IT MEANS YOU CAN CALL:
+## IF YOU STILL DON'T GET IT, IT MEANS YOU CAN CALL:
 `withAnythingYouWantHere('AND A VALUE HERE');`
 ## AND JSON PAYLOAD WILL BE BUILT! TRY READING! IT HELPS!
 ```
