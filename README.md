@@ -117,8 +117,9 @@ Open up `Config/config.json` within the package root, edit and replace the defau
 The open API provides an API interface to handle objects around transactions and the processing of them. Below we provide some examples of using the API. Please first read the API documentation at https://www.addpay.co.za/developers before diving in to grasp an understanding of the API. 
 
 ### Instantiating the Open API
+If you have no idea what this mean, look at the examples.................
 ```php
-require_once(__DIR__ . '/AddPayOpenAPI.php');
+require_once(__DIR__ . '/core/AddPayOpenAPI.php');
 
 $openAPI = new AddPayOpenAPI();
 ```
