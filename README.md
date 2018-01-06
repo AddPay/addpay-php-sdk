@@ -131,3 +131,9 @@ if ($serviceList->succeeds()) {
     echo "Aww! Got error code {$errorCode} with message {$errorMsg}.";
 }
 ```
+
+### Public API
+Coming soon!
+
+### Private API
+Coming soon!
