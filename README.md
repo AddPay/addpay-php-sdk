@@ -273,7 +273,7 @@ $transaction = $api->transactions()
                        ->withId('TRANSACTION_ID_HERE')
                        ->withInstrumentType('CARD')
                        ->withInstrumentNumber('4242424242424242')
-                       ->withInstrumentCode('123')
+                       ->withInstrumentCvv('123')
                        ->withInstrumentExpiryMonth('01')
                        ->withInstrumentExpiryYear('2050')
                        ->update();
