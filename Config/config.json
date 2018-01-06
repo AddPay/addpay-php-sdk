@@ -1,0 +1,12 @@
+{
+  "live": false,
+  "open_api": {
+    "client_id": "2u9nMTUxMTkzNzg5Nw",
+    "client_secret": "r7IopQRupdUbqgd7vXUJnytIold0DkA9iORyYwf0o26LMbfNlcNVa9q",
+    "public_key": "Your-public-key-here"
+  },
+  "private_api": {
+    "username": "username",
+    "password": "password"
+  }
+}
