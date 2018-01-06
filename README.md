@@ -1,8 +1,31 @@
 # AddPay PHP
 A PHP package to assist in developing applications communicating with the AddPay API. The package already exists elsewhere, but due to someone's lack of understanding of API's, this is a replica with **spoon-feeding methods**. This package was written specifically for an incredibly difficult individual who has no understanding of JSON API's and thinks that to add a new field to a JSON object, a new PHP class is required, apparently calling the native PHP function `json_encode()` is too "low-level"... :trollface: :trollface: :trollface: :trollface:
 
+# Read This First - Q&A for the not-so-bright
+
+### Does this package require composer? I can't use composer!?!
+No. Then don't use it.
+
+### Why is there a composer.json and composer.lock file then?
+The package was **built** using composer.
+
+### I get an error saying `AddPayOpenAPI.php` does not exist? Your package is broken!
+No, the package is fine. You need to load the AddPayOpenAPI.php file relative to your working path.
+
+### Why don't you provide examples of every API call?
+Read the fucking AddPay API documentation before asking idiotic questions like these, you'll then realize why you sound like a tool.
+
+### Why don't you provide examples of every method call?
+I do. Read the code, [it's right here](https://github.com/stephenlake/addpay-php/tree/master/Foundation).
+
+### Is this package unit tested?
+Yes.
+
+### Why didn't you just update the previous package?
+Because there are many developers that actually know what they are doing using it as is; There's no need to update it.
+
 # Important Note
-While developing the package for the mentally challenged, with the above mentioned "developer" in mind, this package has some magic method handlers, the major method being the `with` method call which is received by the internal `__call` method. Think of the `with` method as a wildcard method that allows you to set a JSON payload with anything following the `with` word, for example:
+While developing the package for the with the above mentioned "developer" in mind, this package has some magic method handlers, the major method being the `with` method call which is received by the internal `__call` method. Think of the `with` method as a wildcard method that allows you to set a JSON payload with anything following the `with` word, for example:
 
 Calling `withReference('SOMEREFERENCE')` will set a payload of:
 ```json
@@ -40,6 +63,45 @@ However, the AddPay API requirement is to have `currency_code` as a single attri
 }
 ```
 Alernatively you could enforce it with an underscore by calling `withAmountCurreny_code('USD')` but that's really ugly code to work with, in my personal opinion anyway.
+
+## IF YOU STILL DON'T GET IT, IT MEANS YOU CAN CALL:
+`withAnythingYouWantHere('AND A VALUE HERE');`
+## AND JSON PAYLOAD WILL BE BUILT! TRY READING! IT HELPS!
+```
+{
+  "anything": {
+    "you": {
+      "want": {
+        "here": "AND A VALUE HERE"
+      }
+    }
+  }
+}
+```
+## *ANYTHING*:
+```php
+withMe('Stephen');
+```
+## Outputs:
+```json
+{
+   "me": "Stephen"
+}
+```
+
+## *ANYTHING*:
+```php
+withWooHoo('I can read');
+```
+## Outputs:
+```json
+{
+   "woo": {
+     "hoo": "I can read"
+   }
+}
+```
+### /endrant... Let's start working with the package....
 
 # Getting Started
 
@@ -209,7 +271,7 @@ $transaction = $openAPI->transactions()
 See the Transaction Reference Object on the AddPay Developer Documentation for a full list of fields that may be updated.
 ```php
 $transaction = $openAPI->transactions()
-                       ->withId('TRANSACTION_ID_HERE)
+                       ->withId('TRANSACTION_ID_HERE')
                        ->withInstrumentType('CARD')
                        ->withInstrumentNumber('4242424242424242')
                        ->withInstrumentCode('123')
@@ -222,7 +284,7 @@ $transaction = $openAPI->transactions()
 See the Transaction Reference Object on the AddPay Developer Documentation for a full list of fields that may be updated.
 ```php
 $transaction = $openAPI->transactions()
-                       ->withId('TRANSACTION_ID_HERE)
+                       ->withId('TRANSACTION_ID_HERE')
                        ->withInitiatesAt('2050-01-01')
                        ->update();
 ```
@@ -231,15 +293,14 @@ $transaction = $openAPI->transactions()
 Processing a transaction has several steps. Please see the Self-Hosted Payment Page section of the AddPay Developer Documentation if you processing through your own payment page, otherwise see the AddPay-Hosted Payment Page section.
 ```php
 $transaction = $openAPI->transactions()
-                       ->withId('TRANSACTION_ID_HERE)
+                       ->withId('TRANSACTION_ID_HERE')
                        ->process();
 ```
 
 #### Cancelling a transaction
-Processing a transaction has several steps. Please see the Self-Hosted Payment Page section of the AddPay Developer Documentation if you processing through your own payment page, otherwise see the AddPay-Hosted Payment Page section.
 ```php
 $transaction = $openAPI->transactions()
-                       ->withId('TRANSACTION_ID_HERE)
+                       ->withId('TRANSACTION_ID_HERE')
                        ->cancel();
 ```
 
@@ -257,7 +318,7 @@ echo $transaction->resource['customer']['firstname'];
 ```
 
 #### Checking the transaction state
-Please see the AddPay Developer Documentation for a full list of `status` keys.
+Please see the AddPay Developer Documentation for a full list of `status` keys and what to do for each status.
 ```php
 if ($transaction->statusIs(AddPayOpenAPI::STATE_COMPLETED)) {
   // Do what you need to do.
@@ -265,8 +326,6 @@ if ($transaction->statusIs(AddPayOpenAPI::STATE_COMPLETED)) {
   // Do what you need to do, etc, etc,
 }
 ```
-
-#### Handle the Transaction PROCESS result
 
 ### Public API
 The public API provides some useful geographical meta data that can be used in improving your application, this meta data includes the current exchange rate values, list of world countries and currencies, etc.
