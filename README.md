@@ -336,3 +336,5 @@ This section will be updated soon!
 The private API allows an authenticated user to control their configuration of the Merchant Console and change their settings directly through the API.
 
 This section will be updated soon!
+
+**This package README has been dumbed-down a lot, it will be updated with more professional layout and content at a later stage.**
