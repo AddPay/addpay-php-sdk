@@ -235,6 +235,14 @@ $transaction = $openAPI->transactions()
                        ->process();
 ```
 
+#### Cancelling a transaction
+Processing a transaction has several steps. Please see the Self-Hosted Payment Page section of the AddPay Developer Documentation if you processing through your own payment page, otherwise see the AddPay-Hosted Payment Page section.
+```php
+$transaction = $openAPI->transactions()
+                       ->withId('TRANSACTION_ID_HERE)
+                       ->cancel();
+```
+
 ### Transaction Result Handling
 
 #### Handle the Transaction PROCESS result
