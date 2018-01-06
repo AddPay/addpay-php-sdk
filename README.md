@@ -245,6 +245,27 @@ $transaction = $openAPI->transactions()
 
 ### Transaction Result Handling
 
+#### Spitting out the raw result
+```php
+print_r($transaction->resource);
+
+// Or get a specific object
+print_r($transaction->resource['customer'];
+
+// Or a get a specific field
+echo $transaction->resource['customer']['firstname'];
+```
+
+#### Checking the transaction state
+Please see the AddPay Developer Documentation for a full list of `status` keys.
+```php
+if ($transaction->statusIs(AddPayOpenAPI::STATE_COMPLETED)) {
+  // Do what you need to do.
+} elseif($transaction->statusIs(AddPayOpenAPI::STATE_FAILED)) {
+  // Do what you need to do, etc, etc,
+}
+```
+
 #### Handle the Transaction PROCESS result
 
 ### Public API
