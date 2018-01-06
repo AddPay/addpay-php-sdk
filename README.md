@@ -65,7 +65,10 @@ if ($serviceList->succeeds()) {
     print_r($serviceList);
     exit;
 } else {
-    echo "Aww! Got error code {$serviceList->getErrorCode()} with message {$serviceList->getErrorMessage()}.";
+    $errorCode = $serviceList->getErrorCode();
+    $errorMsg  = $serviceList->getErrorMessage();
+    
+    echo "Aww! Got error code {$errorCode} with message {$errorMsg}.";
 }
 ```
 
@@ -81,7 +84,10 @@ if ($serviceList->succeeds()) {
     print_r($serviceList);
     exit;
 } else {
-    echo "Aww! Got error code {$serviceList->getErrorCode()} with message {$serviceList->getErrorMessage()}.";
+    $errorCode = $serviceList->getErrorCode();
+    $errorMsg  = $serviceList->getErrorMessage();
+    
+    echo "Aww! Got error code {$errorCode} with message {$errorMsg}.";
 }
 ```
 
@@ -99,7 +105,10 @@ if ($serviceList->succeeds()) {
     print_r($serviceList);
     exit;
 } else {
-    echo "Aww! Got error code {$serviceList->getErrorCode()} with message {$serviceList->getErrorMessage()}.";
+    $errorCode = $serviceList->getErrorCode();
+    $errorMsg  = $serviceList->getErrorMessage();
+    
+    echo "Aww! Got error code {$errorCode} with message {$errorMsg}.";
 }
 ```
 
@@ -116,6 +125,9 @@ if ($serviceList->succeeds()) {
     print_r($serviceList);
     exit;
 } else {
-    echo "Aww! Got error code {$serviceList->getErrorCode()} with message {$serviceList->getErrorMessage()}.";
+    $errorCode = $serviceList->getErrorCode();
+    $errorMsg  = $serviceList->getErrorMessage();
+    
+    echo "Aww! Got error code {$errorCode} with message {$errorMsg}.";
 }
 ```
