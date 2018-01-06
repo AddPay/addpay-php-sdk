@@ -1,5 +1,5 @@
 # AddPay PHP
-A PHP package to assist in developing applications communicating with the AddPay API. The package already exists elsewhere, but due to someone's lack of understanding of API's, this is a replica with **spoon-feeding methods**. This package was written specifically for an incredibly difficult individual who has no understanding of JSON API's and thinks that to add a new field to a JSON object, a new PHP class is required, apparently calling the native PHP function `json_encode()` is too "low-level"... :trollface: :trollface: :trollface: :trollface:
+A PHP package to assist in developing applications communicating with the AddPay API. The package already exists elsewhere, but due to someone's lack of understanding of API's, this is a replica with **spoon-feeding methods**. This package was written specifically for an incredibly difficult individual who has no understanding of JSON API's and thinks that to add a new field to a JSON object, a new PHP class is required, apparently calling the native PHP function `json_encode()` is too "low-level"... :trollface:
 
 # Read This First - Q&A for the not-so-bright
 
