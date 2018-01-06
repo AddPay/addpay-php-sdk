@@ -44,7 +44,7 @@ Alernatively you could enforce it with an underscore by calling `withAmountCurre
 ## Getting Started
 
 ### Grab your client_id and client_secret
-Head yo your developer portal, find the section providing your sandbox client_id and client_secret. If you're already live, use your live credentials instead.
+Head to your developer portal, find the section providing your sandbox client_id and client_secret. If you're already live, use your live credentials instead.
 
 ### Edit the configuration file
 Open up `Config/config.json` within the package root, edit and replace the default values in each field.
@@ -144,6 +144,60 @@ if ($serviceList->succeeds()) {
 
 #### Transactions
 Creating, retreiving, updating, processing and cancelling of transactions are described here.
+
+##### Creating a SALE transaction
+```php
+$transaction = $openAPI->transactions()
+                       ->new()
+                       ->withReference('MyRef')
+                       ->withDescription('This is my transaction')
+                       ->withCustomerFirstname('CustomerFirstname')
+                       ->withCustomerLastname('CustomerLastname')
+                       ->withCustomerEmail('customer@example.org')
+                       ->withCustomerMobile('000000000')
+                       ->withServiceIntent('SALE')
+                       ->withServiceKey('DIRECTPAY')
+                       ->withAmountValue('1.50')
+                       ->withAmountCurrencyCode('USD')
+                       ->store(); // Or ->create();
+```
+
+
+##### Creating a SUBSCRIPTION transaction
+```php
+$transaction = $openAPI->transactions()
+                       ->new()
+                       ->withReference('MyRef')
+                       ->withDescription('This is my transaction')
+                       ->withCustomerFirstname('CustomerFirstname')
+                       ->withCustomerLastname('CustomerLastname')
+                       ->withCustomerEmail('customer@example.org')
+                       ->withCustomerMobile('000000000')
+                       ->withServiceIntent('SUBSCRIPTION')
+                       ->withContractType('ELASTIC')
+                       ->withContractCount('2')
+                       ->withContractMaxAmount('2.50')
+                       ->withContractInterval('DAY')
+                       ->withServiceKey('DIRECTPAY')
+                       ->withAmountValue('1.50')
+                       ->withAmountCurrencyCode('USD')
+                       ->store(); // Or ->create();
+```
+
+##### Creating a DONATION transaction
+```php
+$transaction = $openAPI->transactions()
+                       ->new()
+                       ->withReference('MyRef')
+                       ->withDescription('This is my transaction')
+                       ->withCustomerFirstname('CustomerFirstname')
+                       ->withCustomerLastname('CustomerLastname')
+                       ->withCustomerEmail('customer@example.org')
+                       ->withCustomerMobile('000000000')
+                       ->withServiceIntent('DONATION')
+                       ->withServiceKey('DIRECTPAY')
+                       ->store(); // Or ->create();
+```
 
 ### Public API
 The public API provides some useful geographical meta data that can be used in improving your application, this meta data includes the current exchange rate values, list of world countries and currencies, etc.
