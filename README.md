@@ -105,11 +105,11 @@ withWooHoo('I can read');
 
 # Getting Started
 
-## Grab your client_id and client_secret
+### Grab your client_id and client_secret
 Head to your developer portal, find the section providing your sandbox client_id and client_secret. If you're already live, use your live credentials instead.
 
-## Edit the configuration file
-Open up `Config/config.json` within the package root, edit and replace the default values in each field.
+### Edit the configuration file
+Open up `config/config.json` within the package root, edit and replace the default values in each field.
 
 # Usage Examples
 
