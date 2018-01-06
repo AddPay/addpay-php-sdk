@@ -1,7 +1,7 @@
 # AddPay PHP
 A PHP package to assist in developing applications communicating with the AddPay API. The package contains minimalistic wrappers around the Public, Private and Open API's. This package was written specifically for an incredibly difficult individual who has no understanding of JSON API's and thinks that to add a new field to a JSON object, a new PHP class is required, apparently calling the native PHP function `json_encode()` is too "low-level"... :trollface: :trollface: :trollface: :trollface:
 
-## Important Note
+# Important Note
 While developing the package with the above mentioned "developer" in mind, this package has some magic method handlers, the major method being the `with` method call which is received by the internal `__call` method. Think of the `with` method as a wildcard method that allows you to set a JSON payload with anything following the `with` word, for example:
 
 Calling `withReference('SOMEREFERENCE')` will set a payload of:
@@ -41,30 +41,30 @@ However, the AddPay API requirement is to have `currency_code` as a single attri
 ```
 Alernatively you could enforce it with an underscore by calling `withAmountCurreny_code('USD')` but that's really ugly code to work with, in my personal opinion anyway.
 
-## Getting Started
+# Getting Started
 
-### Grab your client_id and client_secret
+## Grab your client_id and client_secret
 Head to your developer portal, find the section providing your sandbox client_id and client_secret. If you're already live, use your live credentials instead.
 
-### Edit the configuration file
+## Edit the configuration file
 Open up `Config/config.json` within the package root, edit and replace the default values in each field.
 
-## Usage Examples
+# Usage Examples
 
-### Open API
+## Open API
 The open API provides an API interface to handle objects around transactions and the processing of them. Below we provide some examples of using the API. Please first read the API documentation at https://www.addpay.co.za/developers before diving in to grasp an understanding of the API. 
 
-#### Instantiating the Open API
+### Instantiating the Open API
 ```php
 require_once(__DIR__ . '/AddPayOpenAPI.php');
 
 $openAPI = new AddPayOpenAPI();
 ```
 
-#### Services
+### Services
 Services are required when switching transaction payment modules or creating your own payment page. See the AddPay API documentation for more information on where you'd use these calls.
 
-##### List General Available Services
+#### List General Available Services
 ```php
 $serviceList = $openAPI->services()
                        ->list();
@@ -82,7 +82,7 @@ if ($serviceList->succeeds()) {
 }
 ```
 
-##### List Available Payment Module Services
+#### List Available Payment Module Services
 ```php
 $serviceList = $openAPI->services()
                        ->withType('transaction')
@@ -102,7 +102,7 @@ if ($serviceList->succeeds()) {
 ```
 
 
-##### List Available Payment Module Services that support the SALE intent
+#### List Available Payment Module Services that support the SALE intent
 ```php
 $serviceList = $openAPI->services()
                        ->withType('transaction')
@@ -122,7 +122,7 @@ if ($serviceList->succeeds()) {
 }
 ```
 
-##### List Available Payment Module Services that support the SUBSCRIPTION intent
+#### List Available Payment Module Services that support the SUBSCRIPTION intent
 ```php
 $serviceList = $openAPI->services()
                        ->withType('transaction')
@@ -142,10 +142,10 @@ if ($serviceList->succeeds()) {
 }
 ```
 
-#### Transactions
+### Transactions
 Creating, retreiving, updating, processing and cancelling of transactions are described here.
 
-##### Creating a SALE transaction
+#### Creating a SALE transaction
 ```php
 $transaction = $openAPI->transactions()
                        ->new()
@@ -163,7 +163,7 @@ $transaction = $openAPI->transactions()
 ```
 
 
-##### Creating a SUBSCRIPTION transaction
+#### Creating a SUBSCRIPTION transaction
 ```php
 $transaction = $openAPI->transactions()
                        ->new()
@@ -184,7 +184,7 @@ $transaction = $openAPI->transactions()
                        ->store(); // Or ->create();
 ```
 
-##### Creating a DONATION transaction
+#### Creating a DONATION transaction
 ```php
 $transaction = $openAPI->transactions()
                        ->new()
