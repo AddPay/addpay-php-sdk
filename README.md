@@ -133,7 +133,11 @@ if ($serviceList->succeeds()) {
 ```
 
 ### Public API
-Coming soon!
+The public API provides some useful geographical meta data that can be used in improving your application, this meta data includes the current exchange rate values, list of world countries and currencies, etc.
+
+This section will be updated soon!
 
 ### Private API
-Coming soon!
+The private API allows an authenticated user to control their configuration of the Merchant Console and change their settings directly through the API.
+
+This section will be updated soon!
