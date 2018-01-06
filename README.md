@@ -54,7 +54,10 @@ Open up `Config/config.json` within the package root, edit and replace the defau
 ### Open API
 The open API provides an API interface to handle objects around transactions and the processing of them. Below we provide some examples of using the API. Please first read the API documentation at https://www.addpay.co.za/developers before diving in to grasp an understanding of the API. 
 
-#### List General Available Services
+#### Services
+Services are required when switching transaction payment modules or creating your own payment page. See the AddPay API documentation for more information on where you'd use these calls.
+
+##### List General Available Services
 ```php
 $serviceList = $openAPI->services()
                        ->list();
@@ -72,7 +75,7 @@ if ($serviceList->succeeds()) {
 }
 ```
 
-#### List Available Payment Module Services
+##### List Available Payment Module Services
 ```php
 $serviceList = $openAPI->services()
                        ->withType('transaction')
@@ -92,7 +95,7 @@ if ($serviceList->succeeds()) {
 ```
 
 
-#### List Available Payment Module Services that support the SALE intent
+##### List Available Payment Module Services that support the SALE intent
 ```php
 $serviceList = $openAPI->services()
                        ->withType('transaction')
@@ -112,7 +115,7 @@ if ($serviceList->succeeds()) {
 }
 ```
 
-#### List Available Payment Module Services that support the SUBSCRIPTION intent
+##### List Available Payment Module Services that support the SUBSCRIPTION intent
 ```php
 $serviceList = $openAPI->services()
                        ->withType('transaction')
@@ -131,6 +134,9 @@ if ($serviceList->succeeds()) {
     echo "Aww! Got error code {$errorCode} with message {$errorMsg}.";
 }
 ```
+
+#### Transactions
+Creating, retreiving, updating, processing and cancelling of transactions are described here.
 
 ### Public API
 The public API provides some useful geographical meta data that can be used in improving your application, this meta data includes the current exchange rate values, list of world countries and currencies, etc.
