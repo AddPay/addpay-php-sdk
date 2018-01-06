@@ -1,9 +1,9 @@
 {
   "live": false,
   "open_api": {
-    "client_id": "2u9nMTUxMTkzNzg5Nw",
-    "client_secret": "r7IopQRupdUbqgd7vXUJnytIold0DkA9iORyYwf0o26LMbfNlcNVa9q",
-    "public_key": "Your-public-key-here"
+    "client_id": "your_client_id_here",
+    "client_secret": "your_client_secret_here",
+    "public_key": "your_optional_public_key_here"
   },
   "private_api": {
     "username": "username",
