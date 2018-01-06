@@ -16,7 +16,7 @@ No, the package is fine. You need to load the AddPayOpenAPI.php file relative to
 Read the fucking AddPay API documentation before asking idiotic questions like these, you'll then realize why you sound like a tool.
 
 ### Why don't you provide examples of every method call?
-I do. Read the code, [it's right here](https://github.com/stephenlake/addpay-php/tree/master/Foundation).
+I do. Read the code, [it's right here](https://github.com/stephenlake/addpay-php/tree/master/examples).
 
 ### Is this package unit tested?
 Yes.
