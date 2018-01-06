@@ -15,7 +15,7 @@ class JSONObject
 
     public function gotExpectedResult()
     {
-        return (isset($this->resource->meta) && substr($this->resource->meta['code'], 0, 1) == '2');
+        return (isset($this->resource['meta']) && substr($this->resource['meta']['code'], 0, 1) == '2');
     }
 
     public function succeeds()
@@ -30,12 +30,12 @@ class JSONObject
 
     public function getErrorCode()
     {
-        return $this->resource->meta['code'] ?? 500;
+        return $this->resource['meta']['code'] ?? 500;
     }
 
     public function getErrorMessage()
     {
-        return $this->resource->meta['message'] ?? 'Internal exception';
+        return $this->resource['meta']['message'] ?? 'Internal exception';
     }
 
     public function __call($name, $args)
@@ -85,6 +85,20 @@ class JSONObject
     public function withInitiatesAt($date)
     {
         $this->resource['initiates_at'] = $date;
+
+        return $this;
+    }
+
+    public function withInstrumentExpiryMonth($month)
+    {
+        $this->resource['instrument']['expiry_month'] = $month;
+
+        return $this;
+    }
+
+    public function withInstrumentExpiryYear($year)
+    {
+        $this->resource['instrument']['expiry_year'] = $year;
 
         return $this;
     }

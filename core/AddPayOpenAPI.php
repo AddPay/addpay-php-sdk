@@ -20,3 +20,5 @@ class AddPayOpenAPI extends AddPay\Foundation\Protocol\API\OpenAPI {
     const STATE_SECURE_FAILED         = 'SECUREFAILED';
 
 }
+
+$api = new AddPayOpenAPI();
