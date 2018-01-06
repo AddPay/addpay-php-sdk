@@ -22,7 +22,7 @@ I do. Read the code, [it's right here](https://github.com/stephenlake/addpay-php
 Yes.
 
 ### Why didn't you just update the previous package?
-Because there are many developers using it as is that don't need to be spoonfed like this. I do not want to cause breaking changes to their current working code.
+Because there are many developers that actually know what they are doing using it as is; There's no need to update it.
 
 # Important Note
 While developing the package for the with the above mentioned "developer" in mind, this package has some magic method handlers, the major method being the `with` method call which is received by the internal `__call` method. Think of the `with` method as a wildcard method that allows you to set a JSON payload with anything following the `with` word, for example:
