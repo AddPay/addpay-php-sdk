@@ -60,6 +60,7 @@ require_once(__DIR__ . '/AddPayOpenAPI.php');
 
 $openAPI = new AddPayOpenAPI();
 ```
+An exception will be thrown if the configuration file is missing fields.
 
 ### Services
 Services are required when switching transaction payment modules or creating your own payment page. See the AddPay API documentation for more information on where you'd use these calls.
