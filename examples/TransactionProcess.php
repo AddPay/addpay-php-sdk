@@ -14,7 +14,7 @@ require_once(__DIR__ . '/../core/AddPayOpenAPI.php');
 |
 | With regard to support of this package, no questions that have already been
 | answered in the API documentation will be answered from me. Please ensure
-| you have horoughly read through the entire document before raising concerns.
+| you have thoroughly read through the entire document before raising concerns.
 |
 | If you believe there is a problem with this package, please use the ISSUES
 | feature and create a new issue on the GitHub (pronounced with a G, not a J)
