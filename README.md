@@ -40,3 +40,14 @@ However, the AddPay API requirement is to have `currency_code` as a single attri
 }
 ```
 Alernatively you could enforce it with an underscore by calling `withAmountCurreny_code('USD')` but that's really ugly code to work with, in my personal opinion anyway.
+
+## Setting Up
+
+### Grab your client_id and client_secret
+Head yo your developer portal, find the section providing your sandbox client_id and client_secret. If you're already live, use your live credentials instead.
+
+### Edit the configuration file
+Open up Config/config.json within the package root, edit and replace the default values in each field.
+
+## Usage Examples
+To be updated.
