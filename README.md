@@ -206,7 +206,7 @@ $transaction = $openAPI->transactions()
 ```
 
 #### Updating a transaction's instrument
-See the section 4.7.2 of the AddPay Developer Documentation for a full list of fields that may be updated.
+See the Transaction Reference Object on the AddPay Developer Documentation for a full list of fields that may be updated.
 ```php
 $transaction = $openAPI->transactions()
                        ->withId('TRANSACTION_ID_HERE)
@@ -219,19 +219,25 @@ $transaction = $openAPI->transactions()
 ```
 
 #### Updating a transaction's intitaites_at date
-See the section 4.7.2 of the AddPay Developer Documentation for a full list of fields that may be updated.
+See the Transaction Reference Object on the AddPay Developer Documentation for a full list of fields that may be updated.
 ```php
 $transaction = $openAPI->transactions()
                        ->withId('TRANSACTION_ID_HERE)
                        ->withInitiatesAt('2050-01-01')
                        ->update();
+```
 
 #### Processing a transaction
+Processing a transaction has several steps. Please see the Self-Hosted Payment Page section of the AddPay Developer Documentation if you processing through your own payment page, otherwise see the AddPay-Hosted Payment Page section.
 ```php
 $transaction = $openAPI->transactions()
                        ->withId('TRANSACTION_ID_HERE)
                        ->process();
 ```
+
+### Transaction Result Handling
+
+#### Handle the Transaction PROCESS result
 
 ### Public API
 The public API provides some useful geographical meta data that can be used in improving your application, this meta data includes the current exchange rate values, list of world countries and currencies, etc.
