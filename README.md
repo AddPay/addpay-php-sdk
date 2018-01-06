@@ -46,15 +46,40 @@ Alernatively you could enforce it with an underscore by calling `withAmountCurre
 ## AND JSON PAYLOAD WILL BE BUILT! TRY READING! IT HELPS!
 ```
 {
-  "Anything": {
-    "You": {
-      "Want": {
-        "Here": "AND A VALUE HERE"
+  "anything": {
+    "you": {
+      "want": {
+        "here": "AND A VALUE HERE"
       }
     }
   }
 }
 ```
+## *ANYTHING*:
+```php
+withMe('Stephen');
+```
+## Outputs:
+```json
+{
+   "me": "Stephen"
+}
+```
+
+## *ANYTHING*:
+```php
+withWooHoo('I can read');
+```
+## Outputs:
+```json
+{
+   "woo": {
+     "hoo": "I can read"
+   }
+}
+```
+
+## Exactly the same as the original package, but hey, reading is overrated right?
 
 # Getting Started
 
