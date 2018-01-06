@@ -3,8 +3,8 @@ A PHP package to assist in developing applications communicating with the AddPay
 
 # Read This First - Q&A for the not-so-bright
 
-### Does this package require composer? I can't use composer because -insert-really-bad-excuse-here-.
-No. Then don't use it, but your excuse it terrible.
+### Does this package require composer? I can't use composer!?!
+No. Then don't use it.
 
 ### Why is there a composer.json and composer.lock file then?
 The package was **built** using composer.
