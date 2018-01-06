@@ -16,7 +16,7 @@ No, the package is fine. You need to load the AddPayOpenAPI.php file relative to
 Because I'd like to encourage you to use your brain and read the fucking API documentation before asking idiotic questions like these, you'll then realize why you sound like a tool.
 
 ### Why don't you provide examples of every method call?
-What would be the point of that? Read the code, [it's right here](https://github.com/stephenlake/addpay-php/tree/master/Foundation).
+I do. Read the code, [it's right here](https://github.com/stephenlake/addpay-php/tree/master/Foundation). If you're too lazy to read it, that's your problem.
 
 # Important Note
 While developing the package for the with the above mentioned "developer" in mind, this package has some magic method handlers, the major method being the `with` method call which is received by the internal `__call` method. Think of the `with` method as a wildcard method that allows you to set a JSON payload with anything following the `with` word, for example:
