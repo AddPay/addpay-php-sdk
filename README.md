@@ -50,4 +50,72 @@ Head yo your developer portal, find the section providing your sandbox client_id
 Open up Config/config.json within the package root, edit and replace the default values in each field.
 
 ## Usage Examples
-To be updated.
+
+### Open API
+The open API provides an API interface to handle objects around transactions and the processing of them. Below we provide some examples of using the API. Please first read the API documentation at https://www.addpay.co.za/developers before diving in to grasp an understanding of the API. 
+
+#### List General Available Services
+```php
+$serviceList = $openAPI->services()
+                       ->list();
+
+if ($serviceList->succeeds()) {
+    echo "Cool, we got a list of general services that we can use:";
+    
+    print_r($serviceList);
+    exit;
+} else {
+    echo "We received error code {$serviceList->getErrorCode()} and error message {$serviceList->getErrorMessage()}.";
+}
+```
+
+#### List Available Payment Module Services
+```php
+$serviceList = $openAPI->services()
+                       ->withType('transaction')
+                       ->list();
+
+if ($serviceList->succeeds()) {
+    echo "Cool, we got a list of payment modules that we have access to:";
+    
+    print_r($serviceList);
+    exit;
+} else {
+    echo "We received error code {$serviceList->getErrorCode()} and error message {$serviceList->getErrorMessage()}.";
+}
+```
+
+
+#### List Available Payment Module Services that support the SALE intent
+```php
+$serviceList = $openAPI->services()
+                       ->withType('transaction')
+                       ->withIntent('SALE')
+                       ->list();
+
+if ($serviceList->succeeds()) {
+    echo "Cool, we got a list of payment modules that we have access to and support the SALE intent:";
+    
+    print_r($serviceList);
+    exit;
+} else {
+    echo "We received error code {$serviceList->getErrorCode()} and error message {$serviceList->getErrorMessage()}.";
+}
+```
+
+#### List Available Payment Module Services that support the SUBSCRIPTION intent
+```php
+$serviceList = $openAPI->services()
+                       ->withType('transaction')
+                       ->withIntent('SUBSCRIPTION')
+                       ->list();
+
+if ($serviceList->succeeds()) {
+    echo "Cool, we got a list of payment modules that we have access to and support the SALE intent:";
+    
+    print_r($serviceList);
+    exit;
+} else {
+    echo "We received error code {$serviceList->getErrorCode()} and error message {$serviceList->getErrorMessage()}.";
+}
+```
