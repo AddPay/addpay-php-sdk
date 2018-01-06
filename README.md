@@ -1,7 +1,7 @@
 # AddPay PHP
 A PHP package to assist in developing applications communicating with the AddPay API. The package contains minimalistic wrappers around the Public, Private and Open API's. This package was written specifically for an incredibly difficult individual who has no understanding of JSON API's and thinks that to add a new field to a JSON object, a new PHP class is required, apparently this is called "low-level code"... :trollface: :trollface: :trollface: :trollface:
 
-## Quick Introduction and Gotcha's
+## Important Note
 While developing the package with the above troublesome "developer" in mind, this package has some magic method handlers, the major method being the `with` method call which is received by the internal `__call` method. Think of the `with` method as a wildcard method that allows you to set a JSON payload with anything following the `with` word, for example:
 
 Calling `withReference('SOMEREFERENCE')` will set a payload of:
