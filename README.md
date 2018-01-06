@@ -13,7 +13,7 @@ The package was **built** using composer.
 No, the package is fine. You need to load the AddPayOpenAPI.php file relative to your working path.
 
 ### Why don't you provide examples of every API call?
-I do. Read the fucking AddPay API documentation.
+I do. Read the fucking AddPay API documentation and then read the protocol code, [it's right here](https://github.com/stephenlake/addpay-php/tree/master/core). 
 
 ### Why don't you provide examples of every method call?
 I do. Read the code, [it's right here](https://github.com/stephenlake/addpay-php/tree/master/examples).
