@@ -114,14 +114,12 @@ Open up `Config/config.json` within the package root, edit and replace the defau
 # Usage Examples
 
 ## Open API
-The open API provides an API interface to handle objects around transactions and the processing of them. Below we provide some examples of using the API. Please first read the API documentation at https://www.addpay.co.za/developers before diving in to grasp an understanding of the API. 
+The open API provides an API interface to handle objects around transactions and the processing of them. Below we provide some examples of using the API. Please first read the API documentation at https://www.addpay.co.za/developers before diving in to grasp an understanding of the API.
 
 ### Instantiating the Open API
-If you have no idea what this mean, look at the examples.................
+If you have no idea what this mean, look at the examples :trollface:
 ```php
 require_once(__DIR__ . '/core/AddPayOpenAPI.php');
-
-$openAPI = new AddPayOpenAPI();
 ```
 An exception will be thrown if the configuration file is missing fields.
 
@@ -130,37 +128,37 @@ Services are required when switching transaction payment modules or creating you
 
 #### List General Available Services
 ```php
-$serviceList = $openAPI->services()
+$serviceList = $api->services()
                        ->list();
 
 if ($serviceList->succeeds()) {
     echo "Cool, we got a list of general services that we can use:";
-    
+
     print_r($serviceList);
     exit;
 } else {
     $errorCode = $serviceList->getErrorCode();
     $errorMsg  = $serviceList->getErrorMessage();
-    
+
     echo "Aww! Got error code {$errorCode} with message {$errorMsg}.";
 }
 ```
 
 #### List Available Payment Module Services
 ```php
-$serviceList = $openAPI->services()
+$serviceList = $api->services()
                        ->withType('transaction')
                        ->list();
 
 if ($serviceList->succeeds()) {
     echo "Cool, we got a list of payment modules that we have access to:";
-    
+
     print_r($serviceList);
     exit;
 } else {
     $errorCode = $serviceList->getErrorCode();
     $errorMsg  = $serviceList->getErrorMessage();
-    
+
     echo "Aww! Got error code {$errorCode} with message {$errorMsg}.";
 }
 ```
@@ -168,40 +166,40 @@ if ($serviceList->succeeds()) {
 
 #### List Available Payment Module Services that support the SALE intent
 ```php
-$serviceList = $openAPI->services()
+$serviceList = $api->services()
                        ->withType('transaction')
                        ->withIntent('SALE')
                        ->list();
 
 if ($serviceList->succeeds()) {
     echo "Cool, we got a list of payment modules that we have access to and support the SALE intent:";
-    
+
     print_r($serviceList);
     exit;
 } else {
     $errorCode = $serviceList->getErrorCode();
     $errorMsg  = $serviceList->getErrorMessage();
-    
+
     echo "Aww! Got error code {$errorCode} with message {$errorMsg}.";
 }
 ```
 
 #### List Available Payment Module Services that support the SUBSCRIPTION intent
 ```php
-$serviceList = $openAPI->services()
+$serviceList = $api->services()
                        ->withType('transaction')
                        ->withIntent('SUBSCRIPTION')
                        ->list();
 
 if ($serviceList->succeeds()) {
     echo "Cool, we got a list of payment modules that we have access to and support the SALE intent:";
-    
+
     print_r($serviceList);
     exit;
 } else {
     $errorCode = $serviceList->getErrorCode();
     $errorMsg  = $serviceList->getErrorMessage();
-    
+
     echo "Aww! Got error code {$errorCode} with message {$errorMsg}.";
 }
 ```
@@ -211,12 +209,12 @@ Creating, retreiving, updating, processing and cancelling of transactions are de
 
 #### Fetching a transaction
 ```php
-$transaction = $openAPI->transactions()->find('TRANSACTION_ID_HERE');
+$transaction = $api->transactions()->find('TRANSACTION_ID_HERE');
 ```
 
 #### Creating a SALE transaction
 ```php
-$transaction = $openAPI->transactions()
+$transaction = $api->transactions()
                        ->new()
                        ->withReference('MyRef')
                        ->withDescription('This is my transaction')
@@ -234,7 +232,7 @@ $transaction = $openAPI->transactions()
 
 #### Creating a SUBSCRIPTION transaction
 ```php
-$transaction = $openAPI->transactions()
+$transaction = $api->transactions()
                        ->new()
                        ->withReference('MyRef')
                        ->withDescription('This is my transaction')
@@ -255,7 +253,7 @@ $transaction = $openAPI->transactions()
 
 #### Creating a DONATION transaction
 ```php
-$transaction = $openAPI->transactions()
+$transaction = $api->transactions()
                        ->new()
                        ->withReference('MyRef')
                        ->withDescription('This is my transaction')
@@ -271,7 +269,7 @@ $transaction = $openAPI->transactions()
 #### Updating a transaction's instrument
 See the Transaction Reference Object on the AddPay Developer Documentation for a full list of fields that may be updated.
 ```php
-$transaction = $openAPI->transactions()
+$transaction = $api->transactions()
                        ->withId('TRANSACTION_ID_HERE')
                        ->withInstrumentType('CARD')
                        ->withInstrumentNumber('4242424242424242')
@@ -284,7 +282,7 @@ $transaction = $openAPI->transactions()
 #### Updating a transaction's intitaites_at date
 See the Transaction Reference Object on the AddPay Developer Documentation for a full list of fields that may be updated.
 ```php
-$transaction = $openAPI->transactions()
+$transaction = $api->transactions()
                        ->withId('TRANSACTION_ID_HERE')
                        ->withInitiatesAt('2050-01-01')
                        ->update();
@@ -293,14 +291,14 @@ $transaction = $openAPI->transactions()
 #### Processing a transaction
 Processing a transaction has several steps. Please see the Self-Hosted Payment Page section of the AddPay Developer Documentation if you processing through your own payment page, otherwise see the AddPay-Hosted Payment Page section.
 ```php
-$transaction = $openAPI->transactions()
+$transaction = $api->transactions()
                        ->withId('TRANSACTION_ID_HERE')
                        ->process();
 ```
 
 #### Cancelling a transaction
 ```php
-$transaction = $openAPI->transactions()
+$transaction = $api->transactions()
                        ->withId('TRANSACTION_ID_HERE')
                        ->cancel();
 ```
