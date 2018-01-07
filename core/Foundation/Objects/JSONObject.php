@@ -175,11 +175,6 @@ class JSONObject
         return $this->resource['status_reason'] ?? '';
     }
 
-    public function getAmountCurrencyCode()
-    {
-        return $this->resource['amount']['currency_code'] ?? '';
-    }
-
     public function getInitiatesAt()
     {
         return $this->resource['initiates_at'] ?? '';
