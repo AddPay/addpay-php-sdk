@@ -15,7 +15,7 @@ A PHP package to assist in developing applications communicating with the AddPay
 - [Samples](https://github.com/stephenlake/addpay-php/wiki/Samples)
 
 ## Contributing & Suggestions
-[Create a pull reqest](https://github.com/stephenlake/addpay-php/pulls) at any point. Do not suggest an addition or make a request for change in writing, just write the code and [submit a pull request](https://github.com/stephenlake/addpay-php/pulls), if it improve the package it will be merged. I will ignore any messages doing otherwise.
+[Create a pull request](https://github.com/stephenlake/addpay-php/pulls) at any point. Do not suggest an addition or make a request for change in writing, just write the code and [submit a pull request](https://github.com/stephenlake/addpay-php/pulls), if it improve the package it will be merged. I will ignore any messages doing otherwise.
 
 ## Todo Later
 - Idiot-proofing:
