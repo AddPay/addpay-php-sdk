@@ -169,4 +169,29 @@ class JSONObject
 
         return $this;
     }
+
+    public function getStatusReason()
+    {
+        return $this->resource['status_reason'] ?? '';
+    }
+
+    public function getAmountCurrencyCode()
+    {
+        return $this->resource['amount']['currency_code'] ?? '';
+    }
+
+    public function getInitiatesAt()
+    {
+        return $this->resource['initiates_at'] ?? '';
+    }
+
+    public function getCompletedAt()
+    {
+        return $this->resource['completed_at'] ?? '';
+    }
+
+    public function getCallToAction()
+    {
+        return $this->resource['call_to_action'] ?? '';
+    }
 }
