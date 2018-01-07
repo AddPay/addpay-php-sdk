@@ -14,6 +14,9 @@ A PHP package to assist in developing applications communicating with the AddPay
 - [Different API's](https://github.com/stephenlake/addpay-php/wiki/Different-API's)
 - [Samples](https://github.com/stephenlake/addpay-php/wiki/Samples)
 
+## Contributing & Suggestions
+[Create a pull reqest](https://github.com/stephenlake/addpay-php/pulls) at any point. Do not suggest an addition or make a request for change in writing, just do it and [submit a pull request](https://github.com/stephenlake/addpay-php/pulls). I will ignore any messages doing otherwise.
+
 ## Todo Later
 - Idiot-proofing:
   - Add magic getters to prevent exceptions being thrown on null value getters
@@ -24,5 +27,4 @@ A PHP package to assist in developing applications communicating with the AddPay
 - Add Public Meta API
 - Add Private API
 
-## Contributing
-[Create a pull reqest](https://github.com/stephenlake/addpay-php/pulls) at any point. Do not suggest an addition or make a request for change in writing, just do it and [submit a pull request](https://github.com/stephenlake/addpay-php/pulls). I will ignore any messages doing otherwise.
+
