@@ -15,6 +15,9 @@ A PHP package to assist in developing applications communicating with the AddPay
 - [Samples](https://github.com/stephenlake/addpay-php/wiki/Samples)
 
 ## Todo Later
+- Improve idiot-proofing:
+  - Add magic getter
+  - Replace standard exceptions with custom exceptions to provide better idiot-proof error messages
 - Add caching layers
 - Add Public Meta API
 - Add Private API
