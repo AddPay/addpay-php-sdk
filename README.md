@@ -9,7 +9,7 @@ A PHP package to assist in developing applications communicating with the AddPay
 
 ### [Wiki & Samples](https://github.com/stephenlake/addpay-php/wiki)
 
-### Best Developer Statement 2018:
+### Best "Developer" Statement 2018:
 > You should define all the available methods. I don't want to deal with low-level code.
 
 GET, PUT, POST, PATCH, DELETE. Do you even know what RESTFUL API is?!
