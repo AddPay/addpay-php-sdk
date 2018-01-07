@@ -185,6 +185,16 @@ class JSONObject
         return $this->resource['completed_at'] ?? '';
     }
 
+    public function getReturnUrl()
+    {
+        return $this->resource['return_url'] ?? '';
+    }
+
+    public function getNotifyUrl()
+    {
+        return $this->resource['notify_url'] ?? '';
+    }
+
     public function getCallToAction()
     {
         return $this->resource['call_to_action'] ?? '';
