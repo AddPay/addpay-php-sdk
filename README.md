@@ -1,4 +1,5 @@
 # AddPay PHP
+## For Dummies
 ![Build Status](https://travis-ci.org/dwyl/esta.svg?branch=master)
 ![codecov.io Code Coverage](https://img.shields.io/codecov/c/github/dwyl/hapi-auth-jwt2.svg?maxAge=2592000)
 ![Code Climate](https://codeclimate.com/github/dwyl/esta/badges/gpa.svg)
