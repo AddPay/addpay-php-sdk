@@ -25,4 +25,4 @@ A PHP package to assist in developing applications communicating with the AddPay
 - Add Private API
 
 ## Contributing
-Create a pull reqest at any point. Do not suggest an addition or make a request for change in writing, just do it and submit a pull request. I will ignore any messages doing otherwise.
+[Create a pull reqest](https://github.com/stephenlake/addpay-php/pulls) at any point. Do not suggest an addition or make a request for change in writing, just do it and [submit a pull request](https://github.com/stephenlake/addpay-php/pulls). I will ignore any messages doing otherwise.
