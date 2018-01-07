@@ -96,12 +96,11 @@ class JSONObject
             return $this;
         } elseif ((substr($name, 0, 3) == 'get')) {
             $arr = preg_split('/(?=[A-Z])/', substr($name, 3));
+            $arr = array_filter($arr, function ($item) {
+                return strlen($item);
+            });
 
-            $spair = strtolower(implode('.', $arr));
-
-            if (substr($spair, 0, 1) == '.') {
-                $spair = substr($spair, 1);
-            }
+            $spair = strtolower(implode('', $arr));
 
             $ritit = new \RecursiveIteratorIterator(new \RecursiveArrayIterator($this->resource));
 
@@ -109,14 +108,19 @@ class JSONObject
 
             foreach ($ritit as $leafValue) {
                 $keys = array();
+
                 foreach (range(0, $ritit->getDepth()) as $depth) {
                     $keys[] = $ritit->getSubIterator($depth)->key();
+
+                    $pair = strtolower(implode('', $keys));
+
+                    if ($pair == $spair) {
+                        $result = $ritit->getSubIterator($depth)->current();
+                        break;
+                    }
                 }
 
-                $pair = strtolower(implode('.', $keys));
-
-                if ($pair == $spair) {
-                    $result = $leafValue;
+                if (!is_null($result)) {
                     break;
                 }
             }
@@ -126,7 +130,7 @@ class JSONObject
             if ($this->protocol) {
                 return $this->protocol->{$name}(...$args);
             } else {
-                throw new \Exception("No such function '{$name}'. Read the documentation.");
+                throw new \Exception("You're doing it wrong. Read the documentation.");
             }
         }
     }

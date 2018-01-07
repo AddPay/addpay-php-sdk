@@ -28,8 +28,11 @@ require_once('TestMagicSetters.php');
 |
 */
 
-// Ensure that we receive the expected result
+// Test that we receive the expected result
 echo $t->getAmazingTestingSkills();
+
+// Test that we receive the object
+print_r($t->getAmazing());
 
 // Test that we don't receive an exception when calling a non-existent field
 echo $t->getSomeRandomFieldThatDoesntActuallyExistHere();
