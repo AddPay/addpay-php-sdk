@@ -29,7 +29,7 @@ $call = $api->transactions()
 
 if ($call->succeeds()) {
     if ($call->statusIs('FAILED')) {
-        echo "Dang it! The transaction failed with reason: {$call->getStatusReason()}";
+        echo "Dang it! Failed with reason: {$call->getStatusReason()}";
     }
 } else {
     $errorCode = $call->getErrorCode();

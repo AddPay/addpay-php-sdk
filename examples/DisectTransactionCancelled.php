@@ -29,7 +29,7 @@ $call = $api->transactions()
 
 if ($call->succeeds()) {
     if ($call->statusIs('CANCELLED')) {
-        echo "The transaction is cancelled. Read the API documentation on how to handle this.";
+        echo "is cancelled. Read the API documentation on how to handle this.";
     }
 } else {
     $errorCode = $call->getErrorCode();

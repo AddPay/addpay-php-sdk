@@ -29,7 +29,7 @@ $call = $api->transactions()
 
 if ($call->succeeds()) {
     if ($call->statusIs('AVSSUBMITTED')) {
-        echo "Fair enough! The transaction account verification service has been submitted, waiting for result.";
+        echo "Fair enough! account verification service has been submitted, waiting for result.";
     }
 } else {
     $errorCode = $call->getErrorCode();

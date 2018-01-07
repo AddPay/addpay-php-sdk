@@ -29,7 +29,7 @@ $call = $api->transactions()
 
 if ($call->succeeds()) {
 
-    echo "The transaction Description is: {$call->getDescription()}";
+    echo "Description is: {$call->getDescription()}";
 
 
 } else {

@@ -29,7 +29,7 @@ $call = $api->transactions()
 
 if ($call->succeeds()) {
 
-    echo "The transaction Customer Email is: {$call->getCustomerEmail()}";
+    echo "Customer Email is: {$call->getCustomerEmail()}";
 
 } else {
     $errorCode = $call->getErrorCode();

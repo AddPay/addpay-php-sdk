@@ -29,7 +29,7 @@ $call = $api->transactions()
 
 if ($call->succeeds()) {
     if ($call->statusIs('AVSFAILED')) {
-        echo "Dang it! The transaction account verification service failed with reason: {$call->getStatusReason()}";
+        echo "Dang it! account verification service failed with reason: {$call->getStatusReason()}";
     }
 } else {
     $errorCode = $call->getErrorCode();

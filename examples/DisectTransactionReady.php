@@ -29,7 +29,7 @@ $call = $api->transactions()
 
 if ($call->succeeds()) {
     if ($call->statusIs('READY')) {
-        echo "The transaction is ready. Read the API documentation on how to handle this.";
+        echo "is ready. Read the API documentation on how to handle this.";
     }
 } else {
     $errorCode = $call->getErrorCode();

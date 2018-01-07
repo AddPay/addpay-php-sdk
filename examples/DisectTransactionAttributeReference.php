@@ -29,7 +29,7 @@ $call = $api->transactions()
 
 if ($call->succeeds()) {
 
-    echo "The transaction Reference is: {$call->getReference()}";
+    echo "Reference is: {$call->getReference()}";
 
 } else {
     $errorCode = $call->getErrorCode();

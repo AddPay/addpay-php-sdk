@@ -29,7 +29,7 @@ $call = $api->transactions()
 
 if ($call->succeeds()) {
 
-    echo "The transaction Direct url is: {$call->getDirect()}";
+    echo "Direct url is: {$call->getDirect()}";
 
 } else {
     $errorCode = $call->getErrorCode();

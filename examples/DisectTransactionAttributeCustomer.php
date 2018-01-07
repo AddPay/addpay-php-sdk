@@ -29,7 +29,7 @@ $call = $api->transactions()
 
 if ($call->succeeds()) {
 
-    echo "The transaction Customer Object is:";
+    echo "Customer Object is:";
     print_r($call->getCustomer());
 
 } else {

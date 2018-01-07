@@ -29,7 +29,7 @@ $call = $api->transactions()
 
 if ($call->succeeds()) {
 
-    echo "The transaction Completed At date is: {$call->getCompletedAt()}";
+    echo "Completed At date is: {$call->getCompletedAt()}";
 
 
 } else {

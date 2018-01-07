@@ -29,7 +29,7 @@ $call = $api->transactions()
 
 if ($call->succeeds()) {
 
-    echo "The transaction ID is: {$call->getId()}";
+    echo "ID is: {$call->getId()}";
 
 
 } else {

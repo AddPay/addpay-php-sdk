@@ -29,7 +29,7 @@ $call = $api->transactions()
 
 if ($call->succeeds()) {
 
-    echo "The transaction Initiates At date is: {$call->getInitiatesAt()}";
+    echo "Initiates At date is: {$call->getInitiatesAt()}";
 
 
 } else {

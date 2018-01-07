@@ -29,7 +29,7 @@ $call = $api->transactions()
 
 if ($call->succeeds()) {
 
-    echo "The transaction Amount Currency Code is: {$call->getAmountCurrencyCode()}";
+    echo "Amount Currency Code is: {$call->getAmountCurrencyCode()}";
 
 } else {
     $errorCode = $call->getErrorCode();

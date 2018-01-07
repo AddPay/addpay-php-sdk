@@ -29,7 +29,7 @@ $call = $api->transactions()
 
 if ($call->succeeds()) {
 
-    echo "The transaction Amount Base Currency Object for the organisation currency is:";
+    echo "Amount Base Currency Object for the organisation currency is:";
     print_r($call->getAmountBaseCurrency());
 
 } else {

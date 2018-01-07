@@ -29,7 +29,7 @@ $call = $api->transactions()
 
 if ($call->succeeds()) {
 
-    echo "The transaction Status is: {$call->getServiceLabel()}";
+    echo "Status is: {$call->getServiceLabel()}";
 
 } else {
     $errorCode = $call->getErrorCode();

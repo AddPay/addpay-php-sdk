@@ -29,7 +29,7 @@ $call = $api->transactions()
 
 if ($call->succeeds()) {
 
-    echo "The transaction Service Object is:";
+    echo "Service Object is:";
     print_r($call->getService());
 
 } else {

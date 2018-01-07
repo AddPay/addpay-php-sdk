@@ -29,7 +29,7 @@ $call = $api->transactions()
 
 if ($call->succeeds()) {
 
-    echo "The transaction Amount Object is:";
+    echo "Amount Object is:";
     print_r($call->getAmount());
 
 } else {

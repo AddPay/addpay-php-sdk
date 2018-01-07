@@ -29,7 +29,7 @@ $call = $api->transactions()
 
 if ($call->succeeds()) {
     if ($call->statusIs('AVSPENDING')) {
-        echo "Fair enough! The transaction account verification service submission is pending.";
+        echo "Fair enough! account verification service submission is pending.";
     }
 } else {
     $errorCode = $call->getErrorCode();

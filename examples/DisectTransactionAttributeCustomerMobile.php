@@ -29,7 +29,7 @@ $call = $api->transactions()
 
 if ($call->succeeds()) {
 
-    echo "The transaction Customer Mobile is: {$call->getCustomerMobile()}";
+    echo "Customer Mobile is: {$call->getCustomerMobile()}";
 
 } else {
     $errorCode = $call->getErrorCode();
