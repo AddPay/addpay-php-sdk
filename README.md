@@ -12,7 +12,7 @@ A PHP package to assist in developing applications communicating with the AddPay
 
 GET, PUT, POST, PATCH, DELETE. Do you even know what RESTFUL API is?! :trollface:
 
-On a serious note, here are all the methods for those who don't get the joke:
+_On a serious note, here are all the methods for those who don't get the joke_:
 [All Methods](https://github.com/stephenlake/addpay-php/blob/master/core/Foundation/Protocol/BaseProtocol.php)
 
 ### [Wiki & Samples Here](https://github.com/stephenlake/addpay-php/wiki)
