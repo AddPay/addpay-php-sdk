@@ -26,5 +26,6 @@ A PHP package to assist in developing applications communicating with the AddPay
   - Return services from cache-store with low ttl in scenarios where a user might be oblivious to throttling
 - Add Public Meta API
 - Add Private API
+- PHPDoc
 
 
