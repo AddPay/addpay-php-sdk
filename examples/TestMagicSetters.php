@@ -1,6 +1,6 @@
 <?php
 
-require_once(__DIR__ . '/../../core/AddPayOpenAPI.php');
+require_once(__DIR__ . '/../core/AddPayOpenAPI.php');
 
 /*
 |--------------------------------------------------------------------------
