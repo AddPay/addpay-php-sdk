@@ -3,7 +3,7 @@ A PHP package to assist in developing applications communicating with the AddPay
 
 ## Index
 - [Questions & Answers](https://github.com/stephenlake/addpay-php/wiki/Questions-&-Answers) - Please read this before asking questions
-- [Missing Methods? Nope.](https://github.com/stephenlake/addpay-php/wiki/Missing-Methods%3F-Nope.) - Magic Methods
+- [Missing Methods? Nope, Magic Methods.](https://github.com/stephenlake/addpay-php/wiki/Missing-Methods%3F-Nope.)
 - [Getting Started](https://github.com/stephenlake/addpay-php/wiki/Getting-Started)
 - [Different API's](https://github.com/stephenlake/addpay-php/wiki/Different-API's)
 - [Samples](https://github.com/stephenlake/addpay-php/wiki/Samples)
