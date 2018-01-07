@@ -15,7 +15,7 @@ GET, PUT, POST, PATCH, DELETE. Do you even know what RESTFUL API is?! :trollface
 On a serious note, here are all the methods for those who don't get the joke:
 [All Methods](https://github.com/stephenlake/addpay-php/blob/master/core/Foundation/Protocol/BaseProtocol.php)
 
-If you're truly this oblivious to the [API documentation](https://www.addpay.co.za/developers) and still do not understand how this works, take a look at the wiki and the section describing the API.
+If you're truly this oblivious to the [API documentation](https://www.addpay.co.za/developers) and still do not understand how this works, take a look at [this wiki page spoon feeding information on JSON API's](https://github.com/stephenlake/addpay-php/wiki/The-methods!-Where-are-they%3F!).
 
 ### [Wiki & Samples Here](https://github.com/stephenlake/addpay-php/wiki)
 
