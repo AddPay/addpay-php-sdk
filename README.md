@@ -24,12 +24,12 @@ If you're truly this oblivious to the [API documentation](https://www.addpay.co.
 
 ## Changelog
 - 2018/01/06
- - Created package
- - Added Examples
+  - Created package
+  - Added Examples
 - 2018/01/07
- - Added YouTube video on REST JSON API's to Wiki for those who refuse to read
- - Added magic getters alongside magic setters
- - Removed native PHP error exceptions to prevent morons from thinking the package is broken meanwhile they're using it wrong. Now you won't see any errors on calling `getAnthingHere()`, but instead receive a null value where applicable.
+  - Added YouTube video on REST JSON API's to Wiki for those who refuse to read
+  - Added magic getters alongside magic setters
+  - Removed native PHP error exceptions to prevent morons from thinking the package is broken meanwhile they're using it wrong. Now you won't see any errors on calling `getAnthingHere()`, but instead receive a null value where applicable.
 
 ## Disclaimer
 This package and all documentation was developed by Stephen Lake as a **personal** project to assist new/beginner developers in getting on with the AddPay API. This is an **unofficial** package and therefore **_support is limited and provided as a courtesy_**.
