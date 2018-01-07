@@ -124,8 +124,6 @@ class BaseProtocol
 
         $this->resource = new JSONObject($response->json(), $this);
 
-        //$this->resource = new JSONObject(array(), $this);
-
         if ($callback !== false) {
             $result = $callback($this, $this->resource->resource);
 
