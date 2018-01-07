@@ -23,10 +23,13 @@ If you're truly this oblivious to the [API documentation](https://www.addpay.co.
 [Create a pull request](https://github.com/stephenlake/addpay-php/pulls) at any point. **Do not suggest an addition or make a request for change in writing, just write the code and [submit a pull request](https://github.com/stephenlake/addpay-php/pulls)**, if it improves the package without generating any breaking changes and adds efficiency, then **it will be merged**. _I will ignore any demands/requests for changes without any  suggested code replacement and/or additions._
 
 ## Changelog
-2018/01/07
-- Added YouTube video on REST JSON API's to Wiki for those who refuse to read
-- Added magic getters alongside magic setters
-- Removed native PHP error exceptions to prevent morons from thinking the package is broken meanwhile they're using it wrong. Now you won't see any errors on calling `getAnthingHere()`, but instead receive a null value where applicable.
+- 2018/01/06
+ - Created package
+ - Added Examples
+- 2018/01/07
+ - Added YouTube video on REST JSON API's to Wiki for those who refuse to read
+ - Added magic getters alongside magic setters
+ - Removed native PHP error exceptions to prevent morons from thinking the package is broken meanwhile they're using it wrong. Now you won't see any errors on calling `getAnthingHere()`, but instead receive a null value where applicable.
 
 ## Disclaimer
 This package and all documentation was developed by Stephen Lake as a **personal** project to assist new/beginner developers in getting on with the AddPay API. This is an **unofficial** package and therefore **_support is limited and provided as a courtesy_**.
