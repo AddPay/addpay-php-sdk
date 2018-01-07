@@ -23,3 +23,6 @@ A PHP package to assist in developing applications communicating with the AddPay
   - Return services from cache-store with low ttl in scenarios where a user might be oblivious to throttling
 - Add Public Meta API
 - Add Private API
+
+## Contributing
+Create a pull reqest at any point. Do not suggest an addition or make a request for change in writing, just do it and submit a pull request. I will ignore any messages doing otherwise.
