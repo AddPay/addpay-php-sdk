@@ -25,7 +25,7 @@ require_once(__DIR__ . '/../core/AddPayOpenAPI.php');
 */
 
 $call = $api->transactions()
-            ->withId('36b13892-c790-4b46-8e4e-49d5dc672104')
+            ->withId('TRANSACTION_ID_HERE')
             ->process();
 
 if ($call->succeeds()) {
