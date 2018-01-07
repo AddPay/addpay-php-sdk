@@ -102,7 +102,7 @@ class JSONObject
 
             $spair = strtolower(implode('', $arr));
 
-            $ritit = new \RecursiveIteratorIterator(new \RecursiveArrayIterator($this->resource));
+            $ritit = new \RecursiveIteratorIterator(new \RecursiveArrayIterator(isset($this->resource['data']) ? $this->resource['data'] : $this->resource));
 
             $result = null;
 
