@@ -24,7 +24,7 @@ If you're truly this oblivious to the [API documentation](https://www.addpay.co.
 
 ## Changelog
 2018/01/07
-- Added YouTube video to Wiki for those who can't read
+- Added YouTube video on REST JSON API's to Wiki for those who refuse to read
 - Idiot-proofing:
   - Added magic getters alongside magic setters
   - Removed native PHP error exceptions to prevent morons from thinking the package is broken meanwhile they're using it wrong. Now you won't see any errors on calling `getAnthingHere()`, but instead receive a null value where applicable.
