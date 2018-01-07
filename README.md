@@ -18,6 +18,8 @@ A PHP package to assist in developing applications communicating with the AddPay
 - Idiot-proofing:
   - Add magic getters to prevent exceptions being thrown on null value getters
   - Replace standard exceptions with custom exceptions to provide better idiot-proof error messages
-- Add caching layers
+- Add caching layers:
+  - Return immediate transaction object if the ID has already been instantiated
+  - Return services from cache-store with low ttl in scenarios where a user might be oblivious to throttling
 - Add Public Meta API
 - Add Private API
