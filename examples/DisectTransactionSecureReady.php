@@ -28,8 +28,8 @@ $call = $api->transactions()
             ->find('TRANSACTION_ID_HERE');
 
 if ($call->succeeds()) {
-    if ($call->statusIs('CANCELLED')) {
-        echo "The transaction is cancelled. Read the API documentation on how to handle this.";
+    if ($call->statusIs('SECUREREADY')) {
+        echo "Transaction requires secure authentication validation, process to attempt.";
     }
 } else {
     $errorCode = $call->getErrorCode();

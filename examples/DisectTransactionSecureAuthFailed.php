@@ -28,8 +28,8 @@ $call = $api->transactions()
             ->find('TRANSACTION_ID_HERE');
 
 if ($call->succeeds()) {
-    if ($call->statusIs('CANCELLED')) {
-        echo "The transaction is cancelled. Read the API documentation on how to handle this.";
+    if ($call->statusIs('SECUREAUTHFAILED')) {
+        echo "Transaction authentication failed, can be retried. Read the docs.";
     }
 } else {
     $errorCode = $call->getErrorCode();

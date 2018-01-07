@@ -28,8 +28,8 @@ $call = $api->transactions()
             ->find('TRANSACTION_ID_HERE');
 
 if ($call->succeeds()) {
-    if ($call->statusIs('CANCELLED')) {
-        echo "The transaction is cancelled. Read the API documentation on how to handle this.";
+    if ($call->statusIs('AVSSUBMITTED')) {
+        echo "Fair enough! The transaction account verification service has been submitted, waiting for result.";
     }
 } else {
     $errorCode = $call->getErrorCode();
