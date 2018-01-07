@@ -22,6 +22,10 @@ If you're truly this oblivious to the [API documentation](https://www.addpay.co.
 ## Contributing & Suggestions
 [Create a pull request](https://github.com/stephenlake/addpay-php/pulls) at any point. **Do not suggest an addition or make a request for change in writing, just write the code and [submit a pull request](https://github.com/stephenlake/addpay-php/pulls)**, if it improves the package without generating any breaking changes and adds efficiency, then **it will be merged**. _I will ignore any demands/requests for changes without any  suggested code replacement and/or additions._
 
+## Changelog
+2018/01/07
+- Added YouTube video to Wiki for those who can't read
+
 ## Disclaimer
 This package and all documentation was developed by Stephen Lake as a **personal** project to assist new/beginner developers in getting on with the AddPay API. This is an **unofficial** package and therefore **_support is limited and provided as a courtesy_**.
 
