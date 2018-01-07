@@ -8,6 +8,7 @@
 A PHP package to assist in developing applications communicating with the AddPay API. A well-extended package already exists elsewhere, but for beginner developers that don't know how to write object orientated code, have no clue what a RESTFUL API is or don't know how to use native PHP functions to build JSON payloads, this is for you.
 
 ### Best "Developer" Statement 2018:
+#### If you're this oblivious, please read the API documentation before starting.
 > You should define all the available methods. I don't want to deal with low-level code.
 
 GET, PUT, POST, PATCH, DELETE. Do you even know what RESTFUL API is?! :trollface:
