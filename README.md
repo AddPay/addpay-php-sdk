@@ -26,6 +26,7 @@ If you're truly this oblivious to the [API documentation](https://www.addpay.co.
 - 2018/01/06
   - Created package
   - Added Examples
+  - Added Wiki, Disclaimer, Contributions Header
 - 2018/01/07
   - Added YouTube video on REST JSON API's to Wiki for those who refuse to read
   - Added magic getters alongside magic setters
