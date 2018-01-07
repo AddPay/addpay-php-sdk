@@ -25,14 +25,16 @@ If you're truly this oblivious to the [API documentation](https://www.addpay.co.
 ## Changelog
 2018/01/07
 - Added YouTube video to Wiki for those who can't read
+- Idiot-proofing:
+  - Added magic getters alongside magic setters
+  - Removed native PHP error exceptions to prevent morons from thinking the package is broken meanwhile they're using it wrong. Now you won't see any errors on calling `getAnthingHere()`, but instead receive a null value where applicable.
 
 ## Disclaimer
 This package and all documentation was developed by Stephen Lake as a **personal** project to assist new/beginner developers in getting on with the AddPay API. This is an **unofficial** package and therefore **_support is limited and provided as a courtesy_**.
 
 ## Todo Later
 - Idiot-proofing:
-  - Add magic getters to prevent exceptions being thrown on null value getters
-  - Replace standard exceptions with custom exceptions to provide better idiot-proof error messages
+  - Add magic getters wiki documentation
 - Add caching layers:
   - Return immediate transaction object if the ID has already been instantiated
   - Return services from cache-store with low ttl in scenarios where a user might be oblivious to throttling
