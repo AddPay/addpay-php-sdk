@@ -279,7 +279,7 @@ $transaction = $api->transactions()
                        ->update();
 ```
 
-#### Updating a transaction's intitaites_at date
+#### Updating a transaction's intitiates_at date
 See the Transaction Reference Object on the AddPay Developer Documentation for a full list of fields that may be updated.
 ```php
 $transaction = $api->transactions()
