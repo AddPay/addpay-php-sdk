@@ -9,10 +9,10 @@ A PHP package to assist in developing applications communicating with the AddPay
 
 ### [Wiki & Samples](https://github.com/stephenlake/addpay-php/wiki)
 
-### Best PHP Statement 2018:
-> You should define all the available methods.
+### Best Developer Statement 2018:
+> You should define all the available methods. I don't want to deal with low-level code.
 
-Okay, GET, PUT, POST, PATCH, DELETE.Do you even know what JSON API is?!
+GET, PUT, POST, PATCH, DELETE. Do you even know what JSON API is?!
 
 On a serious note, here are all the methods for those who don't get the joke:
 [All Methods](https://github.com/stephenlake/addpay-php/blob/master/core/Foundation/Protocol/BaseProtocol.php)
