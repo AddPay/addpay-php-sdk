@@ -13,3 +13,8 @@ A PHP package to assist in developing applications communicating with the AddPay
 - [Getting Started](https://github.com/stephenlake/addpay-php/wiki/Getting-Started)
 - [Different API's](https://github.com/stephenlake/addpay-php/wiki/Different-API's)
 - [Samples](https://github.com/stephenlake/addpay-php/wiki/Samples)
+
+## Todo Later
+- Add caching layers
+- Add Public Meta API
+- Add Private API
