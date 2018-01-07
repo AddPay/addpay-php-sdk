@@ -13,31 +13,66 @@ class JSONObject
         $this->protocol = $protocol;
     }
 
+    /**
+     * Returns true if the expected JSON result is found.
+     *
+     * @return boolean
+     */
     public function gotExpectedResult()
     {
         return (isset($this->resource['meta']) && substr($this->resource['meta']['code'], 0, 1) == '2');
     }
 
+    /**
+     * An alias for gotExpectedResult().
+     *
+     * @return boolean
+     */
     public function succeeds()
     {
         return $this->gotExpectedResult();
     }
 
+    /**
+     * Returns true if the expected JSON result is not found.
+     *
+     * @return boolean
+     */
     public function fails()
     {
         return !$this->succeeds();
     }
 
+    /**
+     * Retreive the HTTP response code.
+     *
+     * @return int
+     */
     public function getErrorCode()
     {
         return $this->resource['meta']['code'] ?? 500;
     }
 
+    /**
+     * Retreive the HTTP payload message.
+     *
+     * @return string
+     */
     public function getErrorMessage()
     {
         return $this->resource['meta']['message'] ?? 'Internal exception';
     }
 
+    /**
+     * Magic method that catches undefined functions
+     * looks for custom magic method and returns the
+     * result.
+     *
+     * An exception is thrown is the function does not exist
+     * and it is not a magic method.
+     *
+     * @return mixed
+     */
     public function __call($name, $args)
     {
         if (substr($name, 0, 4) == 'with') {
@@ -59,6 +94,34 @@ class JSONObject
             unset($temp);
 
             return $this;
+        } elseif ((substr($name, 0, 3) == 'get')) {
+            $arr = preg_split('/(?=[A-Z])/', substr($name, 3));
+
+            $spair = strtolower(implode('.', $arr));
+
+            if (substr($spair, 0, 1) == '.') {
+                $spair = substr($spair, 1);
+            }
+
+            $ritit = new \RecursiveIteratorIterator(new \RecursiveArrayIterator($this->resource));
+
+            $result = null;
+
+            foreach ($ritit as $leafValue) {
+                $keys = array();
+                foreach (range(0, $ritit->getDepth()) as $depth) {
+                    $keys[] = $ritit->getSubIterator($depth)->key();
+                }
+
+                $pair = strtolower(implode('.', $keys));
+
+                if ($pair == $spair) {
+                    $result = $leafValue;
+                    break;
+                }
+            }
+
+            return $result;
         } else {
             if ($this->protocol) {
                 return $this->protocol->{$name}(...$args);
