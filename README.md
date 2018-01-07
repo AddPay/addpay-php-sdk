@@ -25,10 +25,11 @@ On a serious note, here are all the methods for those who don't get the joke:
   - Created package
   - Added Examples
   - Added Wiki, Disclaimer, Contributions Header
+  
 - 2018/01/07
   - Added YouTube video on REST JSON API's to Wiki for those who refuse to read
   - Added magic getters alongside magic setters
-  - Removed native PHP error exceptions to prevent morons from thinking the package is broken meanwhile they're using it wrong. Now you won't see any errors on calling `getAnthingHere()`, but instead receive a null value where applicable.
+  - Removed native PHP error exceptions to prevent newbies from thinking the package is broken meanwhile they're using it wrong. Now you won't see any errors on calling `getAnthingHere()`, but instead receive a null value where applicable.
 
 ## Disclaimer
 This package and all documentation was developed by Stephen Lake as a **personal** project to assist new/beginner developers in getting on with the AddPay API. This is an **unofficial** package and therefore **_support is limited and provided as a courtesy_**.
