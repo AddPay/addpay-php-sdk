@@ -15,9 +15,9 @@ GET, PUT, POST, PATCH, DELETE. Do you even know what RESTFUL API is?! :trollface
 On a serious note, here are all the methods for those who don't get the joke:
 [All Methods](https://github.com/stephenlake/addpay-php/blob/master/core/Foundation/Protocol/BaseProtocol.php)
 
-If you're truly this oblivious to the [API documentation](https://www.addpay.co.za/developers) and still do not understand how this works, take a look at [this wiki page spoon feeding information on JSON API's](https://github.com/stephenlake/addpay-php/wiki/The-methods!-Where-are-they%3F!).
-
 ### [Wiki & Samples Here](https://github.com/stephenlake/addpay-php/wiki)
+
+If you're truly this oblivious to the [API documentation](https://www.addpay.co.za/developers) and still do not understand how this works, take a look at [this wiki page spoon feeding information on JSON API's](https://github.com/stephenlake/addpay-php/wiki/The-methods!-Where-are-they%3F!).
 
 ## Contributing & Suggestions
 [Create a pull request](https://github.com/stephenlake/addpay-php/pulls) at any point. **Do not suggest an addition or make a request for change in writing, just write the code and [submit a pull request](https://github.com/stephenlake/addpay-php/pulls)**, if it improves the package without generating any breaking changes and adds efficiency, then **it will be merged**. _I will ignore any demands/requests for changes without any  suggested code replacement and/or additions._
