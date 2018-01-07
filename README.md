@@ -9,6 +9,11 @@ A PHP package to assist in developing applications communicating with the AddPay
 
 ### [Wiki & Samples](https://github.com/stephenlake/addpay-php/wiki)
 
+### Best PHP Statement 2018:
+> You should define all the available methods.
+Okay, GET, PUT, POST, PATCH, DELETE. On a serious note, here are all the methods for those who don't get the joke:
+[All Methods](https://github.com/stephenlake/addpay-php/blob/master/core/Foundation/Protocol/BaseProtocol.php)
+
 ## Contributing & Suggestions
 [Create a pull request](https://github.com/stephenlake/addpay-php/pulls) at any point. **Do not suggest an addition or make a request for change in writing, just write the code and [submit a pull request](https://github.com/stephenlake/addpay-php/pulls)**, if it improves the package without generating any breaking changes and adds efficiency, then **it will be merged**. _I will ignore any demands/requests for changes without any  suggested code replacement and/or additions._
 
