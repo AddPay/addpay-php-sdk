@@ -13,6 +13,7 @@ A PHP package to assist in developing applications communicating with the AddPay
 > You should define all the available methods.
 
 Okay, GET, PUT, POST, PATCH, DELETE.Do you even know what JSON API is?!
+
 On a serious note, here are all the methods for those who don't get the joke:
 [All Methods](https://github.com/stephenlake/addpay-php/blob/master/core/Foundation/Protocol/BaseProtocol.php)
 
