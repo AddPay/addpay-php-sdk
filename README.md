@@ -7,8 +7,6 @@
  
 A PHP package to assist in developing applications communicating with the AddPay API. The package already exists elsewhere, but due to someone's lack of understanding of API's, this is a replica with **spoon-feeding methods** for non-developers that don't know how to write object orientated code or use native PHP functions to build JSON payloads.
 
-### [Wiki & Samples](https://github.com/stephenlake/addpay-php/wiki)
-
 ### Best "Developer" Statement 2018:
 > You should define all the available methods. I don't want to deal with low-level code.
 
@@ -16,6 +14,8 @@ GET, PUT, POST, PATCH, DELETE. Do you even know what RESTFUL API is?!
 
 On a serious note, here are all the methods for those who don't get the joke:
 [All Methods](https://github.com/stephenlake/addpay-php/blob/master/core/Foundation/Protocol/BaseProtocol.php)
+
+### [Wiki & Samples Here](https://github.com/stephenlake/addpay-php/wiki)
 
 ## Contributing & Suggestions
 [Create a pull request](https://github.com/stephenlake/addpay-php/pulls) at any point. **Do not suggest an addition or make a request for change in writing, just write the code and [submit a pull request](https://github.com/stephenlake/addpay-php/pulls)**, if it improves the package without generating any breaking changes and adds efficiency, then **it will be merged**. _I will ignore any demands/requests for changes without any  suggested code replacement and/or additions._
