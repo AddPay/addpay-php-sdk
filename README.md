@@ -13,12 +13,7 @@ A PHP package to assist in developing applications communicating with the AddPay
 Please see the full list of examples for each action in the `examples` directory.
 
 ## Download Latest Release
-
-### Latest
-[AddPay PHP SDK v0.5](https://github.com/stephenlake/AddPay-PHP-SDK/archive/v0.5.zip)
-
-### Archive
-[AddPay PHP SDK v0.5](https://github.com/stephenlake/AddPay-PHP-SDK/archive/v0.5.zip)
+[Download AddPay PHP SDK v0.5](https://github.com/stephenlake/AddPay-PHP-SDK/archive/v0.5.zip)
 
 ## Configuration
 - Head to your developer portal or merchant console developer settings if your integration is live, find the section providing your `client_id` and `client_secret`, keep these credentials closeby.
