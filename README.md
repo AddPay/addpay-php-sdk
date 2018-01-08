@@ -4,7 +4,7 @@
 ![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg?style=flat)
 ![Maintainability](https://img.shields.io/badge/maintainability-A++-brightgreen.svg?style=flat)
 ![PHP Version](https://img.shields.io/badge/php-%3E=5.3-brightgreen.svg?style=flat)
-![Contributions Welcome](https://img.shields.io/badge/contributions-Welcome-brightgreen.svg?style=flat)
+![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)
 
 A PHP package to assist in developing applications communicating with the AddPay API.
 
