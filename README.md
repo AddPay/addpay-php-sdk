@@ -23,7 +23,7 @@ Please see the full list of examples for each action in the `examples` directory
 - Open `localhost:8080/ScriptNameHere.php` in your browser:
    - Example: `localhost:8080/TransactionUpdate.php`
 
-### Windoze <img src="https://dotnetco.de/wp-content/uploads/2016/12/windows-icon256.png" width="24">
+### Windows <img src="https://dotnetco.de/wp-content/uploads/2016/12/windows-icon256.png" width="24">
 **Option 1 - Through the Command Line**
 - Start a command prompt (Start button > Run > cmd.exe)
 - In the window that appears, type the full path to the PHP executable (php.exe) followed by the full path to the script you wish to run:
