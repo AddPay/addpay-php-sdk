@@ -22,6 +22,30 @@ A PHP package to assist in developing applications communicating with the AddPay
 - If your integration is live, set `live` to `true`
 - It is important to ensure the structure of the file is unchanged, the quotes are important!
 
+### Before Diving In
+ The function 'dump()' is just an alias to echo out an object/string for
+ less code clutter and better readability, if you are curious, go to the
+ file at core/Foundation/Helpers/Helpers.php
+
+ The get() function is a magic method that allows you to call *any* string
+ after the word 'get' and it will return the value of the string provided
+ within the object it is being called on, this means that even if there
+ are changes to an object, the magic method can still retrieve the added
+ fields without any changes to this SDK. The same rule applies to the set
+ method.
+
+ Example: `$call->getYourFirstname('John')`
+
+ The `getYourFirstname()` function does not exist, but will succeed.
+
+ The set() function is a magic method that allows you to set *any* string
+ after the word 'set' and it will set the value of the string provided
+ within the object it is being called on.
+
+ Example: `$call->setYourLastname('Doe')`
+
+ The `setYourLastname()` function does not exist, but will succeed.
+
 ### Running/Using Examples
 
 ### \* <img src="http://icons.iconarchive.com/icons/icons8/windows-8/256/Systems-Linux-icon.png" width="24"> Linux & Mac 
