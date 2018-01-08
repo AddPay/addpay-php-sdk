@@ -23,7 +23,7 @@ A PHP package to assist in developing applications communicating with the AddPay
 - It is important to ensure the structure of the file is unchanged, the quotes are important!
 
 ### Before Diving In
-A number of helper functions are imported from an external Laravel package to assist in development readability as well as faster setups, for a list and definition of these helpers, please checkout the [Laravel Helpers Readme](https://github.com/rappasoft/laravel-helpers). Note: This package does NOT require Laravel, the helpers are imported. The most commonly used method from these imports is `dd()` which is simply a shorthand function for a data dump that pretty prints information in a browser.
+A number of helper functions are imported from an external Laravel package to assist in development readability as well as faster setups, for a list and definition of these helpers, please checkout the [Laravel Helpers Readme](https://github.com/rappasoft/laravel-helpers). Note: This package does NOT require Laravel, the helpers are imported. The most commonly used method from these imports is `dd()` which is simply a shorthand function for a data dump that pretty prints information in a browser so that you can read output quickly and easily.
 
 The `get()` function is my own custom magic method that allows you to call *any* string after the word 'get' and it will return the value of the string provided within the object it is being called on, this means that even if there are changes to an object, the magic method can still retrieve the added fields without any changes to this SDK. The same rule applies to the set method.
 
