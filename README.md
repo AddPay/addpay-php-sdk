@@ -15,10 +15,10 @@ Please see the full list of examples for each action in the `examples` directory
 ## Download Latest Release
 
 ### Latest
-[Download AddPay PHP SDK v0.5 Now](https://github.com/stephenlake/AddPay-PHP-SDK/archive/v0.5.zip)
+[AddPay PHP SDK v0.5](https://github.com/stephenlake/AddPay-PHP-SDK/archive/v0.5.zip)
 
 ### Archive
-[Download AddPay PHP SDK v0.5 Now](https://github.com/stephenlake/AddPay-PHP-SDK/archive/v0.5.zip)
+[AddPay PHP SDK v0.5](https://github.com/stephenlake/AddPay-PHP-SDK/archive/v0.5.zip)
 
 ## Configuration
 - Head to your developer portal or merchant console developer settings if your integration is live, find the section providing your `client_id` and `client_secret`, keep these credentials closeby.
