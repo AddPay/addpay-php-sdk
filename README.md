@@ -13,23 +13,23 @@ Please see the full list of examples for each action in the `examples` directory
 ## Using/Running the Examples
 
 ### Linux & Mac
-#### Option 1 - Through the terminal
+**Option 1 - Through the terminal**
 - Open a new terminal
 - Run the script with `php /path/to/addpay/package/examples/TransactionUpdate.php`
 
-#### Option 2 - PHP Internal Webserver
+**Option 2 - PHP Internal Webserver**
 - Open a new terminal
 - Start a webserver on port 8080 with: `php -S localhost:8080 -t /path/to/addpay/package/examples/`
 - Open `localhost:8080/ScriptNameHere.php` in your browser:
    - Example: `localhost:8080/TransactionUpdate.php`
 
 ### Windows
-#### Option 1 - Through the Command Line
+**Option 1 - Through the Command Line**
 - Start a command prompt (Start button > Run > cmd.exe)
 - In the window that appears, type the full path to the PHP executable (php.exe) followed by the full path to the script you wish to run:
    - Example: `C:\PHP\php.exe C:\path\to\addpay\package\examples\TransactionFind.php`
 
-#### Option 2 - PHP Internal Webserver
+**Option 2 - PHP Internal Webserver**
 - Start a command prompt (Start button > Run > cmd.exe)
 - Type the full path to the PHP executable (php.exe) and start the webserver in wthe root directory being the examples directory:
    - Example: `C:\PHP\php.exe -S localhost:8080 -t C:\path\to\addpay\package\examples`
