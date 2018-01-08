@@ -48,7 +48,7 @@ A PHP package to assist in developing applications communicating with the AddPay
 - Open `localhost:8080/ScriptNameHere.php` in your browser:
    - Example: `localhost:8080/TransactionFind.php`
 
----
+
 ## Bug Reporting
 Please use the [GitHub Issues](https://github.com/stephenlake/AddPay-PHP-SDK/issues) tab to report any problems you are having with the package.
 
