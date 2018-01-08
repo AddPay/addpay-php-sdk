@@ -48,16 +48,16 @@ A PHP package to assist in developing applications communicating with the AddPay
 - Open `localhost:8080/ScriptNameHere.php` in your browser:
    - Example: `localhost:8080/TransactionFind.php`
 
-### Bug Reporting
+## Bug Reporting
 Please use the [GitHub Issues](https://github.com/stephenlake/AddPay-PHP-SDK/issues) tab to report any problems you are having with the package.
 
-### Contributing & Suggestions
+## Contributing & Suggestions
 [Create a pull request](https://github.com/stephenlake/addpay-php/pulls) at any point. **Do not suggest an addition or make a request for change in writing, just write the code and [submit a pull request](https://github.com/stephenlake/addpay-php/pulls)**, if it improves the package without generating any breaking changes and adds efficiency, then **it will be merged**. _I will ignore any demands/requests for changes without any  suggested code replacement and/or additions._
 
-### Disclaimer
+## Disclaimer
 This package and all documentation was developed by Stephen Lake as a **personal** project to assist developers unfamiliar with the AddPay API in getting started quickly and efficiently. This is an **unofficial** package and therefore **_support is limited and provided as a courtesy_**.
 
-### Todo
+## Todo
 - Add magic methods documentation
 - Add caching layers:
   - Return immediate transaction object if the ID has already been instantiated
