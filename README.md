@@ -1,5 +1,6 @@
 # AddPay PHP SDK
 ![Build](https://img.shields.io/badge/build-stable-brightgreen.svg?style=flat)
+![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg?style=flat)
 ![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg?style=flat)
 ![Maintainability](https://img.shields.io/badge/maintainability-A++-brightgreen.svg?style=flat)
 ![PHP Version](https://img.shields.io/badge/php-%3E=5.3-brightgreen.svg?style=flat)
