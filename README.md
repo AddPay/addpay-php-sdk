@@ -12,6 +12,17 @@ Please see the full list of examples for each action in the `examples` directory
 
 # Running Examples
 
+## Linux & Mac
+### Option 1 - Through the terminal
+- Open a new terminal
+- Run the script with `php /path/to/addpay/package/examples/TransactionUpdate.php`
+
+### Option 2 - PHP Internal Webserver
+- Open a new terminal
+- Start a webserver on port 8080 with: `php -S localhost:8080 -t /path/to/addpay/package/examples/`
+- Open `localhost:8080/ScriptNameHere.php` in your browser:
+   - Example: `localhost:8080/TransactionUpdate.php`
+
 ## Windows
 ### Option 1 - Through the Command Line
 - Start a command prompt (Start button > Run > cmd.exe)
@@ -25,17 +36,6 @@ Please see the full list of examples for each action in the `examples` directory
 - Open `localhost:8080/ScriptNameHere.php` in your browser:
    - Example: `localhost:8080/TransactionFind.php`
 
-## Linux & Mac
-### Option 1 - Through the terminal
-- Open a new terminal
-- Run the script with `php /path/to/addpay/package/examples/TransactionUpdate.php`
-
-### Option 2 - PHP Internal Webserver
-- Open a new terminal
-- Start a webserver on port 8080 with: `php -S localhost:8080 -t /path/to/addpay/package/examples/`
-- Open `localhost:8080/ScriptNameHere.php` in your browser:
-   - Example: `localhost:8080/TransactionUpdate.php`
-   
 ## Disclaimer
 This package and all documentation was developed by Stephen Lake as a **personal** project to assist new/beginner developers in getting on with the AddPay API. This is an **unofficial** package and therefore **_support is limited and provided as a courtesy_**.
 
