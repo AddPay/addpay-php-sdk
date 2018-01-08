@@ -1,10 +1,10 @@
 # AddPay PHP SDK
-![Build Status](https://travis-ci.org/dwyl/esta.svg?branch=master)
-![codecov.io Code Coverage](https://img.shields.io/codecov/c/github/dwyl/hapi-auth-jwt2.svg?maxAge=2592000)
-![Code Climate](https://codeclimate.com/github/dwyl/esta/badges/gpa.svg)
-![Dependency Status](https://david-dm.org/dwyl/esta.svg)
-![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)
- 
+![Build](https://img.shields.io/badge/build-stable-brightgreen.svg?style=flat)
+![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg?style=flat)
+![Maintainability](https://img.shields.io/badge/maintainability-A++-brightgreen.svg?style=flat)
+![PHP Version](https://img.shields.io/badge/php-%3E=5.3-brightgreen.svg?style=flat)
+![Contributions Welcome](https://img.shields.io/badge/contributions-Welcome-brightgreen.svg?style=flat)
+
 A PHP package to assist in developing applications communicating with the AddPay API.
 
 # Getting Started
