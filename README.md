@@ -5,7 +5,7 @@
 ![Dependency Status](https://david-dm.org/dwyl/esta.svg)
 ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)
  
-A PHP package to assist in developing applications communicating with the AddPay API. A well-extended package already exists elsewhere, but for beginner developers that don't know how to write object orientated code, have no clue what a RESTFUL API is or don't know how to use native PHP functions to build JSON payloads, this is for you.
+A PHP package to assist in developing applications communicating with the AddPay API.
 
 # Examples
 Please see the full list of examples for each action in the `examples` directory.
