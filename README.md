@@ -7,10 +7,18 @@
  
 A PHP package to assist in developing applications communicating with the AddPay API.
 
-# Examples
+# Getting Started
 Please see the full list of examples for each action in the `examples` directory.
 
-## Using/Running the Examples
+## Configuration
+- Head to your developer portal or merchant console developer settings if your integration is live, find the section providing your `client_id` and `client_secret`, keep these credentials closeby.
+- Open the configuration file in this package located at `path/to/this/package/config/config.json`
+- Relace `yourclient_id` with your actual `client_id`
+- Replace `your_client_secret` with your actual `client_secret`
+- If your integration is live, set `live` to `true`
+- It is important to ensure the structure of the file is unchanged, the quotes are important!
+
+## Running/Using Examples
 
 ### \* <img src="http://icons.iconarchive.com/icons/icons8/windows-8/256/Systems-Linux-icon.png" width="24"> Linux & Mac 
 **Option 1 - Through the terminal**
