@@ -25,7 +25,7 @@ A PHP package to assist in developing applications communicating with the AddPay
 ### Before Diving In
  The `dump()` function is just an alias to echo out an object/string for
  less code clutter and better readability, if you are curious, go to the
- file at core/Foundation/Helpers/Helpers.php
+ file at [core/Foundation/Helpers/Helpers.php](https://github.com/stephenlake/AddPay-PHP-SDK/blob/master/core/Foundation/Helpers/Helpers.php)
 
  The `get()` function is a magic method that allows you to call *any* string
  after the word 'get' and it will return the value of the string provided
