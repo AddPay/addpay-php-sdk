@@ -74,15 +74,17 @@ This wil result in:
   }
 }
 ```
-**Please note** that there are some fallback methods in place to prevent unexpected results, for example, with the above information in mind, you'd expect `setCurrencyCode('USD')` to set the following object:
+**Please note** that there are some fallback methods in place to prevent unexpected results, for example, with the above information in mind, you'd expect `setAmountCurrencyCode('USD')` to set the following object:
 ```json
 {
-   "currency": {
-      "code": "USD"
+   "amount": {
+     "currency": {
+        "code": "USD"
+     }
    }
 }
 ```
-**However**, the AddPay API expects the request payload of a currency code to be a single field of `currency_code` and not an object - therefore a primary function has been defined specifically for `setCurrencyCode()` to prevent such scenarios. You can view the full list of primary defined function within the [JSONObject class](https://github.com/stephenlake/AddPay-PHP-SDK/blob/master/core/Foundation/Objects/JSONObject.php).
+**However**, the AddPay API expects the request payload of a currency code to be a single field of `currency_code` and not an object - therefore a primary function has been defined specifically for `setAmountCurrencyCode()` to prevent such scenarios. You can view the full list of primary defined function within the [JSONObject class](https://github.com/stephenlake/AddPay-PHP-SDK/blob/master/core/Foundation/Objects/JSONObject.php).
  
 ### Running/Using Examples
 
