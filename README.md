@@ -132,7 +132,7 @@ SDK Method Reference
     <tbody>
         <tr>
             <td>all()</td>
-            <td>Transactions</td>
+            <td>ANY</td>
             <td>Returns the entire transaction object.</td>
         </tr>
         <tr>
@@ -172,7 +172,7 @@ SDK Method Reference
         </tr>
         <tr>
             <td>list()</td>
-            <td>ANY</td>
+            <td>Services</td>
             <td>Submits a request to the API to retrieve a list of objects based on the invoked repository.</td>
         </tr>
         <tr>
