@@ -129,7 +129,7 @@
             <h4 v-show="!activeExampleRunning">The Result</h4>
             <p v-show="activeExampleResult == false && !activeExampleRunning">Run the code first</p>
             <h3 v-show="activeExampleResult == false && activeExampleRunning"><i class="fa fa-refresh fa-spin"></i> Running code...</h3>
-            <pre v-show="activeExampleResult" v-html="activeExampleResult"></pre>
+            <pre v-show="activeExampleResult" style="font-size: 11px;"><code v-html="activeExampleResult"></code></pre>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" @click="runExampleCode(activeExample)" :disabled="activeExampleRunning"><i class="fa fa-refresh fa-spin" v-show="activeExampleRunning"></i> {{ activeExampleRunning ? 'Loading' : 'Run Example Code' }}</button>
@@ -167,7 +167,8 @@
       foreach($files as $key => $value){
           $path = realpath($dir.DIRECTORY_SEPARATOR.$value);
 
-          if(!is_dir($path) && endsWith($path, '.php')) {
+          if(!is_dir($path)) {
+            if (endsWith($path, '.php')) {
               $result[] = [
                 "name" => str_replace('.php', '', basename($path)),
                 "category" => $execPath,
@@ -177,6 +178,7 @@
                   "content"      => file_get_contents($path),
                 ]
               ];
+            }
           } else if($value != "." && $value != "..") {
             $result = array_merge($result, echoExampleFiles($path, $execPath, $results));
           }

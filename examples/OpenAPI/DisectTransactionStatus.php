@@ -1,39 +1,63 @@
 <?php
 
-require_once(__DIR__ . '/../core/AddPayOpenAPI.php');
+require_once(__DIR__ . '/../../core/bootstrap.php');
 
-/*
-|--------------------------------------------------------------------------
-| AddPay PHP Package
-|--------------------------------------------------------------------------
-|
-| Read the API documentation at https://www.addpay.co.za/developers for more
-| information on how this method works and the parameters it accepts.
-|
-| @Author: Stephen Lake <stephen@closurecode.com>
-|
-| With regard to support of this package, no questions that have already been
-| answered in the API documentation will be answered from me. Please ensure
-| you have thoroughly read through the entire document before raising concerns.
-|
-| If you believe there is a problem with this package, please use the ISSUES
-| feature and create a new issue on the GitHub (pronounced with a G, not a J)
-| page here: https://github.com/stephenlake/addpay-php/issues
-|
-| Thanks!
-|
-*/
+$api = new OpenAPI();
 
-$call = $api->transactions()
+$http = $api->transactions()
             ->find('TRANSACTION_ID_HERE');
 
-if ($call->succeeds()) {
-    if ($call->statusIs('AVSFAILED')) {
-        echo "Dang it! account verification service failed with reason: {$call->getStatusReason()}";
+if ($http->succeeds()) {
+    if ($http->statusIs(OpenApi::STATE_READY)) {
+        // Handle READY transaction
+        // Read the AddPay API docs - handling is up to your application
+    } elseif ($http->statusIs(OpenApi::STATE_ACTIVE)) {
+        // Handle ACTIVE transaction
+        // Read the AddPay API docs - handling is up to your application
+    } elseif ($http->statusIs(OpenApi::STATE_PARTIAL)) {
+        // Handle PARTIAL transaction
+        // Read the AddPay API docs - handling is up to your application
+    } elseif ($http->statusIs(OpenApi::STATE_INVALID)) {
+        // Handle INVALID transaction
+        // Read the AddPay API docs - handling is up to your application
+    } elseif ($http->statusIs(OpenApi::STATE_AVSPENDING)) {
+        // Handle AVSPENDING transaction
+        // Read the AddPay API docs - handling is up to your application
+    } elseif ($http->statusIs(OpenApi::STATE_AVSSUBMITTED)) {
+        // Handle AVSSUBMITTED transaction
+        // Read the AddPay API docs - handling is up to your application
+    } elseif ($http->statusIs(OpenApi::STATE_AVSFAILED)) {
+        // Handle AVSFAILED transaction
+        // Read the AddPay API docs - handling is up to your application
+    } elseif ($http->statusIs(OpenApi::STATE_FAILED)) {
+        // Handle FAILED transaction
+        // Read the AddPay API docs - handling is up to your application
+    } elseif ($http->statusIs(OpenApi::STATE_COMPLETED)) {
+        // Handle COMPLETE transaction
+        // Read the AddPay API docs - handling is up to your application
+    } elseif ($http->statusIs(OpenApi::STATE_CANCELLED)) {
+        // Handle CANCELLED transaction
+        // Read the AddPay API docs - handling is up to your application
+    } elseif ($http->statusIs(OpenApi::STATE_SECURE_AUTHED)) {
+        // Handle SECUREAUTHED transaction
+        // Read the AddPay API docs - handling is up to your application
+    } elseif ($http->statusIs(OpenApi::STATE_SECURE_PENDING)) {
+        // Handle SECUREPENDING transaction
+        // Read the AddPay API docs - handling is up to your application
+    } elseif ($http->statusIs(OpenApi::STATE_SECURE_AUTHED_FAILED)) {
+        // Handle SECUREAUTHFAILED transaction
+        // Read the AddPay API docs - handling is up to your application
+    } elseif ($http->statusIs(OpenApi::STATE_SECURE_FAILED)) {
+        // Handle SECUREFAILED transaction
+        // Read the AddPay API docs - handling is up to your application
     }
-} else {
-    $errorCode = $call->getErrorCode();
-    $errorMsg  = $call->getErrorMessage();
 
-    echo "Dang it! Error '{$errorCode}' with message '{$errorMsg}'.";
+    dd($http->getStatus());
+} else {
+    $errorCode = $http->getErrorCode();
+    $errorMsg  = $http->getErrorMessage();
+
+    echo "Error '{$errorCode}' with message '{$errorMsg}'.";
+
+    dd($http->resource);
 }

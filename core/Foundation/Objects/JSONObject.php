@@ -217,6 +217,16 @@ class JSONObject
     }
 
     /**
+     * Returns the entire resource object
+     *
+     * @return mixed
+     */
+    public function all()
+    {
+        return $this->resource;
+    }
+
+    /**
      * Primary function fix to avoid magic method returning incorrect value
      *
      * Returns the status_reason value if it exists in the object.
