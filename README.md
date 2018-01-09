@@ -90,7 +90,7 @@ Running/Using Examples
 The following guides assume you have PHP installed on the system running the code. If PHP is not installed, please view the [PHP Installation documentation](http://php.net/manual/en/install.php). **PHP5.3+ is supported, but PHP7.1+ is recommended for optimal performance**.
 
 ### \* <img src="http://icons.iconarchive.com/icons/icons8/windows-8/256/Systems-Linux-icon.png" width="24"> Linux & Mac 
----------
+
 **Option 1 - Through the terminal**
 - Open a new terminal
 - Run the script with `php /path/to/addpay/package/examples/TransactionUpdate.php`
@@ -102,7 +102,7 @@ The following guides assume you have PHP installed on the system running the cod
    - Example: `localhost:8080/TransactionUpdate.php`
 
 ### \* <img src="https://dotnetco.de/wp-content/uploads/2016/12/windows-icon256.png" width="24"> Windows
----------
+
 **Option 1 - Through the Command Line**
 - Start a command prompt (Start button > Run > cmd.exe)
 - In the window that appears, type the full path to the PHP executable (php.exe) followed by the full path to the script you wish to run:
