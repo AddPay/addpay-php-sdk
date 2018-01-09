@@ -26,7 +26,7 @@
 - [Disclaimer](https://github.com/stephenlake/AddPay-PHP-SDK#disclaimer)
 
 ## Getting Started
-Please have the AddPay API documentation open and closeby when referencing fields, this will improve your productivity and hopefully answer many questions you may have on field definitions and requirements. All fields are described within the [AddPay API Documentation](https://www.addpay.co.za/developers).
+Please have the [AddPay API Documentation](https://www.addpay.co.za/developers) open and closeby when referencing fields, this will improve your productivity and hopefully answer many questions you may have on field definitions and requirements. All fields are described within the [AddPay API Documentation](https://www.addpay.co.za/developers).
 
 Download Latest Release
 ---------
