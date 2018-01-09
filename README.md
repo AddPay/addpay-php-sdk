@@ -66,13 +66,11 @@ The `set()` function is my own custom magic method that allows you to set *any* 
 
 ```php
 $object->setFirstname('John')
-      ->setLastname('Doe')
-      ->setAddressStreet('1337 Awesome Street')
-      ->setAddressPostal('123456');
-
-dd($object);
+       ->setLastname('Doe')
+       ->setAddressStreet('1337 Awesome Street')
+       ->setAddressPostal('123456');
 ```
-This wil result in:
+This wil result in the following object being built:
 ```json
 {
   "firstname": "John",
