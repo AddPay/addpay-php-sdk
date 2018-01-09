@@ -145,6 +145,31 @@ SDK Method Reference
             <td>ANY</td>
             <td>Magic method that sets single-field and nested field objects based on anything placed after the word 'with'. Example: withAmountValue('1.50') will set value field inside an amount object to '1.50'.</td>
         </tr>
+        <tr>
+            <td>gotExpectedResult()</td>
+            <td>ANY</td>
+            <td>Returns true if the response payload meta status code is in the 200 range otherwise returns false.</td>
+        </tr>
+        <tr>
+            <td>succeeds()</td>
+            <td>ANY</td>
+            <td>Alias of gotExpectedResult().</td>
+        </tr>
+        <tr>
+            <td>fails()</td>
+            <td>ANY</td>
+            <td>Reversed alias of success().</td>
+        </tr>
+        <tr>
+            <td>getErrorCode()</td>
+            <td>ANY</td>
+            <td>Returns the meta status error code if an error exists.</td>
+        </tr>
+        <tr>
+            <td>getErrorMessage()</td>
+            <td>ANY</td>
+            <td>Returns the meta status error message if an error exists.</td>
+        </tr>
     </tbody>
 </table>
  
