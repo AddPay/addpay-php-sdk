@@ -41,7 +41,7 @@ Configuration
 - If your integration is live, set `live` to `true`
 - It is important to ensure the structure of the file is unchanged, the quotes are important!
 
-:warning: Before Diving Into Code :warning: 
+Before Diving Into Code
 ---------
 #### Helpers
 A number of helper functions are imported from an external Laravel package to assist in development readability as well as faster setups, for a list and definition of these helpers, please checkout the [Laravel Helpers Readme](https://github.com/rappasoft/laravel-helpers). Laravel is _NOT_ required, the helpers are imported. The most commonly used method from these imports is `dd()` which is simply a shorthand function for a data dump that pretty prints information in a browser so that you can read output quickly and easily.
