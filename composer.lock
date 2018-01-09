@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a549b688d9ec56eb4db6e279384be2a5",
-    "content-hash": "ac5ef9fabe679f3709c40cbe1425d8e5",
+    "hash": "4aeef2441148e49829ecd53a46f7a953",
+    "content-hash": "53fb09ba4ac5f6034dde9736d019fd1b",
     "packages": [
         {
             "name": "caseyamcl/configula",
@@ -332,26 +332,37 @@
             "time": "2016-08-06 14:39:51"
         },
         {
-            "name": "rappasoft/laravel-helpers",
-            "version": "dev-master",
+            "name": "symfony/polyfill-mbstring",
+            "version": "v1.6.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/rappasoft/laravel-helpers.git",
-                "reference": "e5c03a1f493854e696669f3a757ff4d47a3020cf"
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rappasoft/laravel-helpers/zipball/e5c03a1f493854e696669f3a757ff4d47a3020cf",
-                "reference": "e5c03a1f493854e696669f3a757ff4d47a3020cf",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296",
+                "reference": "2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4.0"
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.6-dev"
+                }
+            },
             "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                },
                 "files": [
-                    "src/helpers.php"
+                    "bootstrap.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -360,16 +371,93 @@
             ],
             "authors": [
                 {
-                    "name": "Anthony Rappa",
-                    "email": "rappa819@gmail.com"
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
-            "description": "Laravel Helpers for Non-Laravel Projects",
+            "description": "Symfony polyfill for the Mbstring extension",
+            "homepage": "https://symfony.com",
             "keywords": [
-                "helpers",
-                "laravel"
+                "compatibility",
+                "mbstring",
+                "polyfill",
+                "portable",
+                "shim"
             ],
-            "time": "2017-11-23 17:14:39"
+            "time": "2017-10-11 12:05:26"
+        },
+        {
+            "name": "symfony/var-dumper",
+            "version": "v3.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/var-dumper.git",
+                "reference": "545be7e78ccbec43e599f10ff7500d0b09eda9d0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/545be7e78ccbec43e599f10ff7500d0b09eda9d0",
+                "reference": "545be7e78ccbec43e599f10ff7500d0b09eda9d0",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5.9|>=7.0.8",
+                "symfony/polyfill-mbstring": "~1.0"
+            },
+            "conflict": {
+                "phpunit/phpunit": "<4.8.35|<5.4.3,>=5.0"
+            },
+            "require-dev": {
+                "ext-iconv": "*",
+                "twig/twig": "~1.34|~2.4"
+            },
+            "suggest": {
+                "ext-iconv": "To convert non-UTF-8 strings to UTF-8 (or symfony/polyfill-iconv in case ext-iconv cannot be used).",
+                "ext-intl": "To show region name in time zone dump",
+                "ext-symfony_debug": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.4-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "Resources/functions/dump.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Component\\VarDumper\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony mechanism for exploring and dumping PHP variables",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "debug",
+                "dump"
+            ],
+            "time": "2018-01-03 17:14:19"
         },
         {
             "name": "symfony/yaml",
@@ -469,14 +557,51 @@
                 "laravel"
             ],
             "time": "2017-12-20 17:38:03"
+        },
+        {
+            "name": "wanfeiyy/dd",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wanfeiyy/laravel-dd.git",
+                "reference": "7a2d3f58e2320e3dd7b1f366f6931163c47ba772"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wanfeiyy/laravel-dd/zipball/7a2d3f58e2320e3dd7b1f366f6931163c47ba772",
+                "reference": "7a2d3f58e2320e3dd7b1f366f6931163c47ba772",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/var-dumper": "^3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Dd/helpers.php"
+                ],
+                "psr-4": {
+                    "Dd\\": "src/Dd"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "wanfeiyy",
+                    "email": "w454852895@163.com"
+                }
+            ],
+            "description": "use laravel dd replace var_dump",
+            "time": "2016-12-30 02:32:44"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "rappasoft/laravel-helpers": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

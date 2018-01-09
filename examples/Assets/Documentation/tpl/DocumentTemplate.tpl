@@ -138,10 +138,10 @@
       foreach($files as $key => $value){
           $path = realpath($dir.DIRECTORY_SEPARATOR.$value);
 
-          if(!is_dir($path) && ends_with($path, '.php')) {
+          if(!is_dir($path) && endsWith($path, '.php')) {
               echo '<tr>';
               echo '<td><strong>' . $execPath . '/</strong>' . basename($path) . '<br/><small>(' . $path . ')</small></td>';
-              echo '<td><button class="btn btn-sm btn-outline-dark" type="button">Execute</button></td>';
+              echo '<td><a class="btn btn-sm btn-outline-dark" target="_blank" href="/' . $execPath . '/' . basename($path) . '">Execute</a></td>';
               echo '</tr>';
           } else if($value != "." && $value != "..") {
               echoExampleFiles($path, $execPath, $results);

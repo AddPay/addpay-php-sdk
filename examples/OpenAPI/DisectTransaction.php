@@ -17,9 +17,9 @@
 | list of transaction fields and what may be disected using this code.
 |
 */
-require_once(__DIR__ . '/../core/OpenAPI.php');
+require_once(__DIR__ . '/../../core/bootstrap.php');
 
-$api = new AddPayOpenAPI();
+$api = new OpenAPI();
 
 // Fetch the transaction from the API.
 //

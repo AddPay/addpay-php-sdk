@@ -1,7 +1,5 @@
 <?php
 
-require_once('../vendor/autoload.php');
-
 class OpenAPI extends AddPay\Foundation\Protocol\API\OpenAPI {
 
     const STATE_READY                 = 'READY';

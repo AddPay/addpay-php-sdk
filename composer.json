@@ -1,7 +1,8 @@
 {
     "require": {
         "kitetail/zttp": "^0.3.0",
-        "caseyamcl/Configula": "^2.4"
+        "caseyamcl/Configula": "^2.4",
+        "wanfeiyy/dd": "^1.0"
     },
     "autoload": {
       "psr-4": {
