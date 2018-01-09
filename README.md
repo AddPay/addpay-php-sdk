@@ -170,19 +170,19 @@ SDK Method Reference
             <td>ANY</td>
             <td>Returns the meta status error message if an error exists.</td>
         </tr>
-         <tr>
-            <td>find(ID)</td>
-            <td>ANY</td>
-            <td>Submits a request to the API to retrieve an object by ID based on the invoked repository.</td>
-        </tr>
         <tr>
             <td>list()</td>
             <td>ANY</td>
             <td>Submits a request to the API to retrieve a list of objects based on the invoked repository.</td>
         </tr>
         <tr>
+            <td>find(ID)</td>
+            <td>Transaction</td>
+            <td>Submits a request to the API to retrieve an object by ID based on the invoked repository.</td>
+        </tr>
+        <tr>
             <td>update()</td>
-            <td>ANY</td>
+            <td>Transaction</td>
             <td>Submits a request to the API to update an object based on the invoked repository and setters used.</td>
         </tr>
         <tr>
