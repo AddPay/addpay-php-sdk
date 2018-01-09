@@ -40,6 +40,8 @@
 
 :warning: Before Diving Into Code :warning: 
 ---------
+Please have the AddPay API documentation open and closeby when referencing fields, this will improve your productivity and hopefully answer many questions you may have on field definitions and requirements. All fields are described within the [AddPay API Documentation](https://www.addpay.co.za/developers).
+
 #### Helpers
 A number of helper functions are imported from an external Laravel package to assist in development readability as well as faster setups, for a list and definition of these helpers, please checkout the [Laravel Helpers Readme](https://github.com/rappasoft/laravel-helpers). Laravel is _NOT_ required, the helpers are imported. The most commonly used method from these imports is `dd()` which is simply a shorthand function for a data dump that pretty prints information in a browser so that you can read output quickly and easily.
 
