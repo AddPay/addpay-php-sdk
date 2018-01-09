@@ -32,7 +32,7 @@ Please have the [AddPay API Documentation](https://www.addpay.co.za/developers) 
 
 Download Latest Release
 ---------
-[Download AddPay PHP SDK v0.5](https://github.com/stephenlake/AddPay-PHP-SDK/archive/v0.5.zip)
+Link coming soon! A few more hours!
 
 Configuration
 ---------
