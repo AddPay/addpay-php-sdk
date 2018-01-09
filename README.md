@@ -125,7 +125,7 @@ SDK Method Reference
     <thead>
         <tr>
             <th>Method</th>
-            <th>Invoke Repository</th>
+            <th>Invokable Repository</th>
             <th>Definition</th>
         </tr>
     </thead>
@@ -137,8 +137,13 @@ SDK Method Reference
         </tr>
         <tr>
             <td>get*()</td>
-            <td>All</td>
+            <td>ANY</td>
             <td>Magic method that returns single-field and nested field objects based on anything placed after the word 'get'. Example: getAmountCurrency() will return the currency object from the amount object of the full resource object.</td>
+        </tr>
+        <tr>
+            <td>with*(mixed)</td>
+            <td>ANY</td>
+            <td>Magic method that sets single-field and nested field objects based on anything placed after the word 'with'. Example: withAmountValue('1.50') will set value field inside an amount object to '1.50'.</td>
         </tr>
     </tbody>
 </table>
