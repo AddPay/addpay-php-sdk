@@ -177,32 +177,32 @@ SDK Method Reference
         </tr>
         <tr>
             <td>find(ID)</td>
-            <td>Transaction</td>
+            <td>Transactions</td>
             <td>Submits a request to the API to retrieve an object by ID based on the invoked repository.</td>
         </tr>
         <tr>
             <td>update()</td>
-            <td>Transaction</td>
+            <td>Transactions</td>
             <td>Submits a request to the API to update an object based on the invoked repository and setters used.</td>
         </tr>
         <tr>
             <td>process()</td>
-            <td>Transaction</td>
+            <td>Transactions</td>
             <td>Submits a request to the API to process an object based on the invoked repository.</td>
         </tr>
         <tr>
             <td>cancel(ID)</td>
-            <td>Transaction</td>
+            <td>Transactions</td>
             <td>Submits a request to the API to cancel an object by ID based on the invoked repository.</td>
         </tr>
         <tr>
             <td>store()</td>
-            <td>Transaction</td>
+            <td>Transactions</td>
             <td>Submits a request to the API to create an object based on the invoked repository and setters used.</td>
         </tr>
         <tr>
             <td>create()</td>
-            <td>Transaction</td>
+            <td>Transactions</td>
             <td>Alias of store().</td>
         </tr>
     </tbody>
