@@ -20,6 +20,8 @@
   - [Download Latest Release](https://github.com/stephenlake/AddPay-PHP-SDK#download-latest-release)
   - [Configuration](https://github.com/stephenlake/AddPay-PHP-SDK#configuration)
   - [Before Diving Into Code](https://github.com/stephenlake/AddPay-PHP-SDK#before-diving-into-code)
+  - [SDK Repository Reference](https://github.com/stephenlake/AddPay-PHP-SDK#sdk-repository-reference)
+  - [SDK Methods Reference](https://github.com/stephenlake/AddPay-PHP-SDK#sdk-method-reference)
   - [Running the Examples](https://github.com/stephenlake/AddPay-PHP-SDK#runningusing-examples)
 - [Bug Reporting](https://github.com/stephenlake/AddPay-PHP-SDK#bug-reporting)
 - [Contributing & Suggestions](https://github.com/stephenlake/AddPay-PHP-SDK#contributing-and-suggestions)
@@ -92,6 +94,49 @@ This wil result in the following object being built:
 }
 ```
 **However**, the AddPay API expects the request payload of a currency code to be a single field of `currency_code` and not an object - therefore a primary function has been defined specifically for `setAmountCurrencyCode()` to prevent such scenarios. You can view the full list of primary defined functions as well as how the magic methods functions were written within the [JSONObject](https://github.com/stephenlake/AddPay-PHP-SDK/blob/master/core/Foundation/Objects/JSONObject.php) class.
+
+SDK Repository Reference
+---------
+<table>
+    <thead>
+        <tr>
+            <th>Repository</th>
+            <th>Invoke Method</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Transactions</td>
+            <td>`transactions()`</td>
+            <td>Instantiates a transaction repository to call referenced methods on</td>
+        </tr>
+         <tr>
+            <td>Services</td>
+            <td>`services()`</td>
+            <td>Instantiates a service repository to call referenced methods on</td>
+        </tr>
+    </tbody>
+</table>
+
+SDK Method Reference
+---------
+<table>
+    <thead>
+        <tr>
+            <th>Method</th>
+            <th>Invoke Repository</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>`all()`</td>
+            <td>Transactions</td>
+            <td>Returns the entire transaction object</td>
+        </tr>
+    </tbody>
+</table>
  
 Running/Using Examples
 ---------
