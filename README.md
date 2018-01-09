@@ -74,7 +74,7 @@ This wil result in:
   }
 }
 ```
-Please note that there are some fallback methods in place to prevent unexpected results, for example, with the above information in mind, you'd expect `setCurrencyCode('USD')` to set the following object:
+**Please note** that there are some fallback methods in place to prevent unexpected results, for example, with the above information in mind, you'd expect `setCurrencyCode('USD')` to set the following object:
 ```json
 {
    "currency": {
