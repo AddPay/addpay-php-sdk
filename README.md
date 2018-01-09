@@ -44,7 +44,9 @@ Configuration
 Before Diving Into Code
 ---------
 #### Helpers
-A number of helper functions are imported from an external Laravel package to assist in development readability as well as faster setups, for a list and definition of these helpers, please checkout the [Laravel Helpers Readme](https://github.com/sebastiaanluca/laravel-helpers). Laravel is _NOT_ required, the helpers are imported. The most commonly used method from these imports is `ddd()` which is an intelligent function that will print output smartly in a CLI and pretty print it in browser output so that you can read output quickly and easily.
+A number of helper functions are imported from within the package. The most commonly used method from these imports is `dd()` which is an intelligent function that will smartly print output in a CLI and pretty print it in browser output so that you can read output quickly and easily.
+
+See [all the imported helpers here](https://github.com/stephenlake/AddPay-PHP-SDK/blob/master/core/helpers.php).
 
 #### Magic Getter: `get`
 The `get()` function is my own custom magic method that allows you to call *any* string after the word 'get' and it will return the value of the string provided within the object it is being called on, this means that even if there are changes to an object, the magic method can still retrieve the added fields without any changes to this SDK.
