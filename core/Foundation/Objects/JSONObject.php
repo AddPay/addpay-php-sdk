@@ -4,7 +4,18 @@ namespace AddPay\Foundation\Objects;
 
 class JSONObject
 {
+    /**
+     * Container for the object data.
+     *
+     * @var array
+     */
     public $resource;
+
+    /**
+     * Container for the API protocol/service instantiation.
+     *
+     * @var mixed
+     */
     public $protocol;
 
     public function __construct(array $data, $protocol = false)
@@ -135,6 +146,13 @@ class JSONObject
         }
     }
 
+    /**
+     * Primary function fix to avoid magic method returning incorrect value
+     *
+     * Sets the amount currency_code value.
+     *
+     * @return void
+     */
     public function withAmountCurrencyCode($code)
     {
         $this->resource['amount']['currency_code'] = $code;
@@ -142,6 +160,13 @@ class JSONObject
         return $this;
     }
 
+    /**
+     * Primary function fix to avoid magic method returning incorrect value
+     *
+     * Sets the contract max_amount value.
+     *
+     * @return void
+     */
     public function withContractMaxAmount($amount)
     {
         $this->resource['contract']['max_amount'] = $amount;
@@ -149,6 +174,13 @@ class JSONObject
         return $this;
     }
 
+    /**
+     * Primary function fix to avoid magic method returning incorrect value
+     *
+     * Sets the initiates_at value.
+     *
+     * @return void
+     */
     public function withInitiatesAt($date)
     {
         $this->resource['initiates_at'] = $date;
@@ -156,6 +188,13 @@ class JSONObject
         return $this;
     }
 
+    /**
+     * Primary function fix to avoid magic method returning incorrect value
+     *
+     * Sets the instrument expiry_month value.
+     *
+     * @return void
+     */
     public function withInstrumentExpiryMonth($month)
     {
         $this->resource['instrument']['expiry_month'] = $month;
@@ -163,6 +202,13 @@ class JSONObject
         return $this;
     }
 
+    /**
+     * Primary function fix to avoid magic method returning incorrect value
+     *
+     * Sets the instrument expiry_year value.
+     *
+     * @return void
+     */
     public function withInstrumentExpiryYear($year)
     {
         $this->resource['instrument']['expiry_year'] = $year;
@@ -170,33 +216,75 @@ class JSONObject
         return $this;
     }
 
+    /**
+     * Primary function fix to avoid magic method returning incorrect value
+     *
+     * Returns the status_reason value if it exists in the object.
+     *
+     * @return string
+     */
     public function getStatusReason()
     {
-        return $this->resource['status_reason'] ?? '';
+        return isset($this->resource['status_reason']) ? $this->resource['status_reason'] : null;
     }
 
+    /**
+     * Primary function fix to avoid magic method returning incorrect value
+     *
+     * Returns the initiates_at value if it exists in the object.
+     *
+     * @return string
+     */
     public function getInitiatesAt()
     {
-        return $this->resource['initiates_at'] ?? '';
+        return isset($this->resource['initiates_at']) ? $this->resource['status_reason'] : null;
     }
 
+    /**
+     * Primary function fix to avoid magic method returning incorrect value
+     *
+     * Returns the completed_at value if it exists in the object.
+     *
+     * @return string
+     */
     public function getCompletedAt()
     {
-        return $this->resource['completed_at'] ?? '';
+        return isset($this->resource['completed_at']) ? $this->resource['status_reason'] : null;
     }
 
+    /**
+     * Primary function fix to avoid magic method returning incorrect value
+     *
+     * Returns the return_url value if it exists in the object.
+     *
+     * @return string
+     */
     public function getReturnUrl()
     {
-        return $this->resource['return_url'] ?? '';
+        return isset($this->resource['return_url']) ? $this->resource['status_reason'] : null;
     }
 
+    /**
+     * Primary function fix to avoid magic method returning incorrect value
+     *
+     * Returns the notify_url value if it exists in the object.
+     *
+     * @return string
+     */
     public function getNotifyUrl()
     {
-        return $this->resource['notify_url'] ?? '';
+        return isset($this->resource['notify_url']) ? $this->resource['status_reason'] : null;
     }
 
+    /**
+     * Primary function fix to avoid magic method returning incorrect value
+     *
+     * Returns the call_to_action value if it exists in the object.
+     *
+     * @return string
+     */
     public function getCallToAction()
     {
-        return $this->resource['call_to_action'] ?? '';
+        return isset($this->resource['call_to_action']) ? $this->resource['status_reason'] : null;
     }
 }
