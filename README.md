@@ -108,12 +108,12 @@ SDK Repository Reference
     <tbody>
         <tr>
             <td>Transactions</td>
-            <td>`transactions()`</td>
+            <td>transactions()</td>
             <td>Instantiates a transaction repository to call referenced methods on</td>
         </tr>
          <tr>
             <td>Services</td>
-            <td>`services()`</td>
+            <td>services()</td>
             <td>Instantiates a service repository to call referenced methods on</td>
         </tr>
     </tbody>
@@ -131,7 +131,7 @@ SDK Method Reference
     </thead>
     <tbody>
         <tr>
-            <td>`all()`</td>
+            <td>all()</td>
             <td>Transactions</td>
             <td>Returns the entire transaction object</td>
         </tr>
