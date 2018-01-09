@@ -31,7 +31,8 @@ A PHP package to assist in developing applications communicating with the AddPay
 - If your integration is live, set `live` to `true`
 - It is important to ensure the structure of the file is unchanged, the quotes are important!
 
-### Before Diving Into Code
+:warning: Before Diving Into Code :warning: 
+---------
 
 #### Helpers
 A number of helper functions are imported from an external Laravel package to assist in development readability as well as faster setups, for a list and definition of these helpers, please checkout the [Laravel Helpers Readme](https://github.com/rappasoft/laravel-helpers). Laravel is _NOT_ required, the helpers are imported. The most commonly used method from these imports is `dd()` which is simply a shorthand function for a data dump that pretty prints information in a browser so that you can read output quickly and easily.
@@ -85,10 +86,14 @@ This wil result in:
 ```
 **However**, the AddPay API expects the request payload of a currency code to be a single field of `currency_code` and not an object - therefore a primary function has been defined specifically for `setAmountCurrencyCode()` to prevent such scenarios. You can view the full list of primary defined functions as well as how the magic methods functions were written within the [JSONObject](https://github.com/stephenlake/AddPay-PHP-SDK/blob/master/core/Foundation/Objects/JSONObject.php) class.
  
-### Running/Using Examples
+Running/Using Examples
+---------
+
 The following guides assume you have PHP installed on the system running the code. If PHP is not installed, please view the [PHP Installation documentation](http://php.net/manual/en/install.php). **PHP5.3+ is supported, but PHP7.1+ is recommended for optimal performance**.
 
 ### \* <img src="http://icons.iconarchive.com/icons/icons8/windows-8/256/Systems-Linux-icon.png" width="24"> Linux & Mac 
+---------
+
 **Option 1 - Through the terminal**
 - Open a new terminal
 - Run the script with `php /path/to/addpay/package/examples/TransactionUpdate.php`
@@ -100,6 +105,8 @@ The following guides assume you have PHP installed on the system running the cod
    - Example: `localhost:8080/TransactionUpdate.php`
 
 ### \* <img src="https://dotnetco.de/wp-content/uploads/2016/12/windows-icon256.png" width="24"> Windows
+---------
+
 **Option 1 - Through the Command Line**
 - Start a command prompt (Start button > Run > cmd.exe)
 - In the window that appears, type the full path to the PHP executable (php.exe) followed by the full path to the script you wish to run:
@@ -113,13 +120,17 @@ The following guides assume you have PHP installed on the system running the cod
    - Example: `localhost:8080/TransactionFind.php`
 
 
-## Bug Reporting
+Bug Reporting
+---------
+
 Please use the [GitHub Issues](https://github.com/stephenlake/AddPay-PHP-SDK/issues) tab to report any problems you are having with the package.
 
 ## Contributing & Suggestions
 [Create a pull request](https://github.com/stephenlake/addpay-php/pulls) at any point. **Do not suggest an addition or make a request for change in writing, just write the code and [submit a pull request](https://github.com/stephenlake/addpay-php/pulls)**, if it improves the package without generating any breaking changes and adds efficiency, then **it will be merged**. _I will ignore any demands/requests for changes without any  suggested code replacement and/or additions._
 
-## Disclaimer
+Disclaimer
+---------
+
 This package and all documentation was developed by Stephen Lake as a **personal** project to assist developers unfamiliar with the AddPay API in getting started quickly and efficiently. This is an **unofficial** package and therefore **_support is limited and provided as a courtesy_**.
 
 ## Todo
