@@ -2,7 +2,7 @@
     <img src="https://www.addpay.co.za/app/assets/img/addpay/addpay_logo.png"/><br/>
 </p>
 <p align="center">
-    AddPay PHP SDK by Stephen Lake<br/>
+    <strong>AddPay PHP SDK</strong> by Stephen Lake<br/>
     A PHP package to assist in developing applications communicating with the AddPay API.
 </p>
 <p align="center">
