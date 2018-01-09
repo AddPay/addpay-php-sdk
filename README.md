@@ -1,7 +1,10 @@
-# AddPay PHP SDK
-
 <p align="center">
     <img src="https://www.addpay.co.za/app/assets/img/addpay/addpay_logo.png"/><br/>
+</p>
+<p align="center">
+    A PHP package to assist in developing applications communicating with the AddPay API.
+</p>
+<p align="center">
     <img src="https://img.shields.io/badge/build-stable-brightgreen.svg?style=flat"/>
     <img src="https://img.shields.io/badge/tests-passing-brightgreen.svg?style=flat"/>
     <img src="https://img.shields.io/badge/coverage-100%25-brightgreen.svg?style=flat"/>
@@ -10,7 +13,6 @@
     <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/>
 </p>
 
-A PHP package to assist in developing applications communicating with the AddPay API.
 
 ## Documentation
 - [Getting Started](https://github.com/stephenlake/AddPay-PHP-SDK#getting-started)
