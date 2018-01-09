@@ -27,10 +27,12 @@
 
 ## Getting Started
 
-### Download Latest Release
+Download Latest Release
+---------
 [Download AddPay PHP SDK v0.5](https://github.com/stephenlake/AddPay-PHP-SDK/archive/v0.5.zip)
 
-### Configuration
+Configuration
+---------
 - Head to your developer portal or merchant console developer settings if your integration is live, find the section providing your `client_id` and `client_secret`, keep these credentials closeby.
 - Open the configuration file in this package located at `path/to/this/package/config/config.json`
 - Relace `your_client_id` with your actual `client_id`
