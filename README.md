@@ -109,12 +109,12 @@ SDK Repository Reference
         <tr>
             <td>Transactions</td>
             <td>transactions()</td>
-            <td>Instantiates a transaction repository to call referenced methods on</td>
+            <td>Instantiates a transaction repository to call referenced methods.</td>
         </tr>
          <tr>
             <td>Services</td>
             <td>services()</td>
-            <td>Instantiates a service repository to call referenced methods on</td>
+            <td>Instantiates a service repository to call referenced methods.</td>
         </tr>
     </tbody>
 </table>
@@ -133,7 +133,12 @@ SDK Method Reference
         <tr>
             <td>all()</td>
             <td>Transactions</td>
-            <td>Returns the entire transaction object</td>
+            <td>Returns the entire transaction object.</td>
+        </tr>
+        <tr>
+            <td>get*()</td>
+            <td>All</td>
+            <td>Magic method that returns single-field and nested field objects based on anything placed after the word 'get'. Example: getAmountCurrency() will return the currency object from the amount object of the full resource object.</td>
         </tr>
     </tbody>
 </table>
