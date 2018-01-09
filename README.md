@@ -87,7 +87,7 @@ This wil result in:
 **However**, the AddPay API expects the request payload of a currency code to be a single field of `currency_code` and not an object - therefore a primary function has been defined specifically for `setAmountCurrencyCode()` to prevent such scenarios. You can view the full list of primary defined functions as well as how the magic methods functions were written within the [JSONObject](https://github.com/stephenlake/AddPay-PHP-SDK/blob/master/core/Foundation/Objects/JSONObject.php) class.
  
 ### Running/Using Examples
-The following guides assume you have PHP installed on the system running the code. If PHP is not installed, please view the [PHP Installation documentation](http://php.net/manual/en/install.php).
+The following guides assume you have PHP installed on the system running the code. If PHP is not installed, please view the [PHP Installation documentation](http://php.net/manual/en/install.php). **PHP5.3+ is supported, but PHP7.1.3 is recommended for optimal performance**.
 
 ### \* <img src="http://icons.iconarchive.com/icons/icons8/windows-8/256/Systems-Linux-icon.png" width="24"> Linux & Mac 
 **Option 1 - Through the terminal**
