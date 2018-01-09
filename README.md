@@ -25,14 +25,14 @@ A PHP package to assist in developing applications communicating with the AddPay
 ### Before Diving In
 
 #### Helpers
-A number of helper functions are imported from an external Laravel package to assist in development readability as well as faster setups, for a list and definition of these helpers, please checkout the [Laravel Helpers Readme](https://github.com/rappasoft/laravel-helpers). Laravel is _NOT_ required, the helpers are simply imported. The most commonly used method from these imports is `dd()` which is simply a shorthand function for a data dump that pretty prints information in a browser so that you can read output quickly and easily.
+A number of helper functions are imported from an external Laravel package to assist in development readability as well as faster setups, for a list and definition of these helpers, please checkout the [Laravel Helpers Readme](https://github.com/rappasoft/laravel-helpers). Laravel is _NOT_ required, the helpers are imported. The most commonly used method from these imports is `dd()` which is simply a shorthand function for a data dump that pretty prints information in a browser so that you can read output quickly and easily.
 
 #### Magic Getter
-The `get()` function is my own custom magic method that allows you to call *any* string after the word 'get' and it will return the value of the string provided within the object it is being called on, this means that even if there are changes to an object, the magic method can still retrieve the added fields without any changes to this SDK. The same rule applies to the set method.
+The `get()` function is my own custom magic method that allows you to call *any* string after the word 'get' and it will return the value of the string provided within the object it is being called on, this means that even if there are changes to an object, the magic method can still retrieve the added fields without any changes to this SDK.
 
 Example: `$call->getFirstname('John')`
 
-The `getFirstname()` function does not exist, but will succeed and will return the value of `firstname` if it exists in a data object. For nested attributes, the call is simply camel-cased, for example: `$call->getCurrencyName()` will look for the following object:
+The `getFirstname()` function does not exist, but will succeed and will return the value of `firstname` if it the field `firstname` exists in the data object it is being called on. For nested attributes, the call is simply camel-cased, for example: `$call->getCurrencyName()` will look for the following object:
 ```json
 {
  "currency": {
@@ -40,14 +40,30 @@ The `getFirstname()` function does not exist, but will succeed and will return t
  }
 }
 ```
-If it does not find the attribute, it returns null.
+If it does not find the attribute, it returns null. The level of nesting using camel-casing is infinite, for example calling `getFooBarsRealLastNameAndLoremIpsum()` will also return a value if the nested attributes exist, otherwise it will return null.
 
 #### Magic Setter
-The `set()` function is my own custom magic method that allows you to set *any* string after the word 'set' and it will set the value of the string provided within the object it is being called on.
- 
-Example: `$call->setLastname('Doe')`
+The `set()` function is my own custom magic method that allows you to set *any* string after the word 'set' and it will set the value of the string provided within the object it is being called on. This works in exactly the same way as the magic getter except it **sets** field and nested field values and returns the object so that you can chain setters, for example:
 
-The `setLastname()` function does not exist, but will succeed.
+```php
+$object->setFirstname('John')
+       ->setLastname('Doe')
+       ->setAddressStreet('1337 Awesome Street')
+       ->setAddressPostal('123456');
+ 
+ dd($object);
+ ```
+ This wil result in:
+ ```json
+ {
+   "firstname": "John",
+   "lastname": "Doe",
+   "address": {
+     "street": "1337 Awesome Street",
+     "postal": "123456"
+   }
+ }
+ ```
 
 ### Running/Using Examples
 
