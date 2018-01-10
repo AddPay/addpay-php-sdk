@@ -297,4 +297,16 @@ class JSONObject
     {
         return isset($this->resource['call_to_action']) ? $this->resource['status_reason'] : null;
     }
+
+    /**
+     * Helper function to identify status of a transaction,
+     * returns true if the status is equal to the passed value.
+     *
+     * @return boolean
+     *
+     */
+    public function statusIs($status)
+    {
+        return isset($this->resource['status']) && $status == $this->resource['status'];
+    }
 }
