@@ -53,7 +53,7 @@ Configuration
 ---------
 - Head to your developer portal or merchant console developer settings if your integration is live, find the section providing your `client_id` and `client_secret`, keep these credentials closeby.
 - Open the configuration file in this package located at `path/to/this/package/config/config.json`
-- Relace `your_client_id` with your actual `client_id`
+- Replace `your_client_id` with your actual `client_id`
 - Replace `your_client_secret` with your actual `client_secret`
 - If your integration is live, set `live` to `true`
 - It is important to ensure the structure of the file is unchanged, the quotes are important!
