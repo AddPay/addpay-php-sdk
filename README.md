@@ -176,7 +176,7 @@ SDK Method Reference
             <td>Submits a request to the API to retrieve a list of objects based on the invoked repository.</td>
         </tr>
         <tr>
-            <td>find(ID)</td>
+            <td>find()</td>
             <td>Transactions</td>
             <td>Submits a request to the API to retrieve an object by ID based on the invoked repository.</td>
         </tr>
@@ -188,10 +188,10 @@ SDK Method Reference
         <tr>
             <td>process()</td>
             <td>Transactions</td>
-            <td>Submits a request to the API to process an object based on the invoked repository.</td>
+            <td>Submits a request to the API to process an object by ID based on the invoked repository.</td>
         </tr>
         <tr>
-            <td>cancel(ID)</td>
+            <td>cancel()</td>
             <td>Transactions</td>
             <td>Submits a request to the API to cancel an object by ID based on the invoked repository.</td>
         </tr>
