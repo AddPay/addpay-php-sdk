@@ -47,6 +47,12 @@ The following guides assume you have PHP installed on the system running the cod
 
 Download Latest Release
 ---------
+More advanced users or users that are familiar with composer may download the package through composer if they wish:
+```bash
+composer require stephenlake/addpay-php-sdk
+```
+
+Alternatively, download the master archive directly:
 [AddPay-PHP-SDK-Master.zip](https://github.com/stephenlake/AddPay-PHP-SDK/archive/master.zip)
 
 Configuration
