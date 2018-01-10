@@ -7,9 +7,28 @@ use AddPay\Foundation\Protocol\TransactionProtocol;
 
 class OpenAPI extends BaseAPI
 {
+    /**
+     * The service protocol container.
+     *
+     * @var ServiceProtocol
+     */
     private $services;
+
+    /**
+     * The transaction protocol container.
+     *
+     * @var TransactionProtocol
+     */
     private $transactions;
 
+    /**
+     * Basically a bootstrapper for the core API class,
+     * ensures config integrity and throws an exception
+     * if there are issues with the config.
+     *
+     * @return void
+     *
+     */
     public function __construct()
     {
         parent::__construct();
@@ -18,11 +37,23 @@ class OpenAPI extends BaseAPI
         $this->transactions = new TransactionProtocol($this);
     }
 
+    /**
+     * Returns the service protocol container
+     *
+     * @return ServiceProtocol
+     *
+     */
     public function services()
     {
         return $this->services;
     }
 
+    /**
+     * Returns the transaction protocol container
+     *
+     * @return TransactionProtocol
+     *
+     */
     public function transactions()
     {
         return $this->transactions;

@@ -7,9 +7,28 @@ use Exception;
 
 class BaseAPI
 {
+  /**
+   * The config container.
+   *
+   * @var Config
+   */
     public $config;
+
+    /**
+     * The base URL for API calls.
+     *
+     * @var JSONObject
+     */
     public $baseUrl;
 
+    /**
+     * Basically a bootstrapper for the core API class,
+     * ensures config integrity and throws an exception
+     * if there are issues with the config.
+     *
+     * @return void
+     *
+     */
     public function __construct()
     {
         $this->config = new Config(__DIR__ . '/../../../../config/');
@@ -19,6 +38,15 @@ class BaseAPI
         $this->baseUrl = boolval($this->config['live']) === true ? 'https://secure.addpay.co.za' : 'https://secure-test.addpay.co.za';
     }
 
+    /**
+     * Pre-allocates the authentication header to be submitted
+     * with each API request.
+     *
+     * @return null
+     *
+     * @throws Exception If the configuration file is missing required values.
+     *
+     */
     private function validateConfig()
     {
         if (isset($this->config['open_api'])) {
