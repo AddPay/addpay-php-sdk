@@ -1,53 +1,22 @@
 <?php
 
-require_once(__DIR__ . '/../core/AddPayOpenAPI.php');
-require_once('Lib/Helpers.php');
+require_once(__DIR__ . '/../../core/bootstrap.php');
 
-$htmlHelper->getHeader('Service List Page: Type SUBSCRIPTION');
+$services = array();
 
-function getServices()
-{
-    global $api;
+$api = new OpenAPI();
 
-    $call = $api->services()
-                ->withType('transaction')
-                ->withIntent('SUBSCRIPTION')
-                ->list();
+$http = $api->services()
+            ->withType('transaction')
+            ->withIntent('SUBSCRIPTION')
+            ->list();
 
-    if ($call->succeeds()) {
-        return $call->getData();
-    }
-    return [];
+if ($http->succeeds()) {
+    $services = $http->all();
 }
 
-$services = getServices();
+$templateIncludes = array(
+  __DIR__ . '/HTML/HTMLServiceList.tpl',
+);
 
-if (count($services)) {
-?>
-
-<div id="payment-options-table">
-    <table style="width: 400px;">
-      <tbody>
-        <?php foreach ($services as $service): ?>
-            <tr>
-                <td>
-                  <img src="<?php echo $service['icon']; ?>" width="64"/></td>
-                <td>
-                  <h3>
-                    <?php echo $service['label']; ?><br/>
-                    <small><?php echo $service['description']; ?></small>
-                  </h3>
-                </td>
-            </tr>
-        <?php endforeach; ?>
-      </tbody>
-    </table>
-</div>
-
-<?php
-} else {
-  echo 'No services with intent SUBSCRIPTION were returned from the API. Please install you have read the API documentation on installing modules.';
-}
-
-$htmlHelper->getFooter();
-?>
+require_once(__DIR__ . '/HTML/HTMLLayout.tpl');

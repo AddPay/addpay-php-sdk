@@ -1,8 +1,10 @@
 <?php
 
-require_once(__DIR__ . '/../core/AddPayOpenAPI.php');
+$httprequire_once(__DIR__ . '/../../core/bootstrap.php');
 
-$call = $api->transactions()
+$api = new OpenAPI();
+
+$http = $api->transactions()
             ->new()
             ->withReference('SOMEREF')
             ->withDescription('This is my transaction')
@@ -16,14 +18,14 @@ $call = $api->transactions()
             ->withAmountCurrencyCode('USD')
             ->create();
 
-if ($call->succeeds()) {
+if ($http->succeeds()) {
 
     // Read the documentation on what to do next.
-    print_r($call->resource);
+    print_r($http->resource);
 
 } else {
-    $errorCode = $call->getErrorCode();
-    $errorMsg  = $call->getErrorMessage();
+    $errorCode = $http->getErrorCode();
+    $errorMsg  = $http->getErrorMessage();
 
     echo "Dang it! Error '{$errorCode}' with message '{$errorMsg}'.";
 }
