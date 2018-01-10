@@ -20,6 +20,8 @@
   - [Download Latest Release](https://github.com/stephenlake/AddPay-PHP-SDK#download-latest-release)
   - [Configuration](https://github.com/stephenlake/AddPay-PHP-SDK#configuration)
   - [Before Diving Into Code](https://github.com/stephenlake/AddPay-PHP-SDK#before-diving-into-code)
+  - [SDK Repository Reference](https://github.com/stephenlake/AddPay-PHP-SDK#sdk-repository-reference)
+  - [SDK Methods Reference](https://github.com/stephenlake/AddPay-PHP-SDK#sdk-method-reference)
   - [Running the Examples](https://github.com/stephenlake/AddPay-PHP-SDK#runningusing-examples)
 - [Bug Reporting](https://github.com/stephenlake/AddPay-PHP-SDK#bug-reporting)
 - [Contributing & Suggestions](https://github.com/stephenlake/AddPay-PHP-SDK#contributing-and-suggestions)
@@ -30,7 +32,7 @@ Please have the [AddPay API Documentation](https://www.addpay.co.za/developers) 
 
 Download Latest Release
 ---------
-[Download AddPay PHP SDK v0.5](https://github.com/stephenlake/AddPay-PHP-SDK/archive/v0.5.zip)
+Link coming soon! A few more hours!
 
 Configuration
 ---------
@@ -92,6 +94,119 @@ This wil result in the following object being built:
 }
 ```
 **However**, the AddPay API expects the request payload of a currency code to be a single field of `currency_code` and not an object - therefore a primary function has been defined specifically for `setAmountCurrencyCode()` to prevent such scenarios. You can view the full list of primary defined functions as well as how the magic methods functions were written within the [JSONObject](https://github.com/stephenlake/AddPay-PHP-SDK/blob/master/core/Foundation/Objects/JSONObject.php) class.
+
+SDK Repository Reference
+---------
+<table>
+    <thead>
+        <tr>
+            <th>Repository</th>
+            <th>Invoke Method</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Transactions</td>
+            <td>transactions()</td>
+            <td>Instantiates a transaction repository to call referenced methods.</td>
+        </tr>
+         <tr>
+            <td>Services</td>
+            <td>services()</td>
+            <td>Instantiates a service repository to call referenced methods.</td>
+        </tr>
+    </tbody>
+</table>
+
+SDK Method Reference
+---------
+<table>
+    <thead>
+        <tr>
+            <th>Method</th>
+            <th>Invokable Repository</th>
+            <th>Definition</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>all()</td>
+            <td>ANY</td>
+            <td>Returns the entire transaction object.</td>
+        </tr>
+        <tr>
+            <td>get*()</td>
+            <td>ANY</td>
+            <td>Magic method that returns single-field and nested field objects based on anything placed after the word 'get'. Example: getAmountCurrency() will return the currency object from the amount object of the full resource object.</td>
+        </tr>
+        <tr>
+            <td>with*(mixed)</td>
+            <td>ANY</td>
+            <td>Magic method that sets single-field and nested field objects based on anything placed after the word 'with'. Example: withAmountValue('1.50') will set value field inside an amount object to '1.50'.</td>
+        </tr>
+        <tr>
+            <td>gotExpectedResult()</td>
+            <td>ANY</td>
+            <td>Returns true if the response payload meta status code is in the 200 range otherwise returns false.</td>
+        </tr>
+        <tr>
+            <td>succeeds()</td>
+            <td>ANY</td>
+            <td>Alias of gotExpectedResult().</td>
+        </tr>
+        <tr>
+            <td>fails()</td>
+            <td>ANY</td>
+            <td>Reversed alias of success().</td>
+        </tr>
+        <tr>
+            <td>getErrorCode()</td>
+            <td>ANY</td>
+            <td>Returns the meta status error code if an error exists.</td>
+        </tr>
+        <tr>
+            <td>getErrorMessage()</td>
+            <td>ANY</td>
+            <td>Returns the meta status error message if an error exists.</td>
+        </tr>
+        <tr>
+            <td>list()</td>
+            <td>Services</td>
+            <td>Submits a request to the API to retrieve a list of objects based on the invoked repository.</td>
+        </tr>
+        <tr>
+            <td>find(ID)</td>
+            <td>Transactions</td>
+            <td>Submits a request to the API to retrieve an object by ID based on the invoked repository.</td>
+        </tr>
+        <tr>
+            <td>update()</td>
+            <td>Transactions</td>
+            <td>Submits a request to the API to update an object based on the invoked repository and setters used.</td>
+        </tr>
+        <tr>
+            <td>process()</td>
+            <td>Transactions</td>
+            <td>Submits a request to the API to process an object based on the invoked repository.</td>
+        </tr>
+        <tr>
+            <td>cancel(ID)</td>
+            <td>Transactions</td>
+            <td>Submits a request to the API to cancel an object by ID based on the invoked repository.</td>
+        </tr>
+        <tr>
+            <td>store()</td>
+            <td>Transactions</td>
+            <td>Submits a request to the API to create an object based on the invoked repository and setters used.</td>
+        </tr>
+        <tr>
+            <td>create()</td>
+            <td>Transactions</td>
+            <td>Alias of store().</td>
+        </tr>
+    </tbody>
+</table>
  
 Running/Using Examples
 ---------
