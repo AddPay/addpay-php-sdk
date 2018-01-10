@@ -20,7 +20,7 @@
   - [Running the Examples](https://github.com/stephenlake/AddPay-PHP-SDK#runningusing-examples)
   - [Download Latest Release](https://github.com/stephenlake/AddPay-PHP-SDK#download-latest-release)
   - [Configuration](https://github.com/stephenlake/AddPay-PHP-SDK#configuration)
-  - [Before Diving Into Code](https://github.com/stephenlake/AddPay-PHP-SDK#before-diving-into-code)
+  - [Before Diving Into Code](https://github.com/stephenlake/AddPay-PHP-SDK#before-diving-into-code) (Big Time Saver!)
   - [SDK Repository Reference](https://github.com/stephenlake/AddPay-PHP-SDK#sdk-repository-reference)
   - [SDK Methods Reference](https://github.com/stephenlake/AddPay-PHP-SDK#sdk-method-reference)
 - [Bug Reporting](https://github.com/stephenlake/AddPay-PHP-SDK#bug-reporting)
