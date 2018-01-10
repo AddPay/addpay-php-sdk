@@ -17,10 +17,7 @@ $http = $api->transactions()
             ->create();
 
 if ($http->succeeds()) {
-
-    // Read the documentation on what to do next.
-    print_r($http->resource);
-
+    dd($http->all());
 } else {
     $errorCode = $http->getErrorCode();
     $errorMsg  = $http->getErrorMessage();

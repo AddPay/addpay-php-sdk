@@ -8,6 +8,11 @@ $http = $api->transactions()
             ->find('TRANSACTION_ID_HERE');
 
 if ($http->succeeds()) {
+
+    // Remember dd() exits after dumping data so the following if statements
+    // won't be evaluated unless this dd() is removed or commented out.
+    dd($http->getStatus());
+
     if ($http->statusIs(OpenApi::STATE_READY)) {
         // Handle READY transaction
         // Read the AddPay API docs - handling is up to your application
@@ -51,8 +56,6 @@ if ($http->succeeds()) {
         // Handle SECUREFAILED transaction
         // Read the AddPay API docs - handling is up to your application
     }
-
-    dd($http->getStatus());
 } else {
     $errorCode = $http->getErrorCode();
     $errorMsg  = $http->getErrorMessage();

@@ -5,13 +5,11 @@ require_once(__DIR__ . '/../../core/bootstrap.php');
 $api = new OpenAPI();
 
 $http = $api->transactions()
-            ->find('TRANSACTION_ID_HERE');
+            ->withId('TRANSACTION_ID_HERE')
+            ->process();
 
 if ($http->succeeds()) {
-
-    // Read the documentation on what to do next.
-    print_r($http->resource);
-
+    dd($http->all());
 } else {
     $errorCode = $http->getErrorCode();
     $errorMsg  = $http->getErrorMessage();

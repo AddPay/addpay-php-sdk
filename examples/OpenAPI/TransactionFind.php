@@ -5,16 +5,10 @@ require_once(__DIR__ . '/../../core/bootstrap.php');
 $api = new OpenAPI();
 
 $http = $api->transactions()
-            ->withId('TRANSACTION_ID_HERE')
-            ->process();
+            ->find('TRANSACTION_ID_HERE');
 
 if ($http->succeeds()) {
-
-    // You have the choice to use your own payment page here,
-    // or use AddPay's hosted payment page. Read the docs, it
-    // explains everything you need to know.
-    print_r($http->resource);
-
+    dd($http->all());
 } else {
     $errorCode = $http->getErrorCode();
     $errorMsg  = $http->getErrorMessage();
