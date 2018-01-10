@@ -46,7 +46,7 @@ The following guides assume you have PHP installed on the system running the cod
 * <img src="http://icons.iconarchive.com/icons/icons8/windows-8/256/Systems-Linux-icon.png" width="24"> [Getting Started: Linux/Mac](https://github.com/stephenlake/AddPay-PHP-SDK/wiki/Getting-Started:-Linux-&-Mac) (Animated GIF's Included)
 
 ### More Advanced Developers
-Developers using composer and/or write OOP code can simply import the requires services from the `AddPay\Foundation\Protocol\API` namespace and use the package you would any other:
+Developers using composer and/or developers who prefer OOP code can simply import the requires services from the `AddPay\Foundation\Protocol\API` namespace and use the package you would any other:
 ```php
 <?php
 
