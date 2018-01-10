@@ -14,16 +14,15 @@
     <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/>
 </p>
 
-
 ## Documentation
 - [Getting Started](https://github.com/stephenlake/AddPay-PHP-SDK#getting-started)
   - [Requirements](https://github.com/stephenlake/AddPay-PHP-SDK#requirements)
+  - [Running the Examples](https://github.com/stephenlake/AddPay-PHP-SDK#runningusing-examples)
   - [Download Latest Release](https://github.com/stephenlake/AddPay-PHP-SDK#download-latest-release)
   - [Configuration](https://github.com/stephenlake/AddPay-PHP-SDK#configuration)
   - [Before Diving Into Code](https://github.com/stephenlake/AddPay-PHP-SDK#before-diving-into-code)
   - [SDK Repository Reference](https://github.com/stephenlake/AddPay-PHP-SDK#sdk-repository-reference)
   - [SDK Methods Reference](https://github.com/stephenlake/AddPay-PHP-SDK#sdk-method-reference)
-  - [Running the Examples](https://github.com/stephenlake/AddPay-PHP-SDK#runningusing-examples)
 - [Bug Reporting](https://github.com/stephenlake/AddPay-PHP-SDK#bug-reporting)
 - [Contributing & Suggestions](https://github.com/stephenlake/AddPay-PHP-SDK#contributing-and-suggestions)
 - [Disclaimer](https://github.com/stephenlake/AddPay-PHP-SDK#disclaimer)
@@ -38,6 +37,13 @@ For clarification sake to less experienced developers, this package does NOT req
 - PHP-CURL Extension
 - PHP-OPENSSL Extension
 - A little bit of patience (Reading Highly Recommended)
+
+Running/Using Examples
+---------
+The following guides assume you have PHP installed on the system running the code. If PHP is not installed, please view the [PHP Installation documentation](http://php.net/manual/en/install.php). **PHP5.3+ is supported, but PHP7.1+ is recommended for optimal performance**.
+
+* <img src="https://dotnetco.de/wp-content/uploads/2016/12/windows-icon256.png" width="24"> [Getting Started: Windows](https://github.com/stephenlake/AddPay-PHP-SDK/wiki/Getting-Started:-Windows) (Animated GIF's Included)
+* <img src="http://icons.iconarchive.com/icons/icons8/windows-8/256/Systems-Linux-icon.png" width="24"> [Getting Started: Linux/Mac](https://github.com/stephenlake/AddPay-PHP-SDK/wiki/Getting-Started:-Linux-&-Mac) (Animated GIF's Included)
 
 Download Latest Release
 ---------
@@ -216,13 +222,6 @@ SDK Method Reference
         </tr>
     </tbody>
 </table>
- 
-Running/Using Examples
----------
-The following guides assume you have PHP installed on the system running the code. If PHP is not installed, please view the [PHP Installation documentation](http://php.net/manual/en/install.php). **PHP5.3+ is supported, but PHP7.1+ is recommended for optimal performance**.
-
-* <img src="https://dotnetco.de/wp-content/uploads/2016/12/windows-icon256.png" width="24"> [Getting Started: Windows](https://github.com/stephenlake/AddPay-PHP-SDK/wiki/Getting-Started:-Windows) (Animated GIF's Included)
-* <img src="http://icons.iconarchive.com/icons/icons8/windows-8/256/Systems-Linux-icon.png" width="24"> [Getting Started: Linux/Mac](https://github.com/stephenlake/AddPay-PHP-SDK/wiki/Getting-Started:-Linux-&-Mac) (Animated GIF's Included)
 
 Bug Reporting
 ---------
