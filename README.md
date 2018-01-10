@@ -17,6 +17,7 @@
 
 ## Documentation
 - [Getting Started](https://github.com/stephenlake/AddPay-PHP-SDK#getting-started)
+  - [Requirements](https://github.com/stephenlake/AddPay-PHP-SDK#requirements)
   - [Download Latest Release](https://github.com/stephenlake/AddPay-PHP-SDK#download-latest-release)
   - [Configuration](https://github.com/stephenlake/AddPay-PHP-SDK#configuration)
   - [Before Diving Into Code](https://github.com/stephenlake/AddPay-PHP-SDK#before-diving-into-code)
@@ -29,6 +30,12 @@
 
 ## Getting Started
 Please have the [AddPay API Documentation](https://www.addpay.co.za/developers) open and closeby when referencing fields, this will improve your productivity and hopefully answer many questions you may have on field definitions and requirements. All fields are described within the [AddPay API Documentation](https://www.addpay.co.za/developers).
+
+Requirements
+---------
+For clarification sake to less experienced developers, this package does NOT require composer - it was merely **built** using composer, do not let the additional files scare you off, the package is dead simple to use. The only requirements are:
+- PHP5.3+ (PHP7.2+ Recommended)
+- A little bit of patience (Reading Highly Recommended)
 
 Download Latest Release
 ---------
