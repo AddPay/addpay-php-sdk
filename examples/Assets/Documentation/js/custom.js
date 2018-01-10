@@ -7,6 +7,18 @@ var examples = new Vue({
     activeExampleResult: false,
     openApiExamples: [],
   },
+  computed: {
+    resultIsHTML() {
+      var a = document.createElement('div');
+      a.innerHTML = this.activeExampleResult;
+
+      for (var c = a.childNodes, i = c.length; i--;) {
+        if (c[i].nodeType == 1) return true;
+      }
+
+      return false;
+    }
+  },
   mounted() {
     this.parseExamples()
   },

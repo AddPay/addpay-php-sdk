@@ -122,17 +122,21 @@
         </button>
           </div>
           <div class="modal-body">
-            <h4>The Code</h4>
-            <button :disabled="activeExampleRunning" type="button" class="btn btn-default mb-4" @click="activeExampleCodeVisible = !activeExampleCodeVisible">{{ activeExampleCodeVisible ? 'Hide' : 'View' }} Code</button>
-            <pre class="language-php" v-show="activeExampleCodeVisible" v-html="activeExample.file.content" style="font-size: 11px;"></pre>
+            <h4 style="font-weight: 400;">{{ activeExample.file.execPath }}</h4>
+            <button :disabled="activeExampleRunning" type="button" class="btn btn-sm btn-default mb-4" @click="activeExampleCodeVisible = !activeExampleCodeVisible"><i class="fa fa-eye-slash" v-show="activeExampleCodeVisible"></i><i class="fa fa-eye" v-show="!activeExampleCodeVisible"></i> {{ activeExampleCodeVisible ? 'Hide' : 'View' }} Code</button>
+            <br/>
+            <textarea class="language-php" v-show="activeExampleCodeVisible" v-html="activeExample.file.content" style="font-size: 11px; width: 100%; height: 360px; resize: none;" readonly="readonly"></textarea>
             <br/>
             <h4 v-show="!activeExampleRunning">The Result</h4>
             <p v-show="activeExampleResult == false && !activeExampleRunning">Run the code first</p>
-            <h3 v-show="activeExampleResult == false && activeExampleRunning"><i class="fa fa-refresh fa-spin"></i> Running code...</h3>
-            <pre v-show="activeExampleResult" style="font-size: 11px;"><code v-html="activeExampleResult"></code></pre>
+            <h3 v-show="activeExampleResult == false && activeExampleRunning"><i class="fa fa-circle-o-notch fa-spin-fast"></i> Running code...</h3>
+            <div v-show="activeExampleResult" style="border: 1px solid whitesmoke; border-radius: 6px; padding: 15px;">
+              <pre v-if="!resultIsHTML" style="font-size: 11px;"><code v-html="activeExampleResult"></code></pre>
+              <div v-else v-html="activeExampleResult"></div>
+            </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" @click="runExampleCode(activeExample)" :disabled="activeExampleRunning"><i class="fa fa-refresh fa-spin" v-show="activeExampleRunning"></i> {{ activeExampleRunning ? 'Loading' : 'Run Example Code' }}</button>
+            <button type="button" class="btn btn-secondary" @click="runExampleCode(activeExample)" :disabled="activeExampleRunning"><i class="fa fa-circle-o-notch fa-spin-fast" v-show="activeExampleRunning"></i> {{ activeExampleRunning ? 'Loading' : 'Run Example Code' }}</button>
             <button type="button" class="btn btn-default" data-dismiss="modal" :disabled="activeExampleRunning">Cancel</button>
           </div>
         </div>

@@ -1,4 +1,9 @@
 textarea {
-  background: #2c3e50;
-  color: #fff;
+  background: whitesmoke;
+  color: #000;
+}
+
+.fa-spin-fast {
+  -webkit-animation: fa-spin 0.7s infinite linear;
+  animation: fa-spin 0.7s infinite linear;
 }
