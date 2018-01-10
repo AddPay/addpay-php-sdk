@@ -61,7 +61,7 @@ class JSONObject
      */
     public function getErrorCode()
     {
-        return $this->resource['meta']['code'] ?? 500;
+        return $this->fails() && isset($this->resource['meta']['code']) ? $this->resource['meta']['code'] : '';
     }
 
     /**
@@ -71,7 +71,7 @@ class JSONObject
      */
     public function getErrorMessage()
     {
-        return $this->resource['meta']['message'] ?? 'Internal exception';
+        return $this->fails() && isset($this->resource['meta']['message']) ? $this->resource['meta']['message'] : '';
     }
 
     /**
