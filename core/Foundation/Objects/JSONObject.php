@@ -223,7 +223,7 @@ class JSONObject
      */
     public function all()
     {
-        return $this->resource;
+        return isset($this->resource['data']) ? $this->resource['data'] : null;
     }
 
     /**
