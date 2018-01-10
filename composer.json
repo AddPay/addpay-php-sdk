@@ -1,12 +1,23 @@
 {
-    "require": {
-        "kitetail/zttp": "^0.3.0",
-        "caseyamcl/Configula": "^2.4",
-        "wanfeiyy/dd": "^1.0"
-    },
-    "autoload": {
-      "psr-4": {
-        "AddPay\\Foundation\\": "core/Foundation/"
-      }
+  "name": "stephenlake/addpay-php-sdk",
+  "type": "library",
+  "description": "A PHP package to assist in developing applications communicating with the AddPay API.",
+  "keywords": ["addpay", "payments"],
+  "license": "MIT",
+  "authors": [{
+    "name": "Stephen Lake",
+    "email": "stephen@closurecode.com",
+    "homepage": "https://www.closurecode.com",
+    "role": "Developer"
+  }],
+  "require": {
+    "kitetail/zttp": "^0.3.0",
+    "caseyamcl/Configula": "^2.4",
+    "wanfeiyy/dd": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "AddPay\\Foundation\\": "core/Foundation/"
     }
+  }
 }
