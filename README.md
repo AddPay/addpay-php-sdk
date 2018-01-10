@@ -226,7 +226,7 @@ SDK Method Reference
 Bug Reporting
 ---------
 
-Please use the [GitHub Issues](https://github.com/stephenlake/AddPay-PHP-SDK/issues) tab to report any problems you are having with the package.
+Please use the [GitHub Issues](https://github.com/stephenlake/AddPay-PHP-SDK/issues) tab to report any problems you are having with the package. I am fully aware that there are code lines that can be optimized using PHP7's new functionality, but I have deliberately avoided this to keep the package compatible with older version of PHP, please do not report performance improvements unless they are backward compatible.
 
 ## Contributing & Suggestions
 [Create a pull request](https://github.com/stephenlake/addpay-php/pulls) at any point. **Do not suggest an addition or make a request for change in writing, just write the code and [submit a pull request](https://github.com/stephenlake/addpay-php/pulls)**, if it improves the package without generating any breaking changes and adds efficiency, then **it will be merged**. _I will ignore any demands/requests for changes without any  suggested code replacement and/or additions._
