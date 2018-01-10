@@ -41,7 +41,7 @@ For clarification sake to less experienced developers, this package does NOT req
 
 Download Latest Release
 ---------
-Link coming soon! A few more hours!
+[AddPay-PHP-SDK-Master.zip](https://github.com/stephenlake/AddPay-PHP-SDK/archive/master.zip)
 
 Configuration
 ---------
