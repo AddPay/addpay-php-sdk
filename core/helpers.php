@@ -37,7 +37,7 @@ if (!function_exists('printAddPaySDKLoaded')) {
              echo "\033[31mCannot continue without required modules loaded\033[0m\n\n";
              exit;
           } else {
-            echo "\033[32mRun an example scripts with:\033[0m php ScriptNameHere.php\n\n";
+            echo "\033[32mRun an example scripts with:\033[0m php ScriptNameHere.php (Example: php OpenAPI/DisectTransaction.php)\n\n";
           }
     }
 }
