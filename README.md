@@ -33,7 +33,7 @@ Please have the [AddPay API Documentation](https://www.addpay.co.za/developers) 
 Requirements
 ---------
 For clarification sake to less experienced developers, this package does NOT require composer - it was merely **built** using composer, do not let the additional files scare you off, the package is dead simple to use. The only requirements are:
-- PHP5.3+ (PHP7.2+ Recommended)
+- PHP5.3+ (PHP7.1+ Recommended)
 - PHP-CURL Extension
 - PHP-OPENSSL Extension
 - A little bit of patience (Reading Highly Recommended)
