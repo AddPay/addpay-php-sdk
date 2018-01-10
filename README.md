@@ -222,7 +222,7 @@ Running/Using Examples
 The following guides assume you have PHP installed on the system running the code. If PHP is not installed, please view the [PHP Installation documentation](http://php.net/manual/en/install.php). **PHP5.3+ is supported, but PHP7.1+ is recommended for optimal performance**.
 
 * <img src="https://dotnetco.de/wp-content/uploads/2016/12/windows-icon256.png" width="24"> [Getting Started: Windows](https://github.com/stephenlake/AddPay-PHP-SDK/wiki/Getting-Started:-Windows) (Animated GIF's Included)
-* <img src="http://icons.iconarchive.com/icons/icons8/windows-8/256/Systems-Linux-icon.png" width="24"> [Getting Started: Linux/Mac](https://github.com/stephenlake/AddPay-PHP-SDK/wiki/Getting-Started:-Linux) (Animated GIF's Included)
+* <img src="http://icons.iconarchive.com/icons/icons8/windows-8/256/Systems-Linux-icon.png" width="24"> [Getting Started: Linux/Mac](https://github.com/stephenlake/AddPay-PHP-SDK/wiki/Getting-Started:-Linux-&-Mac) (Animated GIF's Included)
 
 Bug Reporting
 ---------
