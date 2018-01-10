@@ -24,7 +24,7 @@ if ($http->succeeds()) {
 
     // To get a nested object value, for example the
     // Transaction Amount Currency Name:
-    dd($http->getTransactionAmountCurrencyName());
+    dd($http->getAmountCurrencyName());
 
     // Or and entire object with its subfields, the call_to_action object
     dd($http->getCallToAction());
