@@ -17,9 +17,28 @@ if (!function_exists('runningAddPaySdkInCommandLine')) {
 if (!function_exists('printAddPaySDKLoaded')) {
     function printAddPaySDKLoaded()
     {
-        echo "\n\n-------------------------------------------------------\n\n\033[0m";
-        echo "\033[32m    AddPay PHP SDK Successfully initialized                   ";
-        echo "\n\n\033[0m-------------------------------------------------------\n\n";
+          $openSslLoaded = extension_loaded('openssl');
+          $curlLoaded = extension_loaded('curl');
+
+          $openSslLoadedString = $openSslLoaded ? "\033[32mYes\033[0m" : "\033[31mNo\033[0m";
+          $curlLoadedString = $curlLoaded ? "\033[32mYes\033[0m" : "\033[31mNo\033[0m";
+
+          $canContinue = ($openSslLoaded && $curlLoaded);
+
+          echo "\n\n-------------------------------------------------------\n\n\033[0m";
+          echo "\033[32m    AddPay PHP SDK Initialized                   ";
+          echo "\n\n\033[0m-------------------------------------------------------\n\n";
+          echo "Operating System: \033[36m" . php_uname() . "\033[0m\n\n";
+          echo "OpenSSL Extension Loaded: {$openSslLoadedString}\n";
+          echo "cURL Extension Loaded: {$curlLoadedString}\n";
+          echo "\n";
+
+          if (!$canContinue) {
+             echo "\033[31mCannot continue without required modules loaded\033[0m\n\n";
+             exit;
+          } else {
+             echo "\033[32mRun an example scripts with:\033[0m php ScriptNameHere.php (Example: php OpenAPI/DisectTransaction.php)\n\n";
+          }
     }
 }
 

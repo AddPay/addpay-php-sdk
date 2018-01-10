@@ -14,16 +14,15 @@
     <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/>
 </p>
 
-
 ## Documentation
 - [Getting Started](https://github.com/stephenlake/AddPay-PHP-SDK#getting-started)
   - [Requirements](https://github.com/stephenlake/AddPay-PHP-SDK#requirements)
+  - [Running the Examples](https://github.com/stephenlake/AddPay-PHP-SDK#runningusing-examples)
   - [Download Latest Release](https://github.com/stephenlake/AddPay-PHP-SDK#download-latest-release)
   - [Configuration](https://github.com/stephenlake/AddPay-PHP-SDK#configuration)
   - [Before Diving Into Code](https://github.com/stephenlake/AddPay-PHP-SDK#before-diving-into-code)
   - [SDK Repository Reference](https://github.com/stephenlake/AddPay-PHP-SDK#sdk-repository-reference)
   - [SDK Methods Reference](https://github.com/stephenlake/AddPay-PHP-SDK#sdk-method-reference)
-  - [Running the Examples](https://github.com/stephenlake/AddPay-PHP-SDK#runningusing-examples)
 - [Bug Reporting](https://github.com/stephenlake/AddPay-PHP-SDK#bug-reporting)
 - [Contributing & Suggestions](https://github.com/stephenlake/AddPay-PHP-SDK#contributing-and-suggestions)
 - [Disclaimer](https://github.com/stephenlake/AddPay-PHP-SDK#disclaimer)
@@ -35,17 +34,26 @@ Requirements
 ---------
 For clarification sake to less experienced developers, this package does NOT require composer - it was merely **built** using composer, do not let the additional files scare you off, the package is dead simple to use. The only requirements are:
 - PHP5.3+ (PHP7.2+ Recommended)
+- PHP-CURL Extension
+- PHP-OPENSSL Extension
 - A little bit of patience (Reading Highly Recommended)
+
+Running/Using Examples
+---------
+The following guides assume you have PHP installed on the system running the code. If PHP is not installed, please view the [PHP Installation documentation](http://php.net/manual/en/install.php). **PHP5.3+ is supported, but PHP7.1+ is recommended for optimal performance**.
+
+* <img src="https://dotnetco.de/wp-content/uploads/2016/12/windows-icon256.png" width="24"> [Getting Started: Windows](https://github.com/stephenlake/AddPay-PHP-SDK/wiki/Getting-Started:-Windows) (Animated GIF's Included)
+* <img src="http://icons.iconarchive.com/icons/icons8/windows-8/256/Systems-Linux-icon.png" width="24"> [Getting Started: Linux/Mac](https://github.com/stephenlake/AddPay-PHP-SDK/wiki/Getting-Started:-Linux-&-Mac) (Animated GIF's Included)
 
 Download Latest Release
 ---------
-Link coming soon! A few more hours!
+[AddPay-PHP-SDK-Master.zip](https://github.com/stephenlake/AddPay-PHP-SDK/archive/master.zip)
 
 Configuration
 ---------
 - Head to your developer portal or merchant console developer settings if your integration is live, find the section providing your `client_id` and `client_secret`, keep these credentials closeby.
 - Open the configuration file in this package located at `path/to/this/package/config/config.json`
-- Relace `your_client_id` with your actual `client_id`
+- Replace `your_client_id` with your actual `client_id`
 - Replace `your_client_secret` with your actual `client_secret`
 - If your integration is live, set `live` to `true`
 - It is important to ensure the structure of the file is unchanged, the quotes are important!
@@ -214,34 +222,6 @@ SDK Method Reference
         </tr>
     </tbody>
 </table>
- 
-Running/Using Examples
----------
-The following guides assume you have PHP installed on the system running the code. If PHP is not installed, please view the [PHP Installation documentation](http://php.net/manual/en/install.php). **PHP5.3+ is supported, but PHP7.1+ is recommended for optimal performance**.
-
-### \* <img src="https://dotnetco.de/wp-content/uploads/2016/12/windows-icon256.png" width="24"> Windows
-
-**Option 1 - Through the Command Line**
-- Start a command prompt (Start button > Run > cmd.exe)
-- In the window that appears, type the full path to the PHP executable (php.exe) followed by the full path to the script you wish to run:
-   - Example: `C:\PHP\php.exe C:\path\to\addpay\package\examples\TransactionFind.php`
-
-**Option 2 - PHP Internal Webserver**
-- Start a command prompt (Start button > Run > cmd.exe)
-- Type the full path to the PHP executable (php.exe) and start the webserver in wthe root directory being the examples directory:
-   - Example: `C:\PHP\php.exe -S localhost:8080 -t C:\path\to\addpay\package\examples`
-- Open `localhost:8080/index.php` in your browser
-
-### \* <img src="http://icons.iconarchive.com/icons/icons8/windows-8/256/Systems-Linux-icon.png" width="24"> Linux & Mac 
-
-**Option 1 - Through the terminal**
-- Open a new terminal
-- Run the script with `php /path/to/addpay/package/examples/TransactionUpdate.php`
-
-**Option 2 - PHP Internal Webserver**
-- Open a new terminal
-- Start a webserver on port 8080 with: `php -S localhost:8080 -t /path/to/addpay/package/examples/`
-- Open `localhost:8080/index.php` in your browser
 
 Bug Reporting
 ---------
