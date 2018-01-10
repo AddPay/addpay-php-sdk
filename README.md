@@ -8,7 +8,7 @@
 <p align="center">
     <img src="https://img.shields.io/badge/build-stable-brightgreen.svg?style=flat"/>
     <img src="https://img.shields.io/badge/tests-passing-brightgreen.svg?style=flat"/>
-    <img src="https://img.shields.io/badge/coverage-100%25-brightgreen.svg?style=flat"/>
+    <img src="https://img.shields.io/badge/coverage-97.82%25-brightgreen.svg?style=flat"/>
     <img src="https://img.shields.io/badge/maintainability-A++-brightgreen.svg?style=flat"/>
     <img src="https://img.shields.io/badge/php-%3E=5.3-brightgreen.svg?style=flat"/>
     <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/>
@@ -17,10 +17,10 @@
 ## Documentation
 - [Getting Started](https://github.com/stephenlake/AddPay-PHP-SDK#getting-started)
   - [Requirements](https://github.com/stephenlake/AddPay-PHP-SDK#requirements)
-  - [Running the Examples](https://github.com/stephenlake/AddPay-PHP-SDK#runningusing-examples)
+  - [Running the Examples](https://github.com/stephenlake/AddPay-PHP-SDK#runningusing-examples) :warning: Step-by-Step with animated GIF's
   - [Download Latest Release](https://github.com/stephenlake/AddPay-PHP-SDK#download-latest-release)
   - [Configuration](https://github.com/stephenlake/AddPay-PHP-SDK#configuration)
-  - [Before Diving Into Code](https://github.com/stephenlake/AddPay-PHP-SDK#before-diving-into-code) - :warning: Big Time Saver :warning:
+  - [Before Diving Into Code](https://github.com/stephenlake/AddPay-PHP-SDK#before-diving-into-code) :warning: Big Time Saver
   - [SDK Repository Reference](https://github.com/stephenlake/AddPay-PHP-SDK#sdk-repository-reference)
   - [SDK Methods Reference](https://github.com/stephenlake/AddPay-PHP-SDK#sdk-method-reference)
 - [Bug Reporting](https://github.com/stephenlake/AddPay-PHP-SDK#bug-reporting)
@@ -33,7 +33,7 @@ Please have the [AddPay API Documentation](https://www.addpay.co.za/developers) 
 Requirements
 ---------
 For clarification sake to less experienced developers, this package does NOT require composer - it was merely **built** using composer, do not let the additional files scare you off, the package is dead simple to use. The only requirements are:
-- PHP5.3+ (PHP7.2+ Recommended)
+- PHP5.3+ (PHP7.1+ Recommended)
 - PHP-CURL Extension
 - PHP-OPENSSL Extension
 - A little bit of patience (Reading Highly Recommended)
