@@ -176,6 +176,11 @@ SDK Method Reference
     </thead>
     <tbody>
         <tr>
+            <td>new()</td>
+            <td>ANY</td>
+            <td>Returns a new repository JSONObject.</td>
+        </tr>
+        <tr>
             <td>all()</td>
             <td>ANY</td>
             <td>Returns the entire transaction object.</td>
