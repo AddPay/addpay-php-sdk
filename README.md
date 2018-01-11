@@ -136,6 +136,7 @@ SDK Repository Reference
 <table>
     <thead>
         <tr>
+            <th>API</th>
             <th>Repository</th>
             <th>Invoke Method</th>
             <th>Definition</th>
@@ -143,14 +144,22 @@ SDK Repository Reference
     </thead>
     <tbody>
         <tr>
+            <td>OpenAPI</td>
             <td>Transactions</td>
             <td>transactions()</td>
             <td>Instantiates a transaction repository to call referenced methods.</td>
         </tr>
-         <tr>
+        <tr>
+            <td>OpenAPI</td>
             <td>Services</td>
             <td>services()</td>
             <td>Instantiates a service repository to call referenced methods.</td>
+        </tr>
+        <tr>
+            <td>PrivateAPI</td>
+            <td>Authentication</td>
+            <td>authentication()</td>
+            <td>Instantiates an authentication repository to call referenced methods.</td>
         </tr>
     </tbody>
 </table>
@@ -240,6 +249,16 @@ SDK Method Reference
             <td>create()</td>
             <td>Transactions</td>
             <td>Alias of store().</td>
+        </tr>
+        <tr>
+            <td>submit()</td>
+            <td>*</td>
+            <td>Submits a POST to the relevant repository.</td>
+        </tr>
+        <tr>
+            <td>status()</td>
+            <td>Authentication</td>
+            <td>Returns the authentication status object.</td>
         </tr>
     </tbody>
 </table>
