@@ -45,8 +45,29 @@ The following guides assume you have PHP installed on the system running the cod
 * <img src="https://dotnetco.de/wp-content/uploads/2016/12/windows-icon256.png" width="24"> [Getting Started: Windows](https://github.com/stephenlake/AddPay-PHP-SDK/wiki/Getting-Started:-Windows) (Animated GIF's Included)
 * <img src="http://icons.iconarchive.com/icons/icons8/windows-8/256/Systems-Linux-icon.png" width="24"> [Getting Started: Linux/Mac](https://github.com/stephenlake/AddPay-PHP-SDK/wiki/Getting-Started:-Linux-&-Mac) (Animated GIF's Included)
 
+**More Advanced Developers**
+
+Developers using composer and/or developers who prefer OOP code can simply import the required services from the `AddPay\Foundation\Protocol\API` namespace and use the package you would any other:
+```php
+<?php
+
+use AddPay\Foundation\Protocol\API\OpenAPI;
+use AddPay\Foundation\Protocol\API\PublicAPI;
+use AddPay\Foundation\Protocol\API\PrivateAPI;
+
+$openAPI = new OpenAPI();
+$pubAPI  = new PublicAPI();
+$pvtAPI  = new PrivateAPI();
+```
+
 Download Latest Release
 ---------
+More advanced users or users that are familiar with composer may download the package through composer if they wish:
+```bash
+composer require stephenlake/addpay-php-sdk
+```
+
+Alternatively, download the master archive directly:
 [AddPay-PHP-SDK-Master.zip](https://github.com/stephenlake/AddPay-PHP-SDK/archive/master.zip)
 
 Configuration
