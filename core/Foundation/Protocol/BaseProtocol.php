@@ -14,21 +14,21 @@ class BaseProtocol
      *
      * @var BaseAPI
      */
-    private $api;
+    public $api;
 
     /**
      * Container for all headers to be submitted on each API request
      *
      * @var array
      */
-    private $headers = array();
+    public $headers = array();
 
     /**
      * The resource container
      *
      * @var JSONObject
      */
-    private $resource;
+    public $resource;
 
     /**
      * Parent endpoint of the BaseProtocol

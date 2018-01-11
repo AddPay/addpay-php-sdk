@@ -33,6 +33,8 @@ class OpenAPI extends BaseAPI
     {
         parent::__construct();
 
+        $this->baseUrl = boolval($this->config['live']) === true ? 'https://secure.addpay.co.za' : 'https://secure-test.addpay.co.za';
+
         $this->services = new ServiceProtocol($this);
         $this->transactions = new TransactionProtocol($this);
     }

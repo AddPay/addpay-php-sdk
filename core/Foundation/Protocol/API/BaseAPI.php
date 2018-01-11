@@ -34,8 +34,6 @@ class BaseAPI
         $this->config = new Config(__DIR__ . '/../../../../config/');
 
         $this->validateConfig();
-
-        $this->baseUrl = boolval($this->config['live']) === true ? 'https://secure.addpay.co.za' : 'https://secure-test.addpay.co.za';
     }
 
     /**
