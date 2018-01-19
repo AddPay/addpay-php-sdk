@@ -162,7 +162,7 @@ class BaseProtocol
      * @return JSONObject
      *
      */
-    public function new()
+    public function instantiate()
     {
         $this->resource = new JSONObject(array(), $this);
 

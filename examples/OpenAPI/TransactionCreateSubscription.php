@@ -5,7 +5,7 @@ require_once(__DIR__ . '/../../core/bootstrap.php');
 $api = new OpenAPI();
 
 $http = $api->transactions()
-             ->new()
+             ->instantiate()
              ->withReference('MyRef')
              ->withDescription('This is my transaction')
              ->withCustomerFirstname('CustomerFirstname')
