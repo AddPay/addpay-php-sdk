@@ -176,7 +176,7 @@ SDK Method Reference
     </thead>
     <tbody>
         <tr>
-            <td>new()</td>
+            <td>instantiates()</td>
             <td>ANY</td>
             <td>Returns a new repository JSONObject.</td>
         </tr>
@@ -221,7 +221,7 @@ SDK Method Reference
             <td>Returns the meta status error message if an error exists.</td>
         </tr>
         <tr>
-            <td>list()</td>
+            <td>get()</td>
             <td>Services</td>
             <td>Submits a request to the API to retrieve a list of objects based on the invoked repository.</td>
         </tr>
