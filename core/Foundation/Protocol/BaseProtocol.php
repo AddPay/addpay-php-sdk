@@ -77,6 +77,12 @@ class BaseProtocol
         $this->headers['Authorization'] = $tokenTokened;
     }
 
+    /**
+     * Create HTTP request wrapped around GuzzleHttp client and return result.
+     *
+     * @return JSONObject
+     *
+     */
     public function createRequest($method, $url, $body = [])
     {
         $httpRequest = new Client();
