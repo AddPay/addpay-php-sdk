@@ -1,3 +1,5 @@
+window.baseUrl = window.location.href.toString().replace('index.php', '');
+
 var examples = new Vue({
   el: '#examples',
   data: {
@@ -40,7 +42,7 @@ var examples = new Vue({
       this.activeExampleCodeVisible = false;
 
       setTimeout(function() {
-        axios.get('/' + example.file.execPath).then(response => {
+        axios.get(window.baseUrl + '/' + example.file.execPath).then(response => {
           this.activeExampleResult = response.data;
           this.activeExampleRunning = false;
         }).catch(e => {
