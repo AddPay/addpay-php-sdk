@@ -178,7 +178,7 @@ SDK Method Reference
         <tr>
             <td>instantiates()</td>
             <td>ANY</td>
-            <td>Returns a new repository JSONObject.</td>
+            <td>Instantiates and returns a new repository JSONObject.</td>
         </tr>
         <tr>
             <td>all()</td>
