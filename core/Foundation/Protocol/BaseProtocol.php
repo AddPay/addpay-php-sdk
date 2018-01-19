@@ -83,7 +83,7 @@ class BaseProtocol
      * @return JSONObject
      *
      */
-    public function createRequest($method, $url, $body = [])
+    public function createRequest($method, $url, $body = array())
     {
         $httpRequest = new Client();
 
