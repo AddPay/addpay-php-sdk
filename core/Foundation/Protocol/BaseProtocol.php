@@ -4,8 +4,9 @@ namespace AddPay\Foundation\Protocol;
 
 use AddPay\Foundation\Protocol\API\BaseApi;
 use AddPay\Foundation\Objects\JSONObject;
-
-use Zttp\Zttp;
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\ClientException;
+use GuzzleHttp\Exception\RequestException;
 
 class BaseProtocol
 {
@@ -76,6 +77,30 @@ class BaseProtocol
         $this->headers['Authorization'] = $tokenTokened;
     }
 
+    public function createRequest($method, $url, $body = [])
+    {
+        $httpRequest = new Client();
+
+        try {
+            $httpResponse = $httpRequest->request(
+              $method,
+              "{$this->api->baseUrl}{$this->endpoint}{$this->queryParams}",
+              array(
+                'headers' => $this->headers,
+                'json'    => $body
+              )
+          );
+
+            $httpResponse = json_decode($httpResponse->getBody()->getContents(), true);
+        } catch (ClientException $e) {
+            $httpResponse = json_decode($e->getResponse()->getBody()->getContents(), true);
+        } catch (RequestException $e) {
+            $httpResponse = json_decode($e->getResponse()->getBody()->getContents(), true);
+        }
+
+        return $httpResponse;
+    }
+
     /**
      * Submit request to API to find an object by its ID
      *
@@ -86,11 +111,11 @@ class BaseProtocol
      */
     public function findById($id)
     {
-        $response = Zttp::withHeaders($this->headers)->get("{$this->api->baseUrl}{$this->endpoint}/{$id}{$this->queryParams}");
+        $response = $this->createRequest('GET', "{$this->api->baseUrl}{$this->endpoint}/{$id}{$this->queryParams}");
 
         $this->queryParams = '?';
 
-        $this->resource = new JSONObject($response->json(), $this);
+        $this->resource = new JSONObject($response, $this);
 
         return $this->resource;
     }
@@ -116,11 +141,11 @@ class BaseProtocol
      */
     public function list()
     {
-        $response = Zttp::withHeaders($this->headers)->get("{$this->api->baseUrl}{$this->endpoint}{$this->queryParams}");
+        $response = $this->createRequest('GET', "{$this->api->baseUrl}{$this->endpoint}{$this->queryParams}");
 
         $this->queryParams = '?';
 
-        $this->resource = new JSONObject($response->json(), $this);
+        $this->resource = new JSONObject($response, $this);
 
         return $this->resource;
     }
@@ -146,11 +171,11 @@ class BaseProtocol
      */
     public function store()
     {
-        $response = Zttp::withHeaders($this->headers)->asFormParams()->post("{$this->api->baseUrl}{$this->endpoint}{$this->queryParams}", $this->resource->resource);
+        $response = $this->createRequest('POST', "{$this->api->baseUrl}{$this->endpoint}{$this->queryParams}", $this->resource->resource);
 
         $this->queryParams = '?';
 
-        $this->resource = new JSONObject($response->json(), $this);
+        $this->resource = new JSONObject($response, $this);
 
         return $this->resource;
     }
@@ -177,11 +202,11 @@ class BaseProtocol
     {
         $id = $this->resource->resource['data']['id'] ?? $this->resource->resource['id'];
 
-        $response = Zttp::withHeaders($this->headers)->asFormParams()->put("{$this->api->baseUrl}{$this->endpoint}/{$id}{$this->queryParams}", $this->resource->resource);
+        $response = $this->createRequest('PUT', "{$this->api->baseUrl}{$this->endpoint}/{$id}{$this->queryParams}", $this->resource->resource);
 
         $this->queryParams = '?';
 
-        $this->resource = new JSONObject($response->json(), $this);
+        $this->resource = new JSONObject($response, $this);
 
         return $this->resource;
     }
@@ -196,11 +221,11 @@ class BaseProtocol
     {
         $id = $this->resource->resource['data']['id'] ?? $this->resource->resource['id'];
 
-        $response = Zttp::withHeaders($this->headers)->asFormParams()->delete("{$this->api->baseUrl}{$this->endpoint}/{$id}{$this->queryParams}", $this->resource->resource);
+        $response = $this->createRequest('DELETE', "{$this->api->baseUrl}{$this->endpoint}/{$id}{$this->queryParams}", $this->resource->resource);
 
         $this->queryParams = '?';
 
-        $this->resource = new JSONObject($response->json(), $this);
+        $this->resource = new JSONObject($response, $this);
 
         return $this->resource;
     }
@@ -228,11 +253,11 @@ class BaseProtocol
     {
         $id = $this->resource->resource['data']['id'] ?? $this->resource->resource['id'];
 
-        $response = Zttp::withHeaders($this->headers)->asFormParams()->patch("{$this->api->baseUrl}{$this->endpoint}/{$id}{$this->queryParams}", $this->resource->resource);
+        $response = $this->createRequest('PATCH', "{$this->api->baseUrl}{$this->endpoint}/{$id}{$this->queryParams}", $this->resource->resource);
 
         $this->queryParams = '?';
 
-        $this->resource = new JSONObject($response->json(), $this);
+        $this->resource = new JSONObject($response, $this);
 
         if ($callback !== false) {
             $result = $callback($this, $this->resource->resource);

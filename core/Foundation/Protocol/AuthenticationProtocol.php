@@ -5,8 +5,6 @@ namespace AddPay\Foundation\Protocol;
 use AddPay\Foundation\Protocol\BaseProtocol;
 use AddPay\Foundation\Objects\JSONObject;
 
-use Zttp\Zttp;
-
 class AuthenticationProtocol extends BaseProtocol
 {
     /**
@@ -24,9 +22,9 @@ class AuthenticationProtocol extends BaseProtocol
      */
     public function status()
     {
-        $response = Zttp::get("{$this->api->baseUrl}{$this->endpoint}");
+        $response = $this->createRequest('GET', "{$this->api->baseUrl}{$this->endpoint}");
 
-        $this->resource = new JSONObject($response->json(), $this);
+        $this->resource = new JSONObject($response, $this);
 
         return $this->resource;
     }
@@ -39,9 +37,9 @@ class AuthenticationProtocol extends BaseProtocol
      */
     public function submit()
     {
-        $response = Zttp::post("{$this->api->baseUrl}{$this->endpoint}", $this->resource->resource);
+        $response = $this->createRequest('POST', "{$this->api->baseUrl}{$this->endpoint}", $this->resource->resource);
 
-        $this->resource = new JSONObject($response->json(), $this);
+        $this->resource = new JSONObject($response, $this);
 
         return $this->resource;
     }

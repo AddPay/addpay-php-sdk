@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4aeef2441148e49829ecd53a46f7a953",
-    "content-hash": "53fb09ba4ac5f6034dde9736d019fd1b",
+    "hash": "89143f56c84dcb7e6832bca2d23c0473",
+    "content-hash": "649f7282c0ac17a1c9d1b3bae819a9ff",
     "packages": [
         {
             "name": "caseyamcl/configula",
@@ -234,52 +234,6 @@
                 "url"
             ],
             "time": "2017-03-20 17:10:46"
-        },
-        {
-            "name": "kitetail/zttp",
-            "version": "v0.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kitetail/zttp.git",
-                "reference": "e788ab8fc5c0259f691e2960d17e0ddbab761c6a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kitetail/zttp/zipball/e788ab8fc5c0259f691e2960d17e0ddbab761c6a",
-                "reference": "e788ab8fc5c0259f691e2960d17e0ddbab761c6a",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "^6.0",
-                "php": ">=7.0",
-                "tightenco/collect": "^5.4"
-            },
-            "require-dev": {
-                "laravel/lumen-framework": "^5.4",
-                "phpunit/phpunit": "^6.0"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/Zttp.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Adam Wathan",
-                    "email": "adam.wathan@gmail.com"
-                }
-            ],
-            "description": "A developer-experience focused HTTP client, optimized for most common use cases.",
-            "keywords": [
-                "Guzzle",
-                "http"
-            ],
-            "time": "2017-08-09 15:31:26"
         },
         {
             "name": "psr/http-message",
