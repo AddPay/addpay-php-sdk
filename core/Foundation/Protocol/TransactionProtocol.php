@@ -19,8 +19,8 @@ class TransactionProtocol extends BaseProtocol
      * @return mixed
      *
      */
-    public function new($protocol = false)
+    public function instantiate($protocol = false)
     {
-        return parent::new(array(), $this);
+        return parent::instantiate(array(), $this);
     }
 }

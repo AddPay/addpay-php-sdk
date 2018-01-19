@@ -206,7 +206,7 @@ class BaseProtocol
      */
     public function update()
     {
-        $id = $this->resource->resource['data']['id'] ?? $this->resource->resource['id'];
+        $id = isset($this->resource->resource['data']['id']) ? $this->resource->resource['data']['id'] : $this->resource->resource['id'];
 
         $response = $this->createRequest('PUT', "{$this->api->baseUrl}{$this->endpoint}/{$id}{$this->queryParams}", $this->resource->resource);
 
@@ -225,7 +225,7 @@ class BaseProtocol
      */
     public function delete()
     {
-        $id = $this->resource->resource['data']['id'] ?? $this->resource->resource['id'];
+        $id = isset($this->resource->resource['data']['id']) ? $this->resource->resource['data']['id'] : $this->resource->resource['id'];
 
         $response = $this->createRequest('DELETE', "{$this->api->baseUrl}{$this->endpoint}/{$id}{$this->queryParams}", $this->resource->resource);
 
@@ -257,7 +257,7 @@ class BaseProtocol
      */
     public function process($callback = false)
     {
-        $id = $this->resource->resource['data']['id'] ?? $this->resource->resource['id'];
+        $id = isset($this->resource->resource['data']['id']) ? $this->resource->resource['data']['id'] : $this->resource->resource['id'];
 
         $response = $this->createRequest('PATCH', "{$this->api->baseUrl}{$this->endpoint}/{$id}{$this->queryParams}", $this->resource->resource);
 
