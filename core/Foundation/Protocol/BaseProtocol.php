@@ -145,7 +145,7 @@ class BaseProtocol
      * @return JSONObject
      *
      */
-    public function list()
+    public function get()
     {
         $response = $this->createRequest('GET', "{$this->api->baseUrl}{$this->endpoint}{$this->queryParams}");
 

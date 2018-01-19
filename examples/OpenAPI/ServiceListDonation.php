@@ -7,7 +7,7 @@ $api = new OpenAPI();
 $http = $api->services()
             ->withType('transaction')
             ->withIntent('DONATION')
-            ->list();
+            ->get();
 
 if ($http->succeeds()) {
     dd($http->all());

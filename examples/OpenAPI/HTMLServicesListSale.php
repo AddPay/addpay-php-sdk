@@ -9,7 +9,7 @@ $api = new OpenAPI();
 $http = $api->services()
             ->withType('transaction')
             ->withIntent('SALE')
-            ->list();
+            ->get();
 
 if ($http->succeeds()) {
     $services = $http->all();

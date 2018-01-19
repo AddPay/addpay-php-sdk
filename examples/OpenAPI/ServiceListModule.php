@@ -6,7 +6,7 @@ $api = new OpenAPI();
 
 $http = $api->services()
             ->withType('flag')
-            ->list();
+            ->get();
 
 if ($http->succeeds()) {
     dd($http->all());
