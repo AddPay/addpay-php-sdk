@@ -176,7 +176,7 @@ SDK Method Reference
     </thead>
     <tbody>
         <tr>
-            <td>instantiates()</td>
+            <td>instantiate()</td>
             <td>ANY</td>
             <td>Instantiates and returns a new repository JSONObject.</td>
         </tr>
