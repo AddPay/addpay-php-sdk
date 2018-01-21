@@ -159,6 +159,34 @@ class JSONObject
 
         return $this;
     }
+    
+    /**
+     * Primary function fix to avoid magic method returning incorrect value
+     *
+     * Sets the contract notify_url value.
+     *
+     * @return void
+     */
+    public function withNotifyUrl($notifyUrl)
+    {
+        $this->resource['notify_url'] = $notifyUrl;
+
+        return $this;
+    }
+    
+    /**
+     * Primary function fix to avoid magic method returning incorrect value
+     *
+     * Sets the contract return_url value.
+     *
+     * @return void
+     */
+    public function withNotifyUrl($returnUrl)
+    {
+        $this->resource['return_url'] = $returnUrl;
+
+        return $this;
+    }
 
     /**
      * Primary function fix to avoid magic method returning incorrect value
