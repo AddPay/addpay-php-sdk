@@ -3,7 +3,7 @@ require_once(__DIR__ . '/../../core/bootstrap.php');
 
 $api = new OpenAPI();
 
-$http = $api->transactions()->find('bc6f76b4-4d9f-4d78-b781-e316bf1ca2ba');
+$http = $api->transactions()->find('TRANSACTION_ID_HERE');
 
 if ($http->succeeds()) {
 
