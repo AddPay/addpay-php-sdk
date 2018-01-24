@@ -181,7 +181,7 @@ class JSONObject
      *
      * @return void
      */
-    public function withNotifyUrl($returnUrl)
+    public function withReturnUrl($returnUrl)
     {
         $this->resource['return_url'] = $returnUrl;
 
