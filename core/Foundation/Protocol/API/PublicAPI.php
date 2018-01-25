@@ -12,8 +12,8 @@ class PublicAPI extends BaseAPI
    * @return void
    *
    */
-    public function __construct()
+    public function __construct($configDir = null)
     {
-        parent::__construct();
+        parent::__construct($configDir);
     }
 }

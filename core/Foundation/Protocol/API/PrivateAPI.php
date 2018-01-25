@@ -21,9 +21,9 @@ class PrivateAPI extends BaseAPI
      * @return void
      *
      */
-    public function __construct()
+    public function __construct($configDir = null)
     {
-        parent::__construct();
+        parent::__construct($configDir);
 
         $this->baseUrl = boolval($this->config['live']) === true ? 'https://www.addpay.co.za' : 'https://secure-test.addpay.co.za';
 
