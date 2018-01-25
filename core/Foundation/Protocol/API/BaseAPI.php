@@ -29,9 +29,9 @@ class BaseAPI
      * @return void
      *
      */
-    public function __construct()
+    public function __construct($configDir = false)
     {
-        $this->config = new Config(__DIR__ . '/../../../../config/');
+        $this->config = new Config($configDir ?? __DIR__ . '/../../../../config/');
 
         $this->validateConfig();
     }
