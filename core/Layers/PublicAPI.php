@@ -1,3 +1,3 @@
 <?php
 
-class PayPublicAPI extends AddPay\Foundation\Protocol\API\PublicAPI {}
+class PublicAPI extends AddPay\Foundation\Protocol\API\PublicAPI {}

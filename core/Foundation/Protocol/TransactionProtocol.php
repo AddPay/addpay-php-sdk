@@ -14,6 +14,34 @@ class TransactionProtocol extends BaseProtocol
     protected $endpoint = '/v2/transactions';
 
     /**
+     * Special primary function to set query parameters specifically
+     * for the transactions endpoint in order limit the number of results
+     *
+     * @return mixed
+     *
+     */
+    public function withPageLimit($limit)
+    {
+        $this->queryParams .= "limit={$limit}&";
+
+        return $this;
+    }
+
+    /**
+     * Special primary function to set query parameters specifically
+     * for the transactions endpoint in order set the viewing page number
+     *
+     * @return mixed
+     *
+     */
+    public function withPageNumber($page)
+    {
+        $this->queryParams .= "page={$page}&";
+
+        return $this;
+    }
+
+    /**
      * Create new instance of an empty transaction object
      *
      * @return mixed
