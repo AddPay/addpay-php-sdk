@@ -58,6 +58,20 @@ use AddPay\Foundation\Protocol\API\PrivateAPI;
 $openAPI = new OpenAPI();
 $pubAPI  = new PublicAPI();
 $pvtAPI  = new PrivateAPI();
+
+// Quick start example:
+$openAPI->transactions()->find('SOME_TRANSACTION_ID_HERE');
+
+// If you wish to load a config file from a custom directory,
+// copy the config/config.json to the directory of your choice
+// and pass through the DIRECTORY as an argument in the instantiation
+//
+// Note: The file name must be config.json and the argument must be the 
+// DIRECTORY excluding the file name
+
+$openAPI = new OpenAPI('path/to/your/the/config/');
+$pubAPI  = new PublicAPI('path/to/your/the/config/');
+$pvtAPI  = new PrivateAPI('path/to/your/the/config/');
 ```
 
 Download Latest Release
@@ -176,7 +190,7 @@ SDK Method Reference
     </thead>
     <tbody>
         <tr>
-            <td>instantiates()</td>
+            <td>instantiate()</td>
             <td>ANY</td>
             <td>Instantiates and returns a new repository JSONObject.</td>
         </tr>
