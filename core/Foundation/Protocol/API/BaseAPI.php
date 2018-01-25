@@ -31,7 +31,7 @@ class BaseAPI
      */
     public function __construct($configDir = null)
     {
-        $this->config = new Config($configDir ?? __DIR__ . '/../../../../config/');
+        $this->config = new Config(is_null($configDir) ? __DIR__ . '/../../../../config/' : $configDir);
 
         $this->validateConfig();
     }
