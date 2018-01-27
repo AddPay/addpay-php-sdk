@@ -69,9 +69,9 @@ $openAPI->transactions()->find('SOME_TRANSACTION_ID_HERE');
 // Note: The file name must be config.json and the argument must be the 
 // DIRECTORY excluding the file name
 
-$openAPI = new OpenAPI('path/to/your/the/config/');
-$pubAPI  = new PublicAPI('path/to/your/the/config/');
-$pvtAPI  = new PrivateAPI('path/to/your/the/config/');
+$openAPI = new OpenAPI('path/to/your/config/');
+$pubAPI  = new PublicAPI('path/to/your/config/');
+$pvtAPI  = new PrivateAPI('path/to/your/config/');
 ```
 
 Download Latest Release
