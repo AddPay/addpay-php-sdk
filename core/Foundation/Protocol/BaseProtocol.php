@@ -90,7 +90,7 @@ class BaseProtocol
         try {
             $httpResponse = $httpRequest->request(
               $method,
-              "{$this->api->baseUrl}{$this->endpoint}{$this->queryParams}",
+              "{$this->api->baseUrl}{$this->endpoint}{$url}{$this->queryParams}",
               array(
                 'headers' => $this->headers,
                 'json'    => $body
@@ -117,7 +117,7 @@ class BaseProtocol
      */
     public function findById($id)
     {
-        $response = $this->createRequest('GET', "{$this->api->baseUrl}{$this->endpoint}/{$id}{$this->queryParams}");
+        $response = $this->createRequest('GET', "/{$id}");
 
         $this->queryParams = '?';
 
@@ -147,7 +147,7 @@ class BaseProtocol
      */
     public function get()
     {
-        $response = $this->createRequest('GET', "{$this->api->baseUrl}{$this->endpoint}{$this->queryParams}");
+        $response = $this->createRequest('GET', "");
 
         $this->queryParams = '?';
 
@@ -177,7 +177,7 @@ class BaseProtocol
      */
     public function store()
     {
-        $response = $this->createRequest('POST', "{$this->api->baseUrl}{$this->endpoint}{$this->queryParams}", $this->resource->resource);
+        $response = $this->createRequest('POST', "", $this->resource->resource);
 
         $this->queryParams = '?';
 
@@ -208,7 +208,7 @@ class BaseProtocol
     {
         $id = isset($this->resource->resource['data']['id']) ? $this->resource->resource['data']['id'] : $this->resource->resource['id'];
 
-        $response = $this->createRequest('PUT', "{$this->api->baseUrl}{$this->endpoint}/{$id}{$this->queryParams}", $this->resource->resource);
+        $response = $this->createRequest('PUT', "/{$id}", $this->resource->resource);
 
         $this->queryParams = '?';
 
@@ -227,7 +227,7 @@ class BaseProtocol
     {
         $id = isset($this->resource->resource['data']['id']) ? $this->resource->resource['data']['id'] : $this->resource->resource['id'];
 
-        $response = $this->createRequest('DELETE', "{$this->api->baseUrl}{$this->endpoint}/{$id}{$this->queryParams}", $this->resource->resource);
+        $response = $this->createRequest('DELETE', "/{$id}", $this->resource->resource);
 
         $this->queryParams = '?';
 
@@ -259,7 +259,7 @@ class BaseProtocol
     {
         $id = isset($this->resource->resource['data']['id']) ? $this->resource->resource['data']['id'] : $this->resource->resource['id'];
 
-        $response = $this->createRequest('PATCH', "{$this->api->baseUrl}{$this->endpoint}/{$id}{$this->queryParams}", $this->resource->resource);
+        $response = $this->createRequest('PATCH', "/{$id}", $this->resource->resource);
 
         $this->queryParams = '?';
 
