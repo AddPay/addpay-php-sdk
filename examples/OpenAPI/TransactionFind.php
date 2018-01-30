@@ -8,7 +8,7 @@ $http = $api->transactions()
             ->find('TRANSACTION_ID_HERE');
 
 if ($http->succeeds()) {
-    var_dump$http->all());
+    var_dump($http->all());
 } else {
     $errorCode = $http->getErrorCode();
     $errorMsg  = $http->getErrorMessage();

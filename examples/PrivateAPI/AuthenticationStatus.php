@@ -6,7 +6,7 @@ $api = new PrivateAPI();
 $http = $api->authentication()->status();
 
 if ($http->succeeds()) {
-    var_dump$http->all());
+    var_dump($http->all());
 } else {
     $errorCode = $http->getErrorCode();
     $errorMsg  = $http->getErrorMessage();

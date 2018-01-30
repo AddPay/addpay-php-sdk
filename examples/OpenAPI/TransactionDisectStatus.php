@@ -11,7 +11,7 @@ if ($http->succeeds()) {
 
     // Remember var_dump) exits after dumping data so the following if statements
     // won't be evaluated unless this var_dump) is removed or commented out.
-    var_dump$http->getStatus());
+    var_dump($http->getStatus());
 
     if ($http->statusIs(OpenApi::STATE_READY)) {
         // Handle READY transaction
@@ -62,5 +62,5 @@ if ($http->succeeds()) {
 
     echo "Error '{$errorCode}' with message '{$errorMsg}'.";
 
-    var_dump$http->resource);
+    var_dump($http->resource);
 }

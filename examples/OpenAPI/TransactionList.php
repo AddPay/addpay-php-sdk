@@ -10,10 +10,10 @@ $http = $api->transactions()
 
 if ($http->succeeds()) {
     // Get the results
-    var_dump$http->all());
+    var_dump($http->all());
 
     // You may want to keep track of the page number, in that case
-    var_dump$http->resource)
+    var_dump($http->resource)
     // prints out the entire payload including the meta data
 
 } else {
@@ -22,5 +22,5 @@ if ($http->succeeds()) {
 
     echo "Error '{$errorCode}' with message '{$errorMsg}'";
 
-    var_dump$http->resource);
+    var_dump($http->resource);
 }
