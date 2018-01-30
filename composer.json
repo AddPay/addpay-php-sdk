@@ -18,5 +18,10 @@
     "psr-4": {
       "AddPay\\Foundation\\": "core/Foundation/"
     }
-  }
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "AddPay\\Foundation\\ComposerScripts::postAutoloadDump"
+    ]
+  },
 }

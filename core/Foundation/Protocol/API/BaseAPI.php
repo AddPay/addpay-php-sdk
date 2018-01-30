@@ -6,11 +6,11 @@ use Exception;
 
 class BaseAPI
 {
-  /**
-   * The config container.
-   *
-   * @var Config
-   */
+    /**
+     * The config container.
+     *
+     * @var Config
+     */
     public $config;
 
     /**
@@ -28,9 +28,13 @@ class BaseAPI
      * @return void
      *
      */
-    public function __construct($configDir = null)
+    public function __construct($config = null)
     {
-        $this->config = json_decode(file_get_contents((is_null($configDir) ? __DIR__ . '/../../../../config/' : $configDir) . '/config.json'), true);
+        if (is_array($config)) {
+            $this->config = $config;
+        } else {
+            $this->config = json_decode(file_get_contents((is_null($config) ? __DIR__ . '/../../../../config/' : $config) . '/config.json'), true);
+        }
 
         $this->validateConfig();
     }
