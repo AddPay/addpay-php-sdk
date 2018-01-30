@@ -73,7 +73,7 @@ $openAPI = new OpenAPI('path/to/your/config/');
 $pubAPI  = new PublicAPI('path/to/your/config/');
 $pvtAPI  = new PrivateAPI('path/to/your/config/');
 
-// Alertnatively, pass through the entire config array:
+// Alternatively, pass through the entire config array:
 $openAPI = new OpenAPI([
     'live'     => false,
     'open_api' => [
