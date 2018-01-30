@@ -7,3 +7,7 @@ textarea {
   -webkit-animation: fa-spin 0.7s infinite linear;
   animation: fa-spin 0.7s infinite linear;
 }
+
+.red {
+  color: #911;
+}

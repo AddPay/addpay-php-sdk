@@ -2,7 +2,6 @@
 
 namespace AddPay\Foundation\Protocol\API;
 
-use Configula\Config;
 use Exception;
 
 class BaseAPI
@@ -31,7 +30,7 @@ class BaseAPI
      */
     public function __construct($configDir = null)
     {
-        $this->config = new Config(is_null($configDir) ? __DIR__ . '/../../../../config/' : $configDir);
+        $this->config = json_decode(file_get_contents((is_null($configDir) ? __DIR__ . '/../../../../config/' : $configDir) . '/config.json'), true);
 
         $this->validateConfig();
     }
