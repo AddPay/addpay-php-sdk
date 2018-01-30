@@ -9,7 +9,7 @@ $http = $api->transactions()
             ->cancel();
 
 if ($http->succeeds()) {
-    dd($http->all());
+    var_dump$http->all());
 } else {
     $errorCode = $http->getErrorCode();
     $errorMsg  = $http->getErrorMessage();

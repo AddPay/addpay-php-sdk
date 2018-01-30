@@ -6,12 +6,12 @@ $api = new PublicAPI();
 $currencies = $api->currencies()->get();
 
 if ($currencies->succeeds()) {
-  dd($currencies->all());
+  var_dump$currencies->all());
 } else {
   $errorCode = $http->getErrorCode();
   $errorMsg  = $http->getErrorMessage();
 
   echo "Error '{$errorCode}' with message '{$errorMsg}'";
 
-  dd($http->resource);
+  var_dump$http->resource);
 }

@@ -8,27 +8,27 @@ $http = $api->transactions()->find('TRANSACTION_ID_HERE');
 if ($http->succeeds()) {
 
     // For now we will just spit out the entire object then exit
-    // (dd() exists the app after printing data)
-    dd($http->all());
+    // (var_dump) exists the app after printing data)
+    var_dump$http->all());
 
     // To get a specific field object:
-    //dd($http->getAnythingYouLike());
+    //var_dump$http->getAnythingYouLike());
 
     // Examples (REFER TO THE API DOCUMENTATION FOR A LIST OF AVAILABLE FIELDS):
-    //dd($http->getId());
-    //dd($http->getReference());
-    //dd($http->getStatus());
-    //dd($http->getStatusReason());
-    //dd($http->getAmount());
+    //var_dump$http->getId());
+    //var_dump$http->getReference());
+    //var_dump$http->getStatus());
+    //var_dump$http->getStatusReason());
+    //var_dump$http->getAmount());
 
     // To get a nested object value, for example the Amount Currency Name:
-    //dd($http->getAmountCurrencyName());
+    //var_dump$http->getAmountCurrencyName());
 
     // Or and entire object with its subfields, for example the Customer
-    //dd($http->getCustomer());
+    //var_dump$http->getCustomer());
 
     // To simply dump the entire transaction object:
-    //dd($http->all());
+    //var_dump$http->all());
 
 } else {
 
@@ -37,6 +37,6 @@ if ($http->succeeds()) {
 
     echo "Error '{$errorCode}' with message '{$errorMsg}'";
 
-    dd($http->resource);
+    var_dump$http->resource);
 
 }
