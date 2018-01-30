@@ -308,11 +308,3 @@ Disclaimer
 ---------
 
 This package and all documentation was developed by Stephen Lake as a **personal** project to assist developers unfamiliar with the AddPay API in getting started quickly and efficiently. This is an **unofficial** package and therefore **_support is limited and provided as a courtesy_**.
-
-## Todo
-- Add caching layers:
-  - Return immediate transaction object if the ID has already been instantiated
-  - Return services from cache-store with low ttl in scenarios where a user might be oblivious to throttling
-- Add Public Meta API
-- Add Private API
-
