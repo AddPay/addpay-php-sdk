@@ -22,7 +22,7 @@ class AuthenticationProtocol extends BaseProtocol
      */
     public function status()
     {
-        $response = $this->createRequest('GET', "{$this->api->baseUrl}{$this->endpoint}");
+        $response = $this->createRequest('GET', "");
 
         $this->resource = new JSONObject($response, $this);
 
@@ -37,7 +37,7 @@ class AuthenticationProtocol extends BaseProtocol
      */
     public function submit()
     {
-        $response = $this->createRequest('POST', "{$this->api->baseUrl}{$this->endpoint}", $this->resource->resource);
+        $response = $this->createRequest('POST', "", $this->resource->resource);
 
         $this->resource = new JSONObject($response, $this);
 
