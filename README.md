@@ -17,10 +17,10 @@
 ## Documentation
 - [Getting Started](https://github.com/stephenlake/AddPay-PHP-SDK#getting-started)
   - [Requirements](https://github.com/stephenlake/AddPay-PHP-SDK#requirements)
-  - [Running the Examples](https://github.com/stephenlake/AddPay-PHP-SDK#runningusing-examples) :warning: Step-by-Step with animated GIF's
+  - [Running the Examples](https://github.com/stephenlake/AddPay-PHP-SDK#runningusing-examples)
   - [Download Latest Release](https://github.com/stephenlake/AddPay-PHP-SDK#download-latest-release)
   - [Configuration](https://github.com/stephenlake/AddPay-PHP-SDK#configuration)
-  - [Before Diving Into Code](https://github.com/stephenlake/AddPay-PHP-SDK#before-diving-into-code) :warning: Big Time Saver
+  - [Before Diving Into Code](https://github.com/stephenlake/AddPay-PHP-SDK#before-diving-into-code)
   - [SDK Repository Reference](https://github.com/stephenlake/AddPay-PHP-SDK#sdk-repository-reference)
   - [SDK Methods Reference](https://github.com/stephenlake/AddPay-PHP-SDK#sdk-method-reference)
 - [Bug Reporting](https://github.com/stephenlake/AddPay-PHP-SDK#bug-reporting)
@@ -72,6 +72,20 @@ $openAPI->transactions()->find('SOME_TRANSACTION_ID_HERE');
 $openAPI = new OpenAPI('path/to/your/config/');
 $pubAPI  = new PublicAPI('path/to/your/config/');
 $pvtAPI  = new PrivateAPI('path/to/your/config/');
+
+// Alternatively, pass through the entire config array:
+$openAPI = new OpenAPI([
+    'live'     => false,
+    'open_api' => [
+        'client_id'     => 'your_client_id',
+        'client_secret' => 'your_client_secret',
+        'public_key'    => 'your_optional_public_key_here'
+    ],
+    'private_api' => [
+        'username' => 'username'
+        'password' => 'password'
+    ]
+]);
 ```
 
 Download Latest Release
@@ -294,11 +308,3 @@ Disclaimer
 ---------
 
 This package and all documentation was developed by Stephen Lake as a **personal** project to assist developers unfamiliar with the AddPay API in getting started quickly and efficiently. This is an **unofficial** package and therefore **_support is limited and provided as a courtesy_**.
-
-## Todo
-- Add caching layers:
-  - Return immediate transaction object if the ID has already been instantiated
-  - Return services from cache-store with low ttl in scenarios where a user might be oblivious to throttling
-- Add Public Meta API
-- Add Private API
-
