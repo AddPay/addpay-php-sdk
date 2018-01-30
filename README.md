@@ -72,6 +72,20 @@ $openAPI->transactions()->find('SOME_TRANSACTION_ID_HERE');
 $openAPI = new OpenAPI('path/to/your/config/');
 $pubAPI  = new PublicAPI('path/to/your/config/');
 $pvtAPI  = new PrivateAPI('path/to/your/config/');
+
+// Alertnatively, pass through the entire config array:
+$openAPI = new OpenAPI([
+    'live'     => false,
+    'open_api' => [
+        'client_id'     => 'your_client_id',
+        'client_secret' => 'your_client_secret',
+        'public_key'    => 'your_optional_public_key_here'
+    ],
+    'private_api' => [
+        'username' => 'username'
+        'password' => 'password'
+    ]
+]);
 ```
 
 Download Latest Release
