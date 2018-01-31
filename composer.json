@@ -11,7 +11,8 @@
     "role": "Developer"
   }],
   "require": {
-    "guzzlehttp/guzzle": "^6.3"
+    "guzzlehttp/guzzle": "^6.3",
+    "itorso/logger": "dev-master"
   },
   "autoload": {
     "psr-4": {

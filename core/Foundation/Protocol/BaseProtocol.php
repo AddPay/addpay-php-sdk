@@ -1,5 +1,4 @@
 <?php
-
 namespace AddPay\Foundation\Protocol;
 
 use AddPay\Foundation\Protocol\API\BaseApi;
@@ -7,6 +6,7 @@ use AddPay\Foundation\Objects\JSONObject;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\RequestException;
+use Logger\Logger;
 
 class BaseProtocol
 {
@@ -46,6 +46,20 @@ class BaseProtocol
     protected $queryParams = '?';
 
     /**
+     * Console logger
+     *
+     * @var mixed
+     */
+    public $logConsole;
+
+    /**
+     * File logger
+     *
+     * @var mixed
+     */
+    public $logFile;
+
+    /**
      * Construct the base protocol class.
      *
      * @param  BaseAPI $api The API object class
@@ -55,6 +69,9 @@ class BaseProtocol
      */
     public function __construct(BaseAPI $api)
     {
+        $this->logConsole = new Logger('SDK-' . date('Y-m-d') . '.log');
+        $this->logFile    = new Logger('SDK-' . date('Y-m-d') . '.log');
+
         $this->api = $api;
         $this->resource = new JSONObject(array(), $this);
 
@@ -87,6 +104,17 @@ class BaseProtocol
     {
         $httpRequest = new Client();
 
+        $requestId = md5(time());
+
+        $logBody = json_encode($body);
+        $logHeaders = json_encode($this->headers);
+
+        $this->logFile->info("[{$requestId}] HTTP Request Hostname: {$this->api->baseUrl}");
+        $this->logFile->info("[{$requestId}] HTTP Request Endpoint: {$this->endpoint}{$url}{$this->queryParams}");
+        $this->logFile->info("[{$requestId}] HTTP Request Headers: {$logHeaders}");
+        $this->logFile->info("[{$requestId}] HTTP Method: {$method}");
+        $this->logFile->info("[{$requestId}] HTTP Request Body: {$logBody}");
+
         try {
             $httpResponse = $httpRequest->request(
               $method,
@@ -103,6 +131,10 @@ class BaseProtocol
         } catch (RequestException $e) {
             $httpResponse = json_decode($e->getResponse()->getBody()->getContents(), true);
         }
+
+        $logBody = json_encode($httpResponse);
+
+        $this->logFile->info("[{$requestId}] HTTP Response Body: {$logBody}");
 
         return $httpResponse;
     }
