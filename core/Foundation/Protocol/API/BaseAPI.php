@@ -57,13 +57,5 @@ class BaseAPI
         } else {
             throw new Exception("The configuration field 'open_api' is missing. Read the documentation.");
         }
-
-        if (isset($this->config['private_api'])) {
-            if (!isset($this->config['private_api']['username']) || !isset($this->config['private_api']['password'])) {
-                throw new Exception("Your configuration file is not setup correctly. Read the documentation.");
-            }
-        } else {
-            throw new Exception("The configuration field 'private_api' is missing. Read the documentation.");
-        }
     }
 }

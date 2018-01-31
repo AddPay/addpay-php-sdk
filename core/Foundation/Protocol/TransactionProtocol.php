@@ -42,6 +42,20 @@ class TransactionProtocol extends BaseProtocol
     }
 
     /**
+     * Special primary function to set query parameters specifically
+     * for the transactions date range.
+     *
+     * @return mixed
+     *
+     */
+    public function withinDateRange($from, $to)
+    {
+        $this->queryParams .= "created_at>={$from}&created_at<={$to}";
+
+        return $this;
+    }
+
+    /**
      * Create new instance of an empty transaction object
      *
      * @return mixed
