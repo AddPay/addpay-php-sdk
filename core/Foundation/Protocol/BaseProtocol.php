@@ -104,16 +104,18 @@ class BaseProtocol
     {
         $httpRequest = new Client();
 
-        $requestId = md5(time());
+        if ($this->api->config['logging_enabled']) {
+            $requestId = md5(time());
 
-        $logBody = json_encode($body);
-        $logHeaders = json_encode($this->headers);
+            $logBody = json_encode($body);
+            $logHeaders = json_encode($this->headers);
 
-        $this->logFile->info("[{$requestId}] HTTP Request Hostname: {$this->api->baseUrl}");
-        $this->logFile->info("[{$requestId}] HTTP Request Endpoint: {$this->endpoint}{$url}{$this->queryParams}");
-        $this->logFile->info("[{$requestId}] HTTP Request Headers: {$logHeaders}");
-        $this->logFile->info("[{$requestId}] HTTP Method: {$method}");
-        $this->logFile->info("[{$requestId}] HTTP Request Body: {$logBody}");
+            $this->logFile->info("[{$requestId}] HTTP Request Hostname: {$this->api->baseUrl}");
+            $this->logFile->info("[{$requestId}] HTTP Request Endpoint: {$this->endpoint}{$url}{$this->queryParams}");
+            $this->logFile->info("[{$requestId}] HTTP Request Headers: {$logHeaders}");
+            $this->logFile->info("[{$requestId}] HTTP Method: {$method}");
+            $this->logFile->info("[{$requestId}] HTTP Request Body: {$logBody}");
+        }
 
         try {
             $httpResponse = $httpRequest->request(
@@ -132,9 +134,11 @@ class BaseProtocol
             $httpResponse = json_decode($e->getResponse()->getBody()->getContents(), true);
         }
 
-        $logBody = json_encode($httpResponse);
+        if ($this->api->config['logging_enabled']) {
+            $logBody = json_encode($httpResponse);
 
-        $this->logFile->info("[{$requestId}] HTTP Response Body: {$logBody}");
+            $this->logFile->info("[{$requestId}] HTTP Response Body: {$logBody}");
+        }
 
         return $httpResponse;
     }
