@@ -77,25 +77,6 @@
             </table>
           </div>
         </div>
-        <div class="row">
-          <div class="ml-auto mr-auto">
-            <h3 class="text-center mb-5 mt-5">Private API Examples</h3>
-            <table class="table table-responsive" style="width: 100%;">
-              <thead>
-                <tr>
-                  <th>Example</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr v-for="example in privateApiExamples">
-                  <td>{{ example.category }} / <strong>{{ example.name }}</strong><br/><small>{{ example.file.absolutePath }}</small></td>
-                  <td><button class="btn btn-sm btn-outline-dark" @click="openExampleModal(example)"><i class="fa fa-eye"></i> View</button></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
       </section>
     </div>
     <footer class="footer text-center">
@@ -146,7 +127,6 @@
   <script type="text/javascript">
     <?php echo 'window.openApiExamples = ' . json_encode(echoExampleFiles(__DIR__ . '/../../../OpenAPI', 'OpenAPI')) . ';'; ?>
     <?php echo 'window.publicApiExamples = ' . json_encode(echoExampleFiles(__DIR__ . '/../../../PublicAPI', 'PublicAPI')) . ';'; ?>
-    <?php echo 'window.privateApiExamples = ' . json_encode(echoExampleFiles(__DIR__ . '/../../../PrivateAPI', 'PrivateAPI')) . ';'; ?>
   </script>
   <script type="text/javascript" src="Assets/Documentation/js/vue.js"></script>
   <script type="text/javascript" src="Assets/Documentation/js/axios.min.js"></script>
