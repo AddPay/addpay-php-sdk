@@ -69,8 +69,8 @@ class BaseProtocol
      */
     public function __construct(BaseAPI $api)
     {
-        $this->logConsole = new Logger('SDK-' . date('Y-m-d') . '.log');
-        $this->logFile    = new Logger('SDK-' . date('Y-m-d') . '.log');
+        $this->logConsole = new Logger('SDK-' . date('Y-m-d'));
+        $this->logFile    = new Logger('SDK-' . date('Y-m-d'));
 
         $this->api = $api;
         $this->resource = new JSONObject(array(), $this);

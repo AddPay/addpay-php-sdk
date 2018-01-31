@@ -50,11 +50,7 @@ class BaseAPI
      */
     private function validateConfig()
     {
-        if (isset($this->config['open_api'])) {
-            if (!isset($this->config['open_api']['client_id']) || !isset($this->config['open_api']['client_secret']) || !isset($this->config['open_api']['public_key'])) {
-                throw new Exception("Your configuration file is not setup correctly. Read the documentation.");
-            }
-        } else {
+        if (!isset($this->config['open_api'])) {
             throw new Exception("The configuration field 'open_api' is missing. Read the documentation.");
         }
 
