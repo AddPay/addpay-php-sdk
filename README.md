@@ -80,10 +80,6 @@ $openAPI = new OpenAPI([
         'client_id'     => 'your_client_id',
         'client_secret' => 'your_client_secret',
         'public_key'    => 'your_optional_public_key_here'
-    ],
-    'private_api' => [
-        'username' => 'username'
-        'password' => 'password'
     ]
 ]);
 ```
