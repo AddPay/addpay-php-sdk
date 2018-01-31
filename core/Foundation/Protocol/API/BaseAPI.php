@@ -55,7 +55,7 @@ class BaseAPI
         }
 
         if (!isset($this->config['logging_enabled'])) {
-            $this->config['logging_enabled'] = true;
+            $this->config['logging_enabled'] = false;
         }
     }
 }
