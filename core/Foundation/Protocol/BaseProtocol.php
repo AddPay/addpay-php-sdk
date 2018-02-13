@@ -6,7 +6,6 @@ use AddPay\Foundation\Objects\JSONObject;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\RequestException;
-use Logger\Logger;
 
 class BaseProtocol
 {
@@ -69,8 +68,10 @@ class BaseProtocol
      */
     public function __construct(BaseAPI $api)
     {
-        $this->logConsole = new Logger('SDK-' . date('Y-m-d'));
-        $this->logFile    = new Logger('SDK-' . date('Y-m-d'));
+        if ($this->api->config['logging_enabled']) {
+            $this->logConsole = new \Logger\Logger('SDK-' . date('Y-m-d'));
+            $this->logFile    = new \Logger\Logger('SDK-' . date('Y-m-d'));
+        }
 
         $this->api = $api;
         $this->resource = new JSONObject(array(), $this);
