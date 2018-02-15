@@ -44,19 +44,6 @@ class BaseProtocol
      */
     protected $queryParams = '?';
 
-    /**
-     * Console logger
-     *
-     * @var mixed
-     */
-    public $logConsole;
-
-    /**
-     * File logger
-     *
-     * @var mixed
-     */
-    public $logFile;
 
     /**
      * Construct the base protocol class.
@@ -68,11 +55,6 @@ class BaseProtocol
      */
     public function __construct(BaseAPI $api)
     {
-        if ($this->api->config['logging_enabled']) {
-            $this->logConsole = new \Logger\Logger('SDK-' . date('Y-m-d'));
-            $this->logFile    = new \Logger\Logger('SDK-' . date('Y-m-d'));
-        }
-
         $this->api = $api;
         $this->resource = new JSONObject(array(), $this);
 
@@ -105,19 +87,6 @@ class BaseProtocol
     {
         $httpRequest = new Client();
 
-        if ($this->api->config['logging_enabled']) {
-            $requestId = md5(time());
-
-            $logBody = json_encode($body);
-            $logHeaders = json_encode($this->headers);
-
-            $this->logFile->info("[{$requestId}] HTTP Request Hostname: {$this->api->baseUrl}");
-            $this->logFile->info("[{$requestId}] HTTP Request Endpoint: {$this->endpoint}{$url}{$this->queryParams}");
-            $this->logFile->info("[{$requestId}] HTTP Request Headers: {$logHeaders}");
-            $this->logFile->info("[{$requestId}] HTTP Method: {$method}");
-            $this->logFile->info("[{$requestId}] HTTP Request Body: {$logBody}");
-        }
-
         try {
             $httpResponse = $httpRequest->request(
               $method,
@@ -133,12 +102,6 @@ class BaseProtocol
             $httpResponse = json_decode($e->getResponse()->getBody()->getContents(), true);
         } catch (RequestException $e) {
             $httpResponse = json_decode($e->getResponse()->getBody()->getContents(), true);
-        }
-
-        if ($this->api->config['logging_enabled']) {
-            $logBody = json_encode($httpResponse);
-
-            $this->logFile->info("[{$requestId}] HTTP Response Body: {$logBody}");
         }
 
         return $httpResponse;

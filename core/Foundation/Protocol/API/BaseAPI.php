@@ -53,9 +53,5 @@ class BaseAPI
         if (!isset($this->config['open_api'])) {
             throw new Exception("The configuration field 'open_api' is missing. Read the documentation.");
         }
-
-        if (!isset($this->config['logging_enabled'])) {
-            $this->config['logging_enabled'] = false;
-        }
     }
 }
