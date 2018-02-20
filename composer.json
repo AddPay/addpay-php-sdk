@@ -14,6 +14,9 @@
     "guzzlehttp/guzzle": "^6.3"
   },
   "autoload": {
+    "files": [
+      "core/helpers.php"
+    ],
     "psr-4": {
       "AddPay\\Foundation\\": "core/Foundation/"
     }
