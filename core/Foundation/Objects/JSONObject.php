@@ -159,7 +159,7 @@ class JSONObject
 
         return $this;
     }
-    
+
     /**
      * Primary function fix to avoid magic method returning incorrect value
      *
@@ -173,7 +173,7 @@ class JSONObject
 
         return $this;
     }
-    
+
     /**
      * Primary function fix to avoid magic method returning incorrect value
      *
@@ -275,7 +275,7 @@ class JSONObject
      */
     public function getInitiatesAt()
     {
-        return isset($this->resource['initiates_at']) ? $this->resource['status_reason'] : null;
+        return isset($this->resource['initiates_at']) ? $this->resource['initiates_at'] : null;
     }
 
     /**
@@ -287,7 +287,7 @@ class JSONObject
      */
     public function getCompletedAt()
     {
-        return isset($this->resource['completed_at']) ? $this->resource['status_reason'] : null;
+        return isset($this->resource['completed_at']) ? $this->resource['completed_at'] : null;
     }
 
     /**
@@ -299,7 +299,7 @@ class JSONObject
      */
     public function getReturnUrl()
     {
-        return isset($this->resource['return_url']) ? $this->resource['status_reason'] : null;
+        return isset($this->resource['return_url']) ? $this->resource['return_url'] : null;
     }
 
     /**
@@ -311,7 +311,7 @@ class JSONObject
      */
     public function getNotifyUrl()
     {
-        return isset($this->resource['notify_url']) ? $this->resource['status_reason'] : null;
+        return isset($this->resource['notify_url']) ? $this->resource['notify_url'] : null;
     }
 
     /**
@@ -323,7 +323,43 @@ class JSONObject
      */
     public function getCallToAction()
     {
-        return isset($this->resource['call_to_action']) ? $this->resource['status_reason'] : null;
+        return isset($this->resource['call_to_action']) ? $this->resource['call_to_action'] : null;
+    }
+
+    /**
+     * Primary function fix to avoid magic method returning incorrect value
+     *
+     * Returns the call_to_action URL if it exists in the object.
+     *
+     * @return string
+     */
+    public function getCallToActionUrl()
+    {
+        return isset($this->resource['call_to_action']['url']) ? $this->resource['call_to_action']['url'] : null;
+    }
+
+    /**
+     * Primary function fix to avoid magic method returning incorrect value
+     *
+     * Returns the call_to_action type if it exists in the object.
+     *
+     * @return string
+     */
+    public function getCallToActionType()
+    {
+        return isset($this->resource['call_to_action']['type']) ? $this->resource['call_to_action']['type'] : null;
+    }
+
+    /**
+     * Primary function fix to avoid magic method returning incorrect value
+     *
+     * Returns the call_to_action method if it exists in the object.
+     *
+     * @return string
+     */
+    public function getCallToActionMethod()
+    {
+        return isset($this->resource['call_to_action']['method']) ? $this->resource['call_to_action']['method'] : null;
     }
 
     /**
