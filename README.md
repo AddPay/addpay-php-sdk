@@ -176,12 +176,6 @@ SDK Repository Reference
             <td>services()</td>
             <td>Instantiates a service repository to call referenced methods.</td>
         </tr>
-        <tr>
-            <td>PrivateAPI</td>
-            <td>Authentication</td>
-            <td>authentication()</td>
-            <td>Instantiates an authentication repository to call referenced methods.</td>
-        </tr>
     </tbody>
 </table>
 
