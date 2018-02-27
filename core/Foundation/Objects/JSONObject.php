@@ -201,20 +201,6 @@ class JSONObject
 
         return $this;
     }
-    
-    /**
-     * Primary function fix to avoid magic method returning incorrect value
-     *
-     * Sets the contract action day value.
-     *
-     * @return void
-     */
-    public function withContractActionDay($day)
-    {
-        $this->resource['contract']['action_day'] = $day;
-
-        return $this;
-    }
 
     /**
      * Primary function fix to avoid magic method returning incorrect value
