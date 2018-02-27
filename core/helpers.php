@@ -67,21 +67,56 @@ if (!function_exists('endsWith')) {
     }
 }
 
+if (!function_exists('openApi')) {
+    function openApi($config = null)
+    {
+        return new AddPay\Foundation\Protocol\API\OpenAPI($config);
+    }
+}
+
+if (!function_exists('publicApi')) {
+    function publicApi($config = null)
+    {
+        return new AddPay\Foundation\Protocol\PublicAPI($config);
+    }
+}
+
+if (!function_exists('setHeader')) {
+    function setHeader($code)
+    {
+        SDKUtils::setHeader($code);
+    }
+}
+
+if (!function_exists('getWebhookSecurityHeader')) {
+    function getWebhookSecurityHeader()
+    {
+        return SDKUtils::getWebhookSecurityHeader();
+    }
+}
+
+if (!function_exists('webhookSecurityHeaderMatches')) {
+    function webhookSecurityHeaderMatches($str)
+    {
+        return SDKUtils::webhookSecurityHeaderMatches($str);
+    }
+}
+
+if (!function_Exists('getallheaders')) {
+    function getallheaders()
+    {
+        $headers = array();
+        foreach ($_SERVER as $name => $value) {
+            if (substr($name, 0, 5) == 'HTTP_') {
+                $headers[str_replace(' ', '-', ucwords(strtolower(str_replace('_', ' ', substr($name, 5)))))] = $value;
+            }
+        }
+        return $headers;
+    }
+}
+
 class SDKUtils
 {
-    public static function isValidWebhookEvent()
-    {
-        $receivedData = (object) $_POST;
-
-        $addpayHosts = array(
-             'addpay.co.za',
-             'secure.addpay.co.za',
-             'secure-test.addpay.co.za'
-        );
-
-        return isset($receivedData->event) && in_array($_SERVER['HTTP_HOST'], $addpayHosts);
-    }
-
     public static function setHeader($code)
     {
         $codes = array(
@@ -147,5 +182,17 @@ class SDKUtils
         }
 
         header("HTTP/1.1 {$code} {$codes[$code]}");
+    }
+
+    public function getWebhookSecurityHeader()
+    {
+        $headers = getallheaders();
+
+        return isset($headers['X-ADDPAY-KEY']) ? $headers['X-ADDPAY-KEY'] : '';
+    }
+
+    public static function webhookSecurityHeaderMatches($str)
+    {
+        return self::getWebhookSecurityHeader() == $str;
     }
 }
