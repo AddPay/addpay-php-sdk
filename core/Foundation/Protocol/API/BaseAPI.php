@@ -11,7 +11,7 @@ class BaseAPI
      *
      * @var Config
      */
-    public $config;
+    public static $config;
 
     /**
      * The base URL for API calls.
