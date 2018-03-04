@@ -5,14 +5,6 @@
     <strong>AddPay PHP SDK</strong> by <a href="https://github.com/stephenlake">Stephen Lake</a><br/>
     A PHP package to assist in developing applications communicating with the AddPay API.
 </p>
-<p align="center">
-    <img src="https://img.shields.io/badge/build-stable-brightgreen.svg?style=flat"/>
-    <img src="https://img.shields.io/badge/tests-passing-brightgreen.svg?style=flat"/>
-    <img src="https://img.shields.io/badge/coverage-100%25-brightgreen.svg?style=flat"/>
-    <img src="https://img.shields.io/badge/maintainability-A++-brightgreen.svg?style=flat"/>
-    <img src="https://img.shields.io/badge/php-%3E=5.3-brightgreen.svg?style=flat"/>
-    <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/>
-</p>
 
 ## Documentation
 - [Getting Started](https://github.com/stephenlake/AddPay-PHP-SDK#getting-started)
