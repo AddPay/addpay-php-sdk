@@ -52,14 +52,14 @@ class TransactionProtocol extends BaseProtocol
     {
         $rangeList = implode(',', $range);
 
-        $this->queryParams .= "intent=$rangeList&";
+        $this->queryParams .= "id~$rangeList&";
 
         return $this;
     }
 
     /**
      * Special primary function to set query parameters specifically
-     * for the transactions date range.
+     * for the transactions ID range.
      *
      * @return mixed
      *
@@ -67,6 +67,34 @@ class TransactionProtocol extends BaseProtocol
     public function withinDateRange($from, $to)
     {
         $this->queryParams .= "created_at>={$from}&created_at<={$to}&";
+
+        return $this;
+    }
+
+    /**
+     * Special primary function to set query parameters specifically
+     * for the transaction intent type.
+     *
+     * @return mixed
+     *
+     */
+    public function onlySubscriptions()
+    {
+        $this->queryParams .= "intent=SUBSCRIPTION&";
+
+        return $this;
+    }
+
+    /**
+     * Special primary function to set query parameters specifically
+     * for the transaction intent type.
+     *
+     * @return mixed
+     *
+     */
+    public function onlyOnceOffs()
+    {
+        $this->queryParams .= "intent=SALE&";
 
         return $this;
     }
