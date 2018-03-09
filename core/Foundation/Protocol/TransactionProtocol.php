@@ -48,9 +48,25 @@ class TransactionProtocol extends BaseProtocol
      * @return mixed
      *
      */
+    public function withinIdentifierRange(array $range)
+    {
+        $rangeList = implode(',', $range);
+
+        $this->queryParams .= "intent=$rangeList&";
+
+        return $this;
+    }
+
+    /**
+     * Special primary function to set query parameters specifically
+     * for the transactions date range.
+     *
+     * @return mixed
+     *
+     */
     public function withinDateRange($from, $to)
     {
-        $this->queryParams .= "created_at>={$from}&created_at<={$to}";
+        $this->queryParams .= "created_at>={$from}&created_at<={$to}&";
 
         return $this;
     }
