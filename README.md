@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://www.addpay.co.za/app/assets/img/addpay/addpay_logo.png"/><br/>
+    <img src="https://addpay.co.za/assets/shared/img/addpay/favicon.png"/><br/>
 </p>
 <p align="center">
     <strong>AddPay PHP SDK</strong> by <a href="https://github.com/stephenlake">Stephen Lake</a><br/>
